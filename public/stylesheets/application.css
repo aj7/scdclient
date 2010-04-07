@@ -1,6 +1,6 @@
 body {
 
-background-image: url(../images/header5.jpg);
+  background-image: url(../images/header5.jpg);
   background-repeat: repeat-x;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
@@ -23,8 +23,15 @@ a {
 
 
 .container{padding-top:0.5em;}
-.inner_container{margin-top:1.0em;background:#fff;border:5px solid #eee;}
-.content_container{background:#fff; margin: 0 0.5em;}
+
+.inner_container{
+    margin-top:1.0em;
+    background:#fff;
+    border:5px solid #eee;}
+
+.content_container{
+    background:#fff;
+    margin: 0 0.5em;}
 
 
 /*#container {
