@@ -1,7 +1,10 @@
 body {
-  background-color: #4B7399;
+
+background-image: url(../images/header5.jpg);
+  background-repeat: repeat-x;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  background-color: #cce9ff;
 }
 
 a img {
@@ -18,13 +21,9 @@ a {
   overflow: hidden;
 }
 
-.header{
-    background-color: #0099cc;
 
-}
-
-.container{padding-top:1.5em;}
-.inner_container{margin-top:2.0em;background:#fff;border:5px solid #eee;}
+.container{padding-top:0.5em;}
+.inner_container{margin-top:1.0em;background:#fff;border:5px solid #eee;}
 .content_container{background:#fff; margin: 0 0.5em;}
 
 
