@@ -13,7 +13,7 @@
 
     <%= javascript_include_tag  'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js',
                                 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js',
-                                'cmxforms', 'application' %>
+                                'cmxforms','jquery.easing.1.3','jquery.lavalamp-1.3.4b2', 'application' %>
 
     <%= stylesheet_link_tag  'cmxform','application' %>
    
@@ -33,7 +33,9 @@
                <%# end %>
             </div> --->
             <div id="header">
-              <h1 class="caps"><%= link_to image_tag("bannerinfo1.png"), home_path %> </h1>
+              <%= link_to image_tag("bannerinfo1.png"), home_path %>
+              <br />
+              <%= render :partial => "shared/menu" %>
             </div>
          </div>
     </div>

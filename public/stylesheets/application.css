@@ -22,10 +22,11 @@ a {
 }
 
 
-.container{padding-top:0.5em;}
+.container{padding-top:0.5em;
+           margin-top:0em }
 
 .inner_container{
-    margin-top:1.0em;
+    margin-top:0.5em;
     background:#fff;
     border:5px solid #eee;}
 
@@ -95,3 +96,46 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+/*Lavalamp menu css*/
+
+ul#menu li{
+    margin:3px 5px;
+    padding:0; /* padding moved to the a element below */
+    float:right;
+    font-family:Tahoma, Verdana, Arial, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    /*font-style:italic;*/
+    text-shadow: rgba(255,255,255, 1) 1px 1px 2px;
+    color:#333;
+}
+ul#menu li a {
+    /*display:block; *//* allows us to add top and bottom padding to the element */
+    padding:8px 20px 9px 18px;  /* now we have nice padding for link hi-lighting */
+    position: relative;
+    z-index: 5;
+    color:#333;
+    text-decoration:none;
+}
+ul#menu li a:hover {
+    color:#FFF;
+}
+
+ul#menu li.backLava {
+    position:absolute;
+    z-index:3;
+    
+    border:2px solid brown;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #000;
+    -webkit-box-shadow: 2px 2px 3px #000;
+    -moz-box-shadow: 2px 2px 3px #000;
+}
+
+
+
+
+
