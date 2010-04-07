@@ -4,6 +4,13 @@
   <head>
     <title><%= h(yield(:title) || "Untitled") %></title>
 
+     <!-- Blueprint stuff -->
+    <link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+
+     <!--[if lt IE 8]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <!--End Blueprint stuff -->
+
     <%= javascript_include_tag  'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js',
                                 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js',
                                 'cmxforms', 'application' %>
@@ -13,16 +20,52 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
-      
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
-      <%= yield %>
+  <div class="header">
+         <div class="container">
+
+            <!---<div id="user_nav">
+                <%# if current_user %>
+                <%#= link_to "Edit Profile", edit_user_path %>
+                <%#= link_to "Logout", logout_path %>
+              <%# else %>
+                <%#= link_to "Register", new_user_path %>
+                <%#= link_to "Log in", login_path %>
+               <%# end %>
+            </div> --->
+            <div id="header">
+              <h1 class="caps"><%= link_to "Species Conservation Database", home_path %> </h1>
+            </div>
+         </div>
     </div>
+    <div class="wrap">
+    <div class="container">
+
+            <div class="inner_container">
+                    <div class="content_container">
+
+                          <%- flash.each do |name, msg| -%>
+                          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                          <%- end -%>
+
+                          <%- if show_title? -%>
+                            <h2><%=h yield(:title) %></h2>
+                          <%- end -%>
+
+                          <%= yield %>
+
+                    </div>
+              </div>
+            <div class="span-24 last">&nbsp;</div>
+	        <div class="span-7 prepend-17 quiet">
+				UNEP-WCMC 2009 <%= image_tag 'wcmc_logo.png'%>
+	        </div>
+
+
+       </div>
+     </div>
+     <div class="footer">
+
+     </div>
+
   </body>
 </html>

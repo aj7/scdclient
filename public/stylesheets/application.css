@@ -18,14 +18,24 @@ a {
   overflow: hidden;
 }
 
-#container {
+.header{
+    background-color: #0099cc;
+
+}
+
+.container{padding-top:1.5em;}
+.inner_container{margin-top:2.0em;background:#fff;border:5px solid #eee;}
+.content_container{background:#fff; margin: 0 0.5em;}
+
+
+/*#container {
   width: 75%;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
-}
+} */
 
 #flash_notice, #flash_error {
   padding: 5px 8px;
