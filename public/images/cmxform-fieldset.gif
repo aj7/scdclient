@@ -1,0 +1,1113 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var logged_in_user_email = null;
+ 
+ 
+ var relative_base_url = "";
+ 
+ </script>
+ 
+ 
+ <title>cmxform-fieldset.gif - 
+ dase -
+ 
+ Project Hosting on Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/17891623693695439908/css/ph_core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/17891623693695439908/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/17891623693695439908/css/d_sb_20080522.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/17891623693695439908/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ </style>
+</head>
+<body class="t4">
+ <script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-3597958-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ </script>
+ <div id="gaia">
+ 
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ 
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Fdase%2Fsource%2Fbrowse%2Ftrunk%2Fmodules%2Fitsprop%2Fscripts%2Fjquery-validate%2Fdemo%2Fimages%2Fcmxform-fieldset.gif%3Fr%3D1209&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Fdase%2Fsource%2Fbrowse%2Ftrunk%2Fmodules%2Fitsprop%2Fscripts%2Fjquery-validate%2Fdemo%2Fimages%2Fcmxform-fieldset.gif%3Fr%3D1209" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if IE 6]>
+<div style="text-align:center;">
+Support browsers that contribute to open source, try <a href="http://www.firefox.com">Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a>.
+</div>
+<![endif]-->
+ <table style="padding:0px; margin: 20px 0px 0px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tr style="height: 58px;">
+ 
+ <td style="width: 55px; text-align:center;">
+ <a href="/p/dase/">
+ 
+ 
+ <img src="http://www.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo">
+ 
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname" style="margin: 0px 0px -3px 0px">
+ <a href="/p/dase/" style="text-decoration:none; color:#000">dase</a>
+ 
+ </div>
+ <div id="psum">
+ <i><a id="project_summary_link" href="/p/dase/" style="text-decoration:none; color:#000">a web-based digital assets management and presentation framework</a></i>
+ </div>
+ 
+ </td>
+ <td style="white-space:nowrap; text-align:right">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="">
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+
+
+ 
+<table id="mt" cellspacing="0" cellpadding="0" width="100%" border="0">
+ <tr>
+ <th onclick="if (!cancelBubble) _go('/p/dase/');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/dase/">Project&nbsp;Home</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/dase/downloads/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/dase/downloads/list">Downloads</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/dase/w/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/dase/w/list">Wiki</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/dase/issues/list');">
+ <div class="tab inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/dase/issues/list">Issues</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ 
+ 
+ <th onclick="if (!cancelBubble) _go('/p/dase/source/checkout');">
+ <div class="tab active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a onclick="cancelBubble=true;" href="/p/dase/source/checkout">Source</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td>
+ <div class="st2">
+ <div class="isf">
+ 
+ 
+ 
+ <span class="inst1"><a href="/p/dase/source/checkout">Checkout</a></span> |
+ <span class="inst2"><a href="/p/dase/source/browse/">Browse</a></span> |
+ <span class="inst3"><a href="/p/dase/source/list">Changes</a></span> |
+ 
+ <form action="http://www.google.com/codesearch" method="get" style="display:inline"
+ onsubmit="document.getElementById('codesearchq').value = document.getElementById('origq').value + ' package:http://dase\\.googlecode\\.com'">
+ <input type="hidden" name="q" id="codesearchq" value="">
+ <input maxlength="2048" size="38" id="origq" name="origq" value="" title="Google Code Search" style="font-size:92%">&nbsp;<input type="submit" value="Search Trunk" name="btnG" style="font-size:92%">
+ 
+ </form>
+ </div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ <td height="4" align="right" valign="top" class="bevel-right">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</table>
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+
+
+<div id="maincol"
+ 
+>
+
+ 
+<!-- IE -->
+
+
+
+
+<div class="expand">
+
+
+<style type="text/css">
+ #file_flipper { display: inline; float: right; white-space: nowrap; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<div id="nav_and_rev" class="heading">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner" id="bub">
+ <div class="bub-top">
+ <div class="pagination" style="margin-left: 2em">
+ <table cellpadding="0" cellspacing="0" class="flipper">
+ <tbody>
+ <tr>
+ 
+ <td><b>r1209</b></td>
+ 
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ 
+ <div class="" style="vertical-align: top">
+ <div class="src_crumbs src_nav">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/dase/source/browse/?r=1209">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/dase/source/browse/trunk/?r=1209">trunk</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/?r=1209">modules</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/itsprop/?r=1209">itsprop</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/itsprop/scripts/?r=1209">scripts</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/?r=1209">jquery-validate</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/?r=1209">demo</a><span class="sp">/&nbsp;</span><a href="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/?r=1209">images</a><span class="sp">/&nbsp;</span>cmxform-fieldset.gif</span>
+ 
+ 
+ </div>
+ 
+ </div>
+ <div style="clear:both"></div>
+ </div>
+ </div>
+</div>
+
+<style type="text/css">
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+
+</style>
+<div class="fc">
+ 
+
+
+ <p><em>
+ 
+ This file is not plain text (only UTF-8 and Latin-1 text encodings are currently supported).
+ 
+ </em></p>
+
+
+
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta('', 'p', 'dase', this)">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta('', 'p', 'dase', this)">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/dase/source/detail?spec=svn1209&r=1209">r1209</a>
+ by pjkeane
+ on Mar 21, 2009
+ &nbsp; <a href="/p/dase/source/diff?spec=svn1209&r=1209&amp;format=side&amp;path=/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif&amp;old_path=/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif&amp;old=">Diff</a>
+ </div>
+ <pre>work</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/dase/source/detail?r=1209&spec=svn1209';
+ var publish_url = '/p/dase/source/detail?r=1209&spec=svn1209#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/trunk/lib/Dase/Atom/Entry.php');
+ changed_urls.push('/p/dase/source/browse/trunk/lib/Dase/Atom/Entry.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/lib/Dase/Atom/Entry/Item.php');
+ changed_urls.push('/p/dase/source/browse/trunk/lib/Dase/Atom/Entry/Item.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/lib/Dase/DBO/Autogen/AdminSearchTable.php');
+ changed_urls.push('/p/dase/source/browse/trunk/lib/Dase/DBO/Autogen/AdminSearchTable.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/lib/Dase/DBO/Autogen/Value.php');
+ changed_urls.push('/p/dase/source/browse/trunk/lib/Dase/DBO/Autogen/Value.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/css/itsprop.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/css/itsprop.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/handler.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/handler.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/images/asc.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/images/asc.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/images/bg.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/images/bg.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/images/desc.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/images/desc.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/META.json');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/META.json?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/additional-methods.js');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/additional-methods.js?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/changelog.txt');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/changelog.txt?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/ajaxSubmit-intergration-demo.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/ajaxSubmit-intergration-demo.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/captcha.js');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/captcha.js?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts/Anorexia.ttf');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts/Anorexia.ttf?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/image_req.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/image_req.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/.htaccess');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/.htaccess?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.png');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.png?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.psd');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.psd?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/image.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/image.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/index.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/index.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/newsession.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/newsession.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/process.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/process.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/rand.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/rand.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/style.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/style.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/chili.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/chili.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxform.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxform.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxformTemplate.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxformTemplate.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/core.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/core.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/reset.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/reset.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/css/screen.css');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/screen.css?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-messages-metadata-demo.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-messages-metadata-demo.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-methods-demo.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-methods-demo.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/dynamic-totals.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/dynamic-totals.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/errorcontainer-demo.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/errorcontainer-demo.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/example.html');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/example.html?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/form.php');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/form.php?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/form.phps');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/form.phps?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images/bg.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/bg.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images/checked.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/checked.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-divider.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-divider.gif?r=1209&spec=svn1209');
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif?r=1209&spec=svn1209');
+ 
+ var selected_path = '/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif';
+ 
+ 
+ changed_paths.push('/trunk/modules/itsprop/scripts/jquery-validate/demo/images/loading.gif');
+ changed_urls.push('/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/loading.gif?r=1209&spec=svn1209');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/dase/source/browse/trunk/lib/Dase/Atom/Entry.php?r=1209&amp;spec=svn1209"
+ 
+ >/trunk/lib/Dase/Atom/Entry.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/lib/Dase/Atom/Entry/Item.php?r=1209&amp;spec=svn1209"
+ 
+ >/trunk/lib/Dase/Atom/Entry/Item.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/lib/Dase/DBO/Autogen/AdminSearchTable.php?r=1209&amp;spec=svn1209"
+ 
+ >...DBO/Autogen/AdminSearchTable.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/lib/Dase/DBO/Autogen/Value.php?r=1209&amp;spec=svn1209"
+ 
+ >...k/lib/Dase/DBO/Autogen/Value.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/css/itsprop.css?r=1209&amp;spec=svn1209"
+ 
+ >.../modules/itsprop/css/itsprop.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/handler.php?r=1209&amp;spec=svn1209"
+ 
+ >/trunk/modules/itsprop/handler.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/images/asc.gif?r=1209&amp;spec=svn1209"
+ 
+ >...k/modules/itsprop/images/asc.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/images/bg.gif?r=1209&amp;spec=svn1209"
+ 
+ >...nk/modules/itsprop/images/bg.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/images/desc.gif?r=1209&amp;spec=svn1209"
+ 
+ >.../modules/itsprop/images/desc.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate?r=1209&amp;spec=svn1209"
+ 
+ >.../itsprop/scripts/jquery-validate</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/META.json?r=1209&amp;spec=svn1209"
+ 
+ >...cripts/jquery-validate/META.json</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/additional-methods.js?r=1209&amp;spec=svn1209"
+ 
+ >...y-validate/additional-methods.js</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/changelog.txt?r=1209&amp;spec=svn1209"
+ 
+ >...ts/jquery-validate/changelog.txt</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo?r=1209&amp;spec=svn1209"
+ 
+ >...rop/scripts/jquery-validate/demo</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/ajaxSubmit-intergration-demo.html?r=1209&amp;spec=svn1209"
+ 
+ >...jaxSubmit-intergration-demo.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha?r=1209&amp;spec=svn1209"
+ 
+ >...pts/jquery-validate/demo/captcha</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/captcha.js?r=1209&amp;spec=svn1209"
+ 
+ >...validate/demo/captcha/captcha.js</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts?r=1209&amp;spec=svn1209"
+ 
+ >...uery-validate/demo/captcha/fonts</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/fonts/Anorexia.ttf?r=1209&amp;spec=svn1209"
+ 
+ >.../demo/captcha/fonts/Anorexia.ttf</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/image_req.php?r=1209&amp;spec=svn1209"
+ 
+ >...idate/demo/captcha/image_req.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images?r=1209&amp;spec=svn1209"
+ 
+ >...ery-validate/demo/captcha/images</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/.htaccess?r=1209&amp;spec=svn1209"
+ 
+ >...te/demo/captcha/images/.htaccess</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.png?r=1209&amp;spec=svn1209"
+ 
+ >...e/demo/captcha/images/button.png</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/button.psd?r=1209&amp;spec=svn1209"
+ 
+ >...e/demo/captcha/images/button.psd</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/images/image.php?r=1209&amp;spec=svn1209"
+ 
+ >...te/demo/captcha/images/image.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/index.php?r=1209&amp;spec=svn1209"
+ 
+ >...-validate/demo/captcha/index.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/newsession.php?r=1209&amp;spec=svn1209"
+ 
+ >...date/demo/captcha/newsession.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/process.php?r=1209&amp;spec=svn1209"
+ 
+ >...alidate/demo/captcha/process.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/rand.php?r=1209&amp;spec=svn1209"
+ 
+ >...y-validate/demo/captcha/rand.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/captcha/style.css?r=1209&amp;spec=svn1209"
+ 
+ >...-validate/demo/captcha/style.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css?r=1209&amp;spec=svn1209"
+ 
+ >...scripts/jquery-validate/demo/css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/chili.css?r=1209&amp;spec=svn1209"
+ 
+ >...uery-validate/demo/css/chili.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxform.css?r=1209&amp;spec=svn1209"
+ 
+ >...ry-validate/demo/css/cmxform.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/cmxformTemplate.css?r=1209&amp;spec=svn1209"
+ 
+ >...ate/demo/css/cmxformTemplate.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/core.css?r=1209&amp;spec=svn1209"
+ 
+ >...query-validate/demo/css/core.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/reset.css?r=1209&amp;spec=svn1209"
+ 
+ >...uery-validate/demo/css/reset.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/css/screen.css?r=1209&amp;spec=svn1209"
+ 
+ >...ery-validate/demo/css/screen.css</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-messages-metadata-demo.html?r=1209&amp;spec=svn1209"
+ 
+ >...stom-messages-metadata-demo.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/custom-methods-demo.html?r=1209&amp;spec=svn1209"
+ 
+ >...te/demo/custom-methods-demo.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/dynamic-totals.html?r=1209&amp;spec=svn1209"
+ 
+ >...alidate/demo/dynamic-totals.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/errorcontainer-demo.html?r=1209&amp;spec=svn1209"
+ 
+ >...te/demo/errorcontainer-demo.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/example.html?r=1209&amp;spec=svn1209"
+ 
+ >...query-validate/demo/example.html</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/form.php?r=1209&amp;spec=svn1209"
+ 
+ >...ts/jquery-validate/demo/form.php</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/form.phps?r=1209&amp;spec=svn1209"
+ 
+ >...s/jquery-validate/demo/form.phps</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images?r=1209&amp;spec=svn1209"
+ 
+ >...ipts/jquery-validate/demo/images</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/bg.gif?r=1209&amp;spec=svn1209"
+ 
+ >...uery-validate/demo/images/bg.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/checked.gif?r=1209&amp;spec=svn1209"
+ 
+ >...validate/demo/images/checked.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-divider.gif?r=1209&amp;spec=svn1209"
+ 
+ >.../demo/images/cmxform-divider.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif?r=1209&amp;spec=svn1209"
+ selected="selected"
+ >...demo/images/cmxform-fieldset.gif</option>
+ 
+ <option value="/p/dase/source/browse/trunk/modules/itsprop/scripts/jquery-validate/demo/images/loading.gif?r=1209&amp;spec=svn1209"
+ 
+ >...validate/demo/images/loading.gif</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+
+
+
+
+
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/dase/source/list?path=/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif&start=1209">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 314 bytes</div>
+ 
+ <div><a href="http://dase.googlecode.com/svn-history/r1209/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif">View raw file</a></div>
+ </div>
+ 
+ <div id="props">
+ <p>File properties</p>
+ <dl>
+ 
+ <dt>svn:mime-type</dt>
+ <dd>application/octet-stream</dd>
+ 
+ </dl>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+</div>
+
+<script src="http://www.gstatic.com/codesite/ph/17891623693695439908/js/source_file_scripts.js"></script>
+
+ <script type="text/javascript" src="http://kibbles.googlecode.com/files/kibbles-1.3.1.comp.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initilized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initilized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ }
+ window.onload = function() {keysOnLoadHandler();};
+ </script>
+
+
+<!-- code review support -->
+<script src="http://www.gstatic.com/codesite/ph/17891623693695439908/js/code_review_scripts.js"></script>
+<script type="text/javascript">
+ 
+ // the comment form template
+ var form = '<div class="draft"><div class="header"><span class="title">Draft comment:</span></div>' +
+ '<div class="body"><form onsubmit="return false;"><textarea id="$ID">$BODY</textarea><br>$ACTIONS</form></div>' +
+ '</div>';
+ // the comment "plate" template used for both draft and published comment "plates".
+ var draft_comment = '<div class="draft" ondblclick="$ONDBLCLICK">' +
+ '<div class="header"><span class="title">Draft comment:</span><span class="actions">$ACTIONS</span></div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+ var published_comment = '<div class="published">' +
+ '<div class="header"><span class="title"><a href="$PROFILE_URL">$AUTHOR:</a></span><div>' +
+ '<pre id="$ID" class="body">$BODY</pre>' +
+ '</div>';
+
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn1209': '/trunk/modules/itsprop/scripts/jquery-validate/demo/images/cmxform-fieldset.gif'}
+ CR_setup('', 'p', 'dase', '', 'svn1209', paths,
+ '', CR_BrowseIntegrationFactory);
+ // register our hidden ui elements with the code commenting code ui builder.
+ CR_registerLayoutElement('form', form);
+ CR_registerLayoutElement('draft_comment', draft_comment);
+ CR_registerLayoutElement('published_comment', published_comment);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_PUB_PLATE, pubRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.REVEAL_DRAFT_PLATE, draftRevealed);
+ CR_registerActivityListener(CR_ACTIVITY_TYPE.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ 
+ 
+ var initilized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+</script>
+
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/17891623693695439908/js/dit_scripts_20081013.js"></script>
+
+ 
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/17891623693695439908/js/core_scripts_20081103.js"></script>
+ <script type="text/javascript" src="/js/codesite_product_dictionary_ph.pack.04102009.js"></script>
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ &copy;2010 Google -
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ 
+ </div>
+</div>
+
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
