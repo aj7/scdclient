@@ -58,3 +58,9 @@
     /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
     /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
     script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-04-07 12:15:51) [GET]
+Completed in 37ms (View: 3, DB: 0) | 200 OK [http://localhost/rails/info/properties]
