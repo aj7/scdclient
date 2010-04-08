@@ -22,9 +22,12 @@ $(document).ready(function() {
 
 
       $('#admin').click(
-              $.jGrowl("Stick this!", { sticky: true })
+              $.jGrowl("Stick this!", { life: 1000,
+                                        sticky: false,
+                                        header: 'Important'
+                                        })
 
-              );
+              ).addClass('jGrowl bottom-right');
 
 
  });
