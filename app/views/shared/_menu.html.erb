@@ -1,5 +1,14 @@
-<ul id="menu">
-  <li><%= link_to "About", :controller=>"home" %></li>
-  <li><span><%= link_to "Administration" %></span></li>
-  <li><span><%= link_to "Test" %></span></li>
+<ul id="menu" class="lavaLampNoImage sf-menu">
+  <li><a href="#About">About</a></li>
+  <li><a id="admin" href= "#Administration">Administration</a></li>
+  <li><a href="#Test">Test</a>
+  <li><a href="#Test2">Test</a>
+  <li><a href="#Test3">Test</a>
+  <li><a href="#Test4">Test</a>
+        <ul class="lavaLampNoImage">
+          <li><a href="#Test">Test1</a></li>
+          <li><a href="#Test">Test2</a></li>
+          <li><a href="#Test">Test3</a></li>
+        </ul>
+  </li>
 </ul>

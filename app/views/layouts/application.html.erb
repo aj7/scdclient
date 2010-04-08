@@ -13,9 +13,12 @@
 
     <%= javascript_include_tag  'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js',
                                 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js',
-                                'cmxforms','jquery.easing.1.3','jquery.lavalamp-1.3.4b2', 'application' %>
+                                'cmxforms','jquery.easing.1.3','jquery.lavalamp-1.3.4b2','hoverIntent',
+                                'jquery.bgiframe.min','supersubs','superfish','jquery.jgrowl_compressed',                                
+                                 'application' %>
 
-    <%= stylesheet_link_tag  'cmxform','application' %>
+    <%= stylesheet_link_tag  'cmxform','superfish','jquery.jgrowl',
+                             'application' %>
    
     <%= yield(:head) %>
   </head>
@@ -33,6 +36,9 @@
                <%# end %>
             </div> --->
             <div id="header">
+              <div id="user_nav">
+                <%= render :partial => "shared/login" %>
+              </div>
               <%= link_to image_tag("bannerinfo1.png"), home_path %>
               <br />
               <%= render :partial => "shared/menu" %>

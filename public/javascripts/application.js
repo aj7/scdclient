@@ -6,8 +6,25 @@ $(document).ready(function() {
    // do stuff when DOM is ready
 
     //lavalamp stuff 
-         $('ul#menu').lavaLamp();
+//         $('ul#menu')
+//
+//                 .lavaLamp(
+//                 { fx: "easeOutBounce",
+//                    speed: 1000
+//                 }
+//                 );
+      $("ul.sf-menu").superfish({
+            delay:       1000,                            // one second delay on mouseout
+            animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+            speed:       'fast'                          // faster animation speed
+                            
+      });
 
+
+      $('#admin').click(
+              $.jGrowl("Stick this!", { sticky: true })
+
+              );
 
 
  });
