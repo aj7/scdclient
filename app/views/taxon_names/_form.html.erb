@@ -1,0 +1,40 @@
+<% form_for @taxon_name do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :scientific_name %><br />
+    <%= f.text_field :scientific_name %>
+  </p>
+  <p>
+    <%= f.label :basionym_authorship %><br />
+    <%= f.text_field :basionym_authorship %>
+  </p>
+  <p>
+    <%= f.label :authorship_year %><br />
+    <%= f.date_select :authorship_year %>
+  </p>
+  <p>
+    <%= f.label :basionym_id %><br />
+    <%= f.text_field :basionym_id %>
+  </p>
+  <p>
+    <%= f.label :is_usable %><br />
+    <%= f.check_box :is_usable %>
+  </p>
+  <p>
+    <%= f.label :alternative_authorship_year %><br />
+    <%= f.date_select :alternative_authorship_year %>
+  </p>
+  <p>
+    <%= f.label :genus_part %><br />
+    <%= f.text_field :genus_part %>
+  </p>
+  <p>
+    <%= f.label :epithet %><br />
+    <%= f.text_field :epithet %>
+  </p>
+  <p>
+    <%= f.label :infra_epithet %><br />
+    <%= f.text_field :infra_epithet %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

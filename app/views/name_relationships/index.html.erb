@@ -1,0 +1,23 @@
+<% title "Name Relationships" %>
+
+<table>
+  <tr>
+    <th>Taxon Name From</th>
+    <th>Taxon Name To</th>
+    <th>Date Enforced</th>
+    <th>Relationship Type</th>
+  </tr>
+  <% for name_relationship in @name_relationships %>
+    <tr>
+      <td><%=h name_relationship.taxon_name_from_id %></td>
+      <td><%=h name_relationship.taxon_name_to_id %></td>
+      <td><%=h name_relationship.date_enforced %></td>
+      <td><%=h name_relationship.relationship_type %></td>
+      <td><%= link_to "Show", name_relationship %></td>
+      <td><%= link_to "Edit", edit_name_relationship_path(name_relationship) %></td>
+      <td><%= link_to "Destroy", name_relationship, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Name Relationship", new_name_relationship_path %></p>

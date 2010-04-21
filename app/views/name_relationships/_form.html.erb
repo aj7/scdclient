@@ -1,0 +1,20 @@
+<% form_for @name_relationship do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :taxon_name_from_id %><br />
+    <%= f.text_field :taxon_name_from_id %>
+  </p>
+  <p>
+    <%= f.label :taxon_name_to_id %><br />
+    <%= f.text_field :taxon_name_to_id %>
+  </p>
+  <p>
+    <%= f.label :date_enforced %><br />
+    <%= f.datetime_select :date_enforced %>
+  </p>
+  <p>
+    <%= f.label :relationship_type %><br />
+    <%= f.text_field :relationship_type %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

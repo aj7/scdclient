@@ -1,4 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :taxon_name_relationships
+
+  map.resources :name_relationships
+
+  map.resources :taxon_names
+
+
   map.resources :user_sessions
   map.resources :users
 

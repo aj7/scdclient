@@ -1,0 +1,16 @@
+<% title "Taxon Name Relationship" %>
+
+<p>
+  <strong>Taxon Name:</strong>
+  <%=h @taxon_name_relationship.taxon_name %>
+</p>
+<p>
+  <strong>Name Relationship:</strong>
+  <%=h @taxon_name_relationship.name_relationship %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_taxon_name_relationship_path(@taxon_name_relationship) %> |
+  <%= link_to "Destroy", @taxon_name_relationship, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", taxon_name_relationships_path %>
+</p>

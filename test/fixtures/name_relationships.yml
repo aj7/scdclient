@@ -1,0 +1,11 @@
+one:
+  taxon_name_from_id: 1
+  taxon_name_to_id: 1
+  date_enforced: 2010-04-21 15:13:33
+  relationship_type: MyString
+
+two:
+  taxon_name_from_id: 1
+  taxon_name_to_id: 1
+  date_enforced: 2010-04-21 15:13:33
+  relationship_type: MyString
