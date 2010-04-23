@@ -1,6 +1,6 @@
 <ul id="menu" class="lavaLampNoImage sf-menu">
   <li><a href="home">About</a></li>
-  <% if current_user %>
+  <% if user_signed_in? %>
       <li><a id="admin" href= "#Administration">Administration</a></li>
   <% end %>
 

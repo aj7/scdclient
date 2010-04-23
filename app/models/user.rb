@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
-  acts_as_authentic 
+  # Include default devise modules. Others available are:
+  # :http_authenticatable, :token_authenticatable, :lockable, :confirmable, :timeoutable and :activatable
+  devise :registerable, :authenticatable,  :recoverable,
+         :rememberable, :trackable, :validatable
 
-#  attr_accessible :username, :email, :password
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation
 end
