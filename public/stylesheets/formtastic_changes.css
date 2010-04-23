@@ -14,6 +14,6 @@ form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 --------------------------------------------------------------------------------------------------*/
 /* LABELS
 --------------------------------------------------------------------------------------------------*/
-form.formtastic fieldset > ol > li label  { display:inherit; width:25%; float:left; padding-top:.2em; font-size:small;font-weight:500;}
+form.formtastic fieldset > ol > li label  { width:25%; float:left; padding-top:.2em; font-size:small;font-weight:500;}
 form.formtastic fieldset > ol > li > li label { line-height:100%; padding-top:0; }
 form.formtastic fieldset > ol > li > li label input { line-height:100%; vertical-align:middle; margin-top:-0.1em;}
