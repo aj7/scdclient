@@ -34,9 +34,24 @@ a {
     background:#fff;
     margin: 0 0.5em;}
 
+.footer-disclaimer {
+    background-color:#A2BCC0;
+   
+}
+
+.clearfooter{
+    height : 100px;
+    clear: both;
+}
+
 .footer {
-    background-color:#9D8D6D;
-    
+    clear:both;
+    position: relative;
+    height : 100px;
+    background-color:#A2BCC0;
+    #background-image: url(../images/header5.jpg);
+  #background-repeat: repeat-x;
+
 }
 
 /*#container {

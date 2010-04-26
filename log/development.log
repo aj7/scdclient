@@ -11818,3 +11818,1215 @@ Rendered shared/_devise_links (3.1ms)
 Rendered shared/_login (0.4ms)
 Rendered shared/_menu (0.1ms)
 Completed in 108ms (View: 31, DB: 0) | 200 OK [http://localhost/users/login]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:32:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (1.7ms)
+Rendered shared/_menu (0.9ms)
+Completed in 40ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:33:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:33:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.7ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:35:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:36:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:49:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:50:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:50:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:50:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:50:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:51:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:52:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:53:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:53:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:54:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:55:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:55:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:55:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:59:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:59:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:59:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 11:59:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:04:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.6ms)
+Rendered shared/_menu (0.1ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:09:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:11:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:11:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:12:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:12:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:13:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.7ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:13:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.9ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.8ms)
+Rendered shared/_menu (0.1ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.9ms)
+Rendered shared/_menu (0.1ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 61ms (View: 60, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:15:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:16:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:16:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:16:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.6ms)
+Rendered shared/_menu (0.1ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:16:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:17:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:18:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 12:18:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-04-26 12:20:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mTaxonName Load (1.4ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 22ms (View: 18, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-04-26 12:20:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+Rendering template within layouts/application
+Rendering taxon_names/new
+Rendered taxon_names/_form (11.9ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 27ms (View: 25, DB: 0) | 200 OK [http://localhost/taxon_names/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-04-26 12:20:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mTaxonName Load (0.5ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#show (for 127.0.0.1 at 2010-04-26 12:30:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"taxon_names"}
+  [4;36;1mTaxonName Load (1.4ms)[0m   [0;1mSELECT * FROM "taxon_names" WHERE ("taxon_names"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering taxon_names/show
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 19ms (View: 15, DB: 2) | 200 OK [http://localhost/taxon_names/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#edit (for 127.0.0.1 at 2010-04-26 12:30:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"taxon_names"}
+  [4;35;1mTaxonName Load (0.7ms)[0m   [0mSELECT * FROM "taxon_names" WHERE ("taxon_names"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering taxon_names/edit
+Rendered taxon_names/_form (11.2ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 24ms (View: 21, DB: 1) | 200 OK [http://localhost/taxon_names/1/edit]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-04-26 12:30:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mTaxonName Load (0.5ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.9ms)
+Rendered shared/_menu (0.5ms)
+Completed in 41ms (View: 38, DB: 1) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#show (for 127.0.0.1 at 2010-04-26 12:30:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"taxon_names"}
+  [4;35;1mTaxonName Load (0.6ms)[0m   [0mSELECT * FROM "taxon_names" WHERE ("taxon_names"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering taxon_names/show
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://localhost/taxon_names/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#edit (for 127.0.0.1 at 2010-04-26 12:30:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"taxon_names"}
+  [4;36;1mTaxonName Load (0.7ms)[0m   [0;1mSELECT * FROM "taxon_names" WHERE ("taxon_names"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering taxon_names/edit
+Rendered taxon_names/_form (12.6ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 27ms (View: 24, DB: 1) | 200 OK [http://localhost/taxon_names/1/edit]
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100408134445)
+Migrating to CreateProducts (20100420104640)
+Migrating to CreateTaxonNames (20100421140905)
+Migrating to CreateNameRelationships (20100421141333)
+Migrating to CreateTaxonNameRelationships (20100421141432)
+Migrating to ActsAsTaggableOnMigration (20100421150747)
+Migrating to AddAuditsTable (20100421150842)
+Migrating to DeviseCreateUsers (20100423150725)
+Migrating to AddUsernameToUsers (20100423154927)
+Migrating to CreateRoles (20100426114918)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mCREATE TABLE "roles" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100426114918')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateAssignments (20100426115042)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "assignments" ("id" serial primary key, "role_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100426115042')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-26 13:02:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.6ms)
+Rendered shared/_login (0.4ms)
+Rendered shared/_menu (0.6ms)
+Completed in 32ms (View: 24, DB: 0) | 200 OK [http://localhost/users/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-26 13:02:42) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"sessions", "user"=>{"remember_me"=>"0", "username"=>"ackbarj", "password"=>"[FILTERED]"}}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (3.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = E'ackbarj') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me, username
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.4ms)
+Rendered shared/_login (0.2ms)
+Rendered shared/_menu (0.1ms)
+Completed in 33ms (View: 8, DB: 4) | 200 OK [http://localhost/users/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-04-26 13:02:49) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"sessions", "user"=>{"remember_me"=>"0", "username"=>"ackbarj", "password"=>"[FILTERED]"}}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = E'ackbarj') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me, username
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (0.4ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 98ms (View: 9, DB: 2) | 200 OK [http://localhost/users/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-04-26 13:02:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (0.4ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 29ms (View: 19, DB: 0) | 200 OK [http://localhost/users/register]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-04-26 13:03:08) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"registrations", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"ackbarj", "password"=>"[FILTERED]", "email"=>"ackbar@ackadij.com"}}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+WARNING: Can't mass-assign these protected attributes: username
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = E'ackbar@ackadij.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (0.4ms)
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 98ms (View: 15, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-04-26 13:03:13) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"registrations", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"", "password"=>"[FILTERED]", "email"=>"ackbar2@ackadij.com"}}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+WARNING: Can't mass-assign these protected attributes: username
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = E'ackbar2@ackadij.com') LIMIT 1[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "created_at", "last_sign_in_ip", "updated_at", "last_sign_in_at", "username", "sign_in_count", "password_salt", "reset_password_token", "remember_token", "current_sign_in_ip", "remember_created_at", "current_sign_in_at", "email") VALUES(E'65f80caab9325a0a9b401548c974da52cc35150e', '2010-04-26 12:03:13.329066', NULL, '2010-04-26 12:03:13.329066', NULL, NULL, 0, E'Do7zQyEcop0p8bTcCz4N', NULL, NULL, NULL, NULL, NULL, E'ackbar2@ackadij.com') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-26 12:03:13.370230', "sign_in_count" = 1, "current_sign_in_at" = '2010-04-26 12:03:13.339968', "current_sign_in_ip" = E'127.0.0.1', "last_sign_in_at" = '2010-04-26 12:03:13.339968', "last_sign_in_ip" = E'127.0.0.1' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 78ms (DB: 7) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:03:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (13.9ms)
+
+ActionView::TemplateError (role_url failed to generate from {:controller=>"roles", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["roles", :id] - are they all satisfied?) on line #6 of app/views/shared/_menu.html.erb:
+3:   <% if user_signed_in? %>
+4:       <li><a id="admin" href= "#Administration">Administration</a></li>
+5:       <ul>
+6:         <li><%= link_to "Roles", role_path %></li>
+7:       </ul>
+8: 
+9:   <% end %>
+
+    (eval):16:in `role_path'
+    app/views/shared/_menu.html.erb:6
+    app/views/layouts/application.html.erb:39
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (113.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:03:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (10.0ms)
+
+ActionView::TemplateError (role_url failed to generate from {:controller=>"roles", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["roles", :id] - are they all satisfied?) on line #6 of app/views/shared/_menu.html.erb:
+3:   <% if user_signed_in? %>
+4:       <li><a id="admin" href= "#Administration">Administration</a></li>
+5:       <ul>
+6:         <li><%= link_to "Roles", role_path %></li>
+7:       </ul>
+8: 
+9:   <% end %>
+
+    (eval):16:in `role_path'
+    app/views/shared/_menu.html.erb:6
+    app/views/layouts/application.html.erb:39
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (107.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:03:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (13.7ms)
+
+ActionView::TemplateError (role_url failed to generate from {:controller=>"roles", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["roles", :id] - are they all satisfied?) on line #6 of app/views/shared/_menu.html.erb:
+3:   <% if user_signed_in? %>
+4:       <li><a id="admin" href= "#Administration">Administration</a></li>
+5:       <ul>
+6:         <li><%= link_to "Roles", role_path %></li>
+7:       </ul>
+8: 
+9:   <% end %>
+
+    (eval):16:in `role_path'
+    app/views/shared/_menu.html.erb:6
+    app/views/layouts/application.html.erb:39
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-04-26 13:03:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 10ms (DB: 2) | 302 Found [http://localhost/users/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:03:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (13.0ms)
+
+ActionView::TemplateError (role_url failed to generate from {:controller=>"roles", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["roles", :id] - are they all satisfied?) on line #6 of app/views/shared/_menu.html.erb:
+3:   <% if user_signed_in? %>
+4:       <li><a id="admin" href= "#Administration">Administration</a></li>
+5:       <ul>
+6:         <li><%= link_to "Roles", role_path %></li>
+7:       </ul>
+8: 
+9:   <% end %>
+
+    (eval):16:in `role_path'
+    app/views/shared/_menu.html.erb:6
+    app/views/layouts/application.html.erb:39
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:04:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (13.4ms)
+Rendered shared/_menu (0.6ms)
+Completed in 24ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-26 13:04:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/wikimedia-button.png" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-26 13:04:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (69.4ms)
+Rendered shared/_menu (0.6ms)
+Completed in 80ms (View: 76, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-26 13:04:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (12.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 30ms (View: 23, DB: 3) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-26 13:04:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+Rendered roles/_form (9.2ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (4.9ms)
+Rendered shared/_menu (0.1ms)
+Completed in 34ms (View: 25, DB: 1) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#create (for 127.0.0.1 at 2010-04-26 13:05:06) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "role"=>{"name"=>"Superuser", "description"=>"this is the super user"}, "controller"=>"roles"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "description") VALUES(E'Superuser', '2010-04-26 12:05:06.939993', '2010-04-26 12:05:06.939993', E'this is the super user') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/roles/1
+Completed in 76ms (DB: 1) | 302 Found [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#show (for 127.0.0.1 at 2010-04-26 13:05:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"roles"}
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering roles/show
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 30ms (View: 21, DB: 2) | 200 OK [http://localhost/roles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-26 13:05:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;36;1mRole Load (1.3ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.4ms)
+Rendered shared/_menu (0.1ms)
+Completed in 86ms (View: 79, DB: 2) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-26 13:07:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+
+LoadError (Expected /Library/Ruby/Gems/1.8/gems/cancan-1.1.1/lib/cancan.rb to define Cancan):
+  app/models/ability.rb:2
+  cancan (1.1.1) lib/cancan/controller_additions.rb:170:in `current_ability'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:194:in `cannot?'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:151:in `authorize!'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:33:in `authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:19:in `load_and_authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `send'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `add_before_filter'
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (102.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-26 13:08:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+Rendered roles/_form (9.4ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.0ms)
+Rendered shared/_menu (0.1ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-26 13:08:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+Rendered roles/_form (10.0ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.2ms)
+Rendered shared/_menu (0.1ms)
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://localhost/roles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-26 13:09:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+Rendered roles/_form (65.1ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 83ms (View: 76, DB: 1) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-26 13:09:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (4.9ms)
+Rendered shared/_menu (0.1ms)
+Completed in 25ms (View: 20, DB: 2) | 200 OK [http://localhost/roles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-26 13:10:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.0ms)
+Rendered shared/_menu (0.1ms)
+Completed in 25ms (View: 20, DB: 2) | 200 OK [http://localhost/roles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-26 13:11:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered shared/_login (5.2ms)
+
+ActionView::TemplateError (undefined local variable or method `users_path' for #<ActionView::Base:0x10331eb70>) on line #6 of app/views/shared/_menu.html.erb:
+3:   <% if user_signed_in? %>
+4:       <li><a id="admin" href= "#Administration">Administration</a>
+5:       <ul>
+6:         <li><%= link_to "Users", users_path %></li>
+7:         <li><%= link_to "Roles", roles_path %></li>
+8:       </ul>
+9:       </li>
+
+    app/views/shared/_menu.html.erb:6
+    app/views/layouts/application.html.erb:39
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/models/user.rb:4)

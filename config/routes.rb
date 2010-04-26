@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :roles
+
   map.devise_for :users, :path_names => { :sign_in => "login" , :sign_out => "logout" ,:sign_up => "register"}
 
   map.resources :name_relationships
