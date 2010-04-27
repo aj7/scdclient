@@ -11694,3 +11694,2203 @@ Migrating to CreateAssignments (20100427094557)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: relation "assignments" already exists
 : CREATE TABLE "assignments" ("id" serial primary key, "role_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
   [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 11:05:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ArgumentError (No association found for name `role'. Has it been defined yet?):
+  app/models/user.rb:8
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:233:in `initialize_resources_class_accessors!'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:261:in `send'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:261:in `inherited'
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100408134445)
+Migrating to CreateProducts (20100420104640)
+Migrating to CreateTaxonNames (20100421140905)
+Migrating to CreateNameRelationships (20100421141333)
+Migrating to CreateTaxonNameRelationships (20100421141432)
+Migrating to ActsAsTaggableOnMigration (20100421150747)
+Migrating to AddAuditsTable (20100421150842)
+Migrating to RerunCreateUsers (20100427085741)
+Migrating to CreateRoles (20100427094527)
+Migrating to CreateAssignments (20100427094557)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (60.0ms)[0m   [0;1mCREATE TABLE "assignments" ("id" serial primary key, "role_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100427094557')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 11:05:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+ArgumentError (No association found for name `role'. Has it been defined yet?):
+  app/models/user.rb:8
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:233:in `initialize_resources_class_accessors!'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:261:in `send'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/class_methods.rb:261:in `inherited'
+  app/controllers/users_controller.rb:1
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-27 11:07:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (No association found for name `role'. Has it been defined yet?) on line #1 of app/views/shared/_login.html.erb:
+1:   <% if current_user %>
+2: 	
+3:       Welcome <%= link_to  current_user.username, edit_user_path(:current),:class => "headerlink" %> ! |
+4:       <%= link_to "Logout", logout_path, :class => "headerlink" %>
+
+    app/models/user.rb:8
+    authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+    authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+    authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+    authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+    authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+    authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+    authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+    authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+    authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+    app/controllers/application_controller.rb:20:in `current_user_session'
+    app/controllers/application_controller.rb:25:in `current_user'
+    (eval):2:in `send'
+    (eval):2:in `current_user'
+    app/views/shared/_login.html.erb:1
+    app/views/layouts/application.html.erb:34
+
+Rendered rescues/_trace (119.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "description") VALUES(E'superuser', '2010-04-27 10:10:06.722415', '2010-04-27 10:10:06.722415', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-04-27 10:18:51.204227', '2010-04-27 10:18:51.204227', 1, 1) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-27 11:19:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:19:24.883008', "last_request_at" = '2010-04-27 10:19:24.882163' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (60.5ms)
+Rendered shared/_menu (0.7ms)
+Completed in 71ms (View: 68, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-27 11:19:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:19:28.156778', "last_request_at" = '2010-04-27 10:19:28.156094' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 34, DB: 3) | 200 OK [http://localhost/roles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 11:19:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (14.7ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:19:31.235165', "last_request_at" = '2010-04-27 10:19:31.234582' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 44ms (View: 35, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#create (for 127.0.0.1 at 2010-04-27 11:19:52) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "role"=>{"name"=>"administrator", "description"=>"This is the administrator of the system"}, "controller"=>"roles"}
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at", "description") VALUES(E'administrator', '2010-04-27 10:19:52.475018', '2010-04-27 10:19:52.475018', E'This is the administrator of the system') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/roles/2
+Completed in 96ms (DB: 1) | 302 Found [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#show (for 127.0.0.1 at 2010-04-27 11:19:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"roles"}
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering roles/show
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:19:52.545069', "last_request_at" = '2010-04-27 10:19:52.544376' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 31, DB: 2) | 200 OK [http://localhost/roles/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-27 11:19:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:19:54.838606', "last_request_at" = '2010-04-27 10:19:54.837999' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 32, DB: 3) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:20:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:20:00.909066', "last_request_at" = '2010-04-27 10:20:00.908423' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (8.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 26ms (View: 21, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 11:20:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+
+ActionView::TemplateError (undefined method `role' for #<User:0x103384150>) on line #11 of app/views/users/_form.html.erb:
+8:         <%= f.input :email %>
+9:         <%= f.input :password  %>
+10:         <%= f.input :password_confirmation, :as => :password %>
+11: 		<%= f.input :role , :as => :select, :collection => Role.find(:all) %>
+12:     <% end %>
+13: 
+14:     <%= f.buttons %>
+
+    formtastic (0.9.8) rails/./lib/formtastic.rb:748:in `select_input'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1186:in `send'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1186:in `inline_input_for'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:105:in `send'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:105:in `input'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:104:in `map'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:104:in `input'
+    app/views/users/_form.html.erb:11
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1269:in `field_set_and_list_wrapping'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:266:in `inputs'
+    app/views/users/_form.html.erb:6
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1703:in `semantic_form_for'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1681:in `with_custom_field_error_proc'
+    formtastic (0.9.8) rails/./lib/formtastic.rb:1702:in `semantic_form_for'
+    app/views/users/_form.html.erb:3
+    app/views/users/new.html.erb:3
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:19:in `new'
+
+Rendered rescues/_trace (60.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 11:21:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (18.9ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:21:53.344702', "last_request_at" = '2010-04-27 10:21:53.344095' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (7.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 33, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-27 11:22:58) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["2"], "username"=>"test1", "password"=>"[FILTERED]", "email"=>"test@test.com"}}
+  [4;36;1mRole Load (1.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = E'test@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = E'test1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = E'6296c9f3905a2e2d25f22e4438c111af60dc1b23e7034573a475b769f50f76b47b831f3c44784faf4f7b410784758064a6d175407354da57259c0b0d0021b59e') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:22:58.743716', "last_request_at" = '2010-04-27 10:22:58.743388' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "users" ("last_request_at", "created_at", "crypted_password", "updated_at", "username", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES(NULL, '2010-04-27 10:22:58.745017', E'77e903345c9aa72f19c90cfc1a235976336316c22d13b027d3ae3a0aa8d8b29128786fcf4f2800d22e6cff49ecce4b6585ca4cf907c7721668e77e7ff7e57c7b', '2010-04-27 10:22:58.745017', E'test1', 0, NULL, E'WAxXPolztzPfP0sf5XYY', NULL, E'6296c9f3905a2e2d25f22e4438c111af60dc1b23e7034573a475b769f50f76b47b831f3c44784faf4f7b410784758064a6d175407354da57259c0b0d0021b59e', 0, NULL, NULL, E'test@test.com') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-04-27 10:22:58.751623', '2010-04-27 10:22:58.751623', 2, 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed in 154ms (DB: 0) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:22:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+
+ActionView::MissingTemplate (Missing template users/show.erb in view path app/views):
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:13:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:28:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:28:08.287211', "last_request_at" = '2010-04-27 10:28:08.286468' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (8.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 24ms (View: 20, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:28:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mRole Load (0.9ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2)) [0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #15 of app/views/users/show.html.erb:
+12:   <strong>Roles</strong>
+13: 
+14:   <% for role in @user.roles %>
+15:     <%=h @role.name %>
+16:   <% end %>
+17:   
+18: </p>
+
+    app/views/users/show.html.erb:15
+    app/views/users/show.html.erb:14
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:13:in `show'
+
+Rendered rescues/_trace (50.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = E'test1') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-04-27 11:45:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+SyntaxError (/Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/controllers/users_controller.rb:19: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (92.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 11:45:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (0.7ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (87.8ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:45:50.840759', "last_request_at" = '2010-04-27 10:45:50.839660' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (54.5ms)
+Rendered shared/_menu (0.9ms)
+Completed in 172ms (View: 166, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-27 11:46:07) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["2"], "username"=>"test2", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:15:in `create'
+
+Rendered rescues/_trace (54.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-27 11:48:09) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["2"], "username"=>"test2", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = E'test2@test.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = E'test2') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = E'11003bd9e2d7fdc8723177bcd7357acf6eaa32c73c709eeb70e3927e3b891aba2265e2364993d3d347f763cae076792db1af4220842801390e9e1450464497d5') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendered users/_form (16.4ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:48:09.753072', "last_request_at" = '2010-04-27 10:48:09.752202' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (10.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 237ms (View: 33, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-27 11:48:16) [POST]
+  Parameters: {"commit"=>"Create User", "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["2"], "username"=>"test2", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = E'test2@test.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = E'test2') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = E'10eda60b1467e898f314510ec67c49890c78bd569ee393db6eddd623af00e12b7854894475dfa864fb78b7ec56076d0eebd7c83e034ab7fb8fde797b03d82600') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:48:16.813048', "last_request_at" = '2010-04-27 10:48:16.812459' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "users" ("last_request_at", "created_at", "crypted_password", "updated_at", "username", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES(NULL, '2010-04-27 10:48:16.815377', E'845fd56707b4ec658e7efeb88524e87948df12d6bf33ee646dcb991add76ddd2e81366fcc9dc7f04b148275a1f7456d2cf578f77365792027d4d627f55e83a27', '2010-04-27 10:48:16.815377', E'test2', 0, NULL, E'QLa1dw_F1z4Ymu1M1rW2', NULL, E'10eda60b1467e898f314510ec67c49890c78bd569ee393db6eddd623af00e12b7854894475dfa864fb78b7ec56076d0eebd7c83e034ab7fb8fde797b03d82600', 0, NULL, NULL, E'test2@test.com') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-04-27 10:48:16.825663', '2010-04-27 10:48:16.825663', 2, 3) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed in 119ms (DB: 0) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:48:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mRole Load (0.9ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #15 of app/views/users/show.html.erb:
+12:   <strong>Roles</strong>
+13: 
+14:   <% for role in @user.roles %>
+15:     <%=h @role.name %>
+16:   <% end %>
+17:   
+18: </p>
+
+    app/views/users/show.html.erb:15
+    app/views/users/show.html.erb:14
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:13:in `show'
+
+Rendered rescues/_trace (64.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:49:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:49:23.625179', "last_request_at" = '2010-04-27 10:49:23.542413' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (93.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 113ms (View: 107, DB: 3) | 200 OK [http://localhost/users/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 11:50:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/wikimedia-button.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:50:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:50:10.179035', "last_request_at" = '2010-04-27 10:50:10.178301' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.3ms)
+Completed in 104ms (View: 98, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:50:14) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:54:59.625441', "last_request_at" = '2010-04-27 10:54:59.624698' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 285276ms (View: 285270, DB: 4) | 200 OK [http://localhost/users/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:55:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:55:06.942572', "last_request_at" = '2010-04-27 10:55:06.941852' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 30ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:55:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:55:13.793990', "last_request_at" = '2010-04-27 10:55:13.793277' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 3385ms (View: 3380, DB: 3) | 200 OK [http://localhost/users/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:57:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:21.725521', "last_request_at" = '2010-04-27 10:57:21.724715' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 30ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:57:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mRole Load (0.9ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:23.986423', "last_request_at" = '2010-04-27 10:57:23.985728' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 33, DB: 3) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 11:57:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:26.546339', "last_request_at" = '2010-04-27 10:57:26.545620' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 31ms (View: 26, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:57:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRole Load (0.8ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:28.246532', "last_request_at" = '2010-04-27 10:57:28.245764' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 104ms (View: 31, DB: 3) | 200 OK [http://localhost/users/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-27 11:57:31) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+Rendered users/_form (89.9ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:31.185764', "last_request_at" = '2010-04-27 10:57:31.185033' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 114ms (View: 108, DB: 3) | 200 OK [http://localhost/users/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-04-27 11:57:36) [PUT]
+  Parameters: {"commit"=>"Update User", "action"=>"update", "_method"=>"put", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "id"=>"3", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["1"], "username"=>"test2", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssignment Delete all (0.2ms)[0m   [0;1mDELETE FROM "assignments" WHERE ("assignments"."role_id" = 2 AND "assignments"."user_id" = 3) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-04-27 10:57:36.776809', '2010-04-27 10:57:36.776809', 1, 3) RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed in 98ms (DB: 0) | 302 Found [http://localhost/users/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:57:36) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mRole Load (0.9ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:36.941968', "last_request_at" = '2010-04-27 10:57:36.941061' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 37ms (View: 30, DB: 3) | 200 OK [http://localhost/users/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-04-27 11:57:49) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+Rendered users/_form (21.8ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:49.522150', "last_request_at" = '2010-04-27 10:57:49.521439' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 36, DB: 3) | 200 OK [http://localhost/users/3/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-04-27 11:57:57) [PUT]
+  Parameters: {"commit"=>"Update User", "action"=>"update", "_method"=>"put", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "id"=>"3", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "role_ids"=>["1", "2"], "username"=>"test2", "password"=>"[FILTERED]", "email"=>"test2@test.com"}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" IN (1,2)) [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-04-27 10:57:57.022732', '2010-04-27 10:57:57.022732', 2, 3) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/users/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-27 11:57:57) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mRole Load (0.8ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 3)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 10:57:57.113923', "last_request_at" = '2010-04-27 10:57:57.113209' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (9.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 35ms (View: 29, DB: 3) | 200 OK [http://localhost/users/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-27 12:07:49) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 11:07:50.003496', "last_request_at" = '2010-04-27 11:07:50.002882' WHERE "id" = 1[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 38ms (DB: 3) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-27 12:07:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (15.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 35ms (View: 33, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#show (for 127.0.0.1 at 2010-04-27 12:08:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"taxon_names"}
+  [4;36;1mTaxonName Load (1.5ms)[0m   [0;1mSELECT * FROM "taxon_names" WHERE ("taxon_names"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/models/ability.rb:6:in `role?'
+  app/models/ability.rb:6:in `initialize'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:170:in `new'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:170:in `current_ability'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:194:in `cannot?'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:151:in `authorize!'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:33:in `authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:19:in `load_and_authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `send'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `add_before_filter'
+
+Rendered rescues/_trace (49.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-04-27 12:08:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/models/ability.rb:6:in `role?'
+  app/models/ability.rb:6:in `initialize'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:170:in `new'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:170:in `current_ability'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:194:in `cannot?'
+  cancan (1.1.1) lib/cancan/controller_additions.rb:151:in `authorize!'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:33:in `authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:19:in `load_and_authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `send'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `add_before_filter'
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mRole Load (1.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (8.4ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mRole Load (0.9ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mPGError: ERROR: column "superuser" does not exist
+LINE 1: ... WHERE (("assignments".user_id = 1) AND (name =superuser)...
+ ^
+: SELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name =superuser)) LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mPGError: ERROR: column "superuser" does not exist
+LINE 1: ... WHERE (("assignments".user_id = 1) AND (name =superuser)...
+ ^
+: SELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name =superuser)) LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mPGError: ERROR: column "superuser" does not exist
+LINE 1: ... WHERE (("assignments".user_id = 1) AND (name =superuser)...
+ ^
+: SELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name =superuser)) LIMIT 1[0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (1.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "assignments" ON "users".id = "assignments".user_id WHERE (("assignments".role_id = 1)) [0m
+  [4;35;1mRole Load (1.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name= E'superuser')) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (1.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-27 12:56:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (22.1ms)
+Rendered shared/_menu (1.2ms)
+Completed in 120ms (View: 118, DB: 0) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-27 12:56:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_login (1.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 33ms (View: 17, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-27 12:57:07) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"ackbarj", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"0mUFNqq2QY4bKOip5d09SeipxZMw0jrcs4Leg/MEOdI=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = E'ackbarj') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "login_count" = 3, "updated_at" = '2010-04-27 11:57:08.024791', "last_request_at" = '2010-04-27 11:57:08.023310', "last_login_at" = '2010-04-27 09:25:57.235701', "current_login_at" = '2010-04-27 11:57:08.004591' WHERE "id" = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 247ms (DB: 3) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-27 12:57:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 11:57:08.157084', "last_request_at" = '2010-04-27 11:57:08.156183' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (28.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 38ms (View: 34, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 12:57:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 11:57:12.110446', "last_request_at" = '2010-04-27 11:57:12.109702' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 104ms (View: 99, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 12:57:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (94.7ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 11:57:20.273301', "last_request_at" = '2010-04-27 11:57:20.272555' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 122ms (View: 117, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:00:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (24.3ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:00:23.316451', "last_request_at" = '2010-04-27 12:00:23.315701' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (84.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 123ms (View: 117, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:00:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.5ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:00:26.826938', "last_request_at" = '2010-04-27 12:00:26.753095' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (83.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 110, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:01:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.6ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:01:47.784305', "last_request_at" = '2010-04-27 12:01:47.783577' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (79.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 117ms (View: 111, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:01:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.3ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:01:49.665527', "last_request_at" = '2010-04-27 12:01:49.664721' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:01:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.4ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:01:51.112184', "last_request_at" = '2010-04-27 12:01:51.111467' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:02:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.4ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:02:20.799570', "last_request_at" = '2010-04-27 12:02:20.798827' WHERE "id" = 1[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (57.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 93ms (View: 41, DB: 49) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:02:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.2ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:02:25.423155', "last_request_at" = '2010-04-27 12:02:25.422406' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 35, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:02:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.9ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:02:58.321541', "last_request_at" = '2010-04-27 12:02:58.320769' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 47ms (View: 42, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:02:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.4ms)
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:02:59.978096', "last_request_at" = '2010-04-27 12:02:59.977360' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 36, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:03:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.7ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:03:01.275141', "last_request_at" = '2010-04-27 12:03:01.274148' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 43ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (1.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:03:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (26.6ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:03:01.944043', "last_request_at" = '2010-04-27 12:03:01.943226' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 47ms (View: 41, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:03:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (98.1ms)
+  [4;35;1mUser Load (2.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:03:02.117635', "last_request_at" = '2010-04-27 12:03:02.110088' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (25.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 134ms (View: 126, DB: 5) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:03:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.5ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:03:02.280713', "last_request_at" = '2010-04-27 12:03:02.279966' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (80.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 113ms (View: 108, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:03:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.3ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:03:54.807668', "last_request_at" = '2010-04-27 12:03:54.806935' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (81.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 117ms (View: 111, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:04:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (24.9ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:04:09.542831', "last_request_at" = '2010-04-27 12:04:09.541903' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (79.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 118ms (View: 112, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:04:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (14.2ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:04:19.846452', "last_request_at" = '2010-04-27 12:04:19.845634' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (80.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 120ms (View: 109, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:12:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.7ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (24.7ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:12:37.596107', "last_request_at" = '2010-04-27 12:12:37.594753' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (90.8ms)
+Rendered shared/_menu (0.3ms)
+Completed in 135ms (View: 127, DB: 5) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:12:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (15.3ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:12:41.652717', "last_request_at" = '2010-04-27 12:12:41.651959' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (79.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 105, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:13:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.6ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:13:45.589246', "last_request_at" = '2010-04-27 12:13:45.588483' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 44ms (View: 38, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:13:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (15.1ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:13:48.384535', "last_request_at" = '2010-04-27 12:13:48.383756' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (13.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 45ms (View: 34, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:17:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.0ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:17:12.104338', "last_request_at" = '2010-04-27 12:17:12.103632' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 43ms (View: 38, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:17:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.7ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:17:40.529593', "last_request_at" = '2010-04-27 12:17:40.528897' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:17:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.2ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:17:40.689200', "last_request_at" = '2010-04-27 12:17:40.688342' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:17:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (82.4ms)
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:17:47.386050', "last_request_at" = '2010-04-27 12:17:47.385233' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (14.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 103, DB: 3) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:17:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (84.3ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:17:55.114695', "last_request_at" = '2010-04-27 12:17:55.113934' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (12.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 114ms (View: 103, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:18:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (94.2ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:18:16.767385', "last_request_at" = '2010-04-27 12:18:16.766616' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 117ms (View: 112, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:18:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (80.3ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:18:20.656059', "last_request_at" = '2010-04-27 12:18:20.655293' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (12.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 109ms (View: 99, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 13:19:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.8ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (93.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:19:22.536804', "last_request_at" = '2010-04-27 12:19:22.536010' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 110, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 13:19:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (85.6ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 12:19:26.151339', "last_request_at" = '2010-04-27 12:19:26.150473' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (13.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 117ms (View: 106, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:16:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.7ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:16:49.393195', "last_request_at" = '2010-04-27 13:16:49.316234' WHERE "id" = 1[0m
+  [4;36;1mSQL (74.9ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (160.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 195ms (View: 115, DB: 77) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 14:16:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (15.8ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:16:56.809285', "last_request_at" = '2010-04-27 13:16:56.808490' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (78.3ms)
+Rendered shared/_menu (0.3ms)
+Completed in 112ms (View: 101, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:20:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.5ms)
+Rendered shared/_modal (0.4ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:20:58.842574', "last_request_at" = '2010-04-27 13:20:58.841866' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.1ms)
+Rendered shared/_menu (0.4ms)
+Completed in 120ms (View: 115, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:21:04) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.7ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:21:04.312941', "last_request_at" = '2010-04-27 13:21:04.312212' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 36, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:21:08) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.2ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:21:08.098024', "last_request_at" = '2010-04-27 13:21:08.097317' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 36, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:22:28) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.3ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:22:28.616122', "last_request_at" = '2010-04-27 13:22:28.615373' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 46ms (View: 40, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:22:40) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.4ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:22:40.046215', "last_request_at" = '2010-04-27 13:22:40.045473' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:27:30) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.7ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:27:30.360521', "last_request_at" = '2010-04-27 13:27:30.359785' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (13.1ms)
+Rendered shared/_menu (0.2ms)
+Completed in 48ms (View: 43, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:27:32) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.9ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.8ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:27:32.098004', "last_request_at" = '2010-04-27 13:27:32.097275' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 43ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:28:09) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.6ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:28:09.699270', "last_request_at" = '2010-04-27 13:28:09.698537' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 43ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:28:11) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.3ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:28:11.731360', "last_request_at" = '2010-04-27 13:28:11.730549' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 37, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:34:12) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.4ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:34:12.148570', "last_request_at" = '2010-04-27 13:34:12.147783' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 38, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (12.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:34:40) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (90.9ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:34:40.627217', "last_request_at" = '2010-04-27 13:34:40.626365' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 113ms (View: 107, DB: 15) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:49:07) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (93.2ms)
+Rendered shared/_modal (0.2ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:49:07.531519', "last_request_at" = '2010-04-27 13:49:07.530717' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 122ms (View: 115, DB: 5) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:49:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/images/ui-bg_flat_50_5c5c5c_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:49:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/images/ui-bg_highlight-soft_33_003147_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:50:25) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.7ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:50:25.788733', "last_request_at" = '2010-04-27 13:50:25.788024' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 36, DB: 3) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:50:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/dark-hive/images/ui-bg_flat_50_5c5c5c_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:51:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/images/ui-bg_highlight-soft_33_003147_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:51:11) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (3.4ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (14.3ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (49.1ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:51:11.588386', "last_request_at" = '2010-04-27 13:51:11.587578' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 142ms (View: 120, DB: 20) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/dark-hive/ui-bg_flat_50_5c5c5c_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 14:51:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/dark-hive/images/ui-bg_highlight-soft_33_003147_1x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 14:57:04) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (24.9ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 13:57:04.906963', "last_request_at" = '2010-04-27 13:57:04.906157' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 47ms (View: 41, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:08:13) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.2ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:08:13.264646', "last_request_at" = '2010-04-27 14:08:13.263855' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (12.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 55ms (View: 47, DB: 5) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:18:02) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (25.3ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:18:02.902970', "last_request_at" = '2010-04-27 14:18:02.902217' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 53ms (View: 46, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:18:10) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.1ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:18:10.455084', "last_request_at" = '2010-04-27 14:18:10.454293' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 46ms (View: 39, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:18:44) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.4ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:18:44.496674', "last_request_at" = '2010-04-27 14:18:44.495936' WHERE "id" = 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 45ms (View: 39, DB: 4) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:19:48) [GET]
+  Parameters: {"action"=>"new", "id"=>"new_user", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.2ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:19:48.069590', "last_request_at" = '2010-04-27 14:19:48.068837' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 46ms (View: 39, DB: 5) | 200 OK [http://localhost/users/new?id=new_user]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 15:20:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (16.0ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:20:00.351119', "last_request_at" = '2010-04-27 14:20:00.350109' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (12.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 50ms (View: 39, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-27 15:20:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 14:20:03.426962', "last_request_at" = '2010-04-27 14:20:03.426235' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (12.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 55ms (View: 46, DB: 3) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-04-27 15:23:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (9.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:23:34.305778', "last_request_at" = '2010-04-27 14:23:34.304870' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 49ms (View: 32, DB: 11) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:23:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (102.7ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:23:36.630313', "last_request_at" = '2010-04-27 14:23:36.628983' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 126ms (View: 120, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:23:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.4ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:23:43.459398', "last_request_at" = '2010-04-27 14:23:43.458479' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (96.4ms)
+Rendered shared/_menu (0.3ms)
+Completed in 131ms (View: 125, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:25:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.2ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:25:21.201126', "last_request_at" = '2010-04-27 14:25:21.200366' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 118ms (View: 111, DB: 4) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:25:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (26.6ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:25:21.806789', "last_request_at" = '2010-04-27 14:25:21.805791' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (103.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 143ms (View: 137, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:25:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (24.9ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:25:38.554097', "last_request_at" = '2010-04-27 14:25:38.553381' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (9.6ms)
+Rendered shared/_menu (0.3ms)
+Completed in 50ms (View: 44, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:29:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.7ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (21.9ms)
+Rendered shared/_modal (0.1ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:29:15.427363', "last_request_at" = '2010-04-27 14:29:15.426624' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (10.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 47ms (View: 41, DB: 3) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:33:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (23.2ms)
+Rendered shared/_modal (0.3ms)
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:33:36.553892', "last_request_at" = '2010-04-27 14:33:36.553009' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (13.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 54ms (View: 46, DB: 5) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-27 15:34:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL)) [0m
+Rendered users/_form (22.1ms)
+Rendered shared/_modal (0.3ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:34:34.769049', "last_request_at" = '2010-04-27 14:34:34.768223' WHERE "id" = 1[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (11.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 46ms (View: 39, DB: 5) | 200 OK [http://localhost/users/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 15:34:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (19.4ms)
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:34:54.160523', "last_request_at" = '2010-04-27 14:34:54.159794' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (12.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 53ms (View: 38, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-27 15:34:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 14:34:58.009035', "last_request_at" = '2010-04-27 14:34:58.008282' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (12.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 47ms (View: 39, DB: 4) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#new (for 127.0.0.1 at 2010-04-27 15:35:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"roles"}
+Rendering template within layouts/application
+Rendering roles/new
+Rendered roles/_form (17.0ms)
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-04-27 14:35:02.165476', "last_request_at" = '2010-04-27 14:35:02.164729' WHERE "id" = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (12.9ms)
+Rendered shared/_menu (0.2ms)
+Completed in 49ms (View: 37, DB: 2) | 200 OK [http://localhost/roles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-04-27 15:35:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;36;1mRole Load (1.3ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'1') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-04-27 14:35:05.440456', "last_request_at" = '2010-04-27 14:35:05.438749' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (22.4ms)
+Rendered shared/_menu (0.5ms)
+Completed in 60ms (View: 50, DB: 5) | 200 OK [http://localhost/roles]

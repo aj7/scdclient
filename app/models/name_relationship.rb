@@ -3,7 +3,6 @@ class NameRelationship < ActiveRecord::Base
   ###
   ### gems
   ###
-
   acts_as_taggable_on :taxon_name_relationship_type
 
 

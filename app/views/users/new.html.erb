@@ -1,4 +1,8 @@
 <% title "Register" %>
-
   <%= render :partial => 'form' %>
+
+<%= link_to "Add a new user","#", :id => 'new_user'%> <br />
+<%= link_to "Add a new role","#", :id => 'new_role'%>
+
+<div id="user_dialog"  title="Add new user"><%= render :partial => "shared/modal" %></div>
 
