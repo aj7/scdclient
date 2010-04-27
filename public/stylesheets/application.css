@@ -1,5 +1,4 @@
 body {
-
     background: #cedce9 url(../images/backgd1.jpg);
     /*cedce9*/
     background-repeat: repeat-x;
@@ -14,7 +13,7 @@ a img {
     border: none;
 }
 
-a {
+a.headerlink {
     color: #C8BDA1;
 }
 
