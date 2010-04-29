@@ -210,6 +210,10 @@ $(document).ready(function() {
 
     });
 
+    //setting tablesorter
+//$('.tablesorter').tablesorter();
+    $('.tableformat').colorize({altColor:'#ECF6FC' ,bgColor:'#EAF6CC', hoverColor:'green', hiliteColor:'red',oneClick:'true'});
+
     $('#click').click(function(){
 
         // Create a new notification (5 second timeout)

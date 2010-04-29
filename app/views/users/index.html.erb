@@ -1,21 +1,31 @@
 <% title "Users list" %>
-
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Email</th>
-
-  </tr>
+<div class="span-16 colborder">
+<table class="tableformat">
+  <thead>
+	<tr>
+		<th>Username</th>
+		<th>Email</th>
+		<th>Role</th>
+	</tr>
+  </thead>
+  <tbody>
   <% for user in @users %>
-    <tr>
-      <td><%=h user.username %></td>
-      <td><%=h user.email %></td>
-
-      <td><%= link_to "Show", user %></td>
-      <td><%= link_to "Edit", edit_user_path(user) %></td>
-      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+      <tr>
+        <td><%=h user.username %></td>
+        <td><%=h user.email %></td>
+		<td><% user.roles.each do |role| %>
+			<%=h role.name %>
+			<% end %>
+		</td>        
+		<td><%= link_to "Show", user %></td>
+        <td><%= link_to "Edit", edit_user_path(user) %></td>
+        <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
   <% end %>
+  </tbody>
 </table>
-
-<p><%= link_to "New User", new_user_path %></p>
+</div>
+<div class="span-6 last">
+	<br />
+	<%= link_to "New User", new_user_path %>
+</div>
