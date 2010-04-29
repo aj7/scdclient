@@ -16,7 +16,7 @@
                               'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js',
                               'cmxforms','jquery.easing.1.3','jquery.lavalamp-1.3.4b2','hoverIntent',
                               'jquery.bgiframe.min','supersubs','superfish','jquery.jgrowl_compressed',
-                              'jquery.livequery', 'ui.achtung-min',
+                              'jquery.livequery', 'ui.achtung-min', 'jquery.form',
                               'application' %>
 
   <%= stylesheet_link_tag  'cmxform','superfish','jquery.jgrowl','formtastic','formtastic_changes',
@@ -24,19 +24,19 @@
                            'application' %>
 
   <%= yield(:head) %>
+
 </head>
 <body>
 <div class="header">
   <div class="container">
 
     <div id="header">
-      <div id="user_nav">
-        <%= render :partial => "shared/login" %>
-      </div>
-      <%= link_to image_tag("bannerinfo1.png"), home_path %>
-      <br />
-      <%= render :partial => "shared/menu" %>
-    </div>
+	<div id="user_nav">
+		<%= render :partial => "shared/login" %>
+	</div><%= link_to image_tag("bannerinfo1.png"), home_path %><br>
+	<%= render :partial => "shared/menu" %>
+</div>
+
   </div>
 </div>
 <div class="wrap">
@@ -46,7 +46,9 @@
       <div class="content_container">
 
         <%- flash.each do |name, msg| -%>
-            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <%#= content_tag :div, msg, :id => "flash_#{name}" %>
+			<%#= javascript_tag "alert('The message: #{msg}')" %>
+			<%= javascript_tag "growlMe('#{msg}')" %>
         <%- end -%>
 
         <%- if show_title? -%>

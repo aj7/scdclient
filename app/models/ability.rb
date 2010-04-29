@@ -10,7 +10,8 @@ class Ability
             can :create, User
             can :update, User
            end
-           can :read, :all  
+           can :read, :all 
+             
          end
    end
  end

@@ -1,0 +1,3 @@
+<%= f.label :role %><br />
+<%= select_tag(f, options_from_collection_for_select(Role.find(:all), :id, :name), :multiple => true)  %>
+<%#= f.collection_select(role, @roles, :id, :name, {:prompt => true}) %>

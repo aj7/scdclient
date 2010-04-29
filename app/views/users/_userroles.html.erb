@@ -1,0 +1,4 @@
+ <%#= f.fields_for :roles do |r| %>
+  <label>Role:</label><br />
+  <%= select :user,:role_ids, Role.find(:all).collect{|p| [p.name, p.id]}, :prompt => 'Select the role' %>
+    <%#= select_tag 'user[role_ids][]', options_for_select(Role.find(:all).collect{|p| [p.name, p.id]}), {:multiple => true, :size => 3  }  %>

@@ -11,7 +11,7 @@
 <p>
   <strong>Roles</strong>
 	<% @user.roles.each do |role| %>
-		 <%=h role.name %> ,
+		 <%=h role.name %>
 	<% end %>
   
 </p>
@@ -21,3 +21,4 @@
   <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", users_path %>
 </p>
+
