@@ -50,7 +50,8 @@
         <%- flash.each do |name, msg| -%>
             <%#= content_tag :div, msg, :id => "flash_#{name}" %>
 			<%#= javascript_tag "alert('The message: #{msg}')" %>
-			<%= javascript_tag "growlMe('#{msg}')" %>
+			<%= javascript_tag "growlMe('#{msg}','#{name}')" %>
+            <% flash.delete(name) %>
         <%- end -%>
 
         <%- if show_title? -%>

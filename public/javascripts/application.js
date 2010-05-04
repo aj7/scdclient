@@ -2,15 +2,15 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 /*
-Jquery and Rails powered default application.js
-Easy Ajax replacement for remote_functions and ajax_form based on class name
-All actions will reply to the .js format
-Unostrusive, will only works if Javascript enabled, if not, respond to an HTML as a normal link
-respond_to do |format|
-format.html
-format.js {render :layout => false}
-end
-*/
+ Jquery and Rails powered default application.js
+ Easy Ajax replacement for remote_functions and ajax_form based on class name
+ All actions will reply to the .js format
+ Unostrusive, will only works if Javascript enabled, if not, respond to an HTML as a normal link
+ respond_to do |format|
+ format.html
+ format.js {render :layout => false}
+ end
+ */
 
 jQuery.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")} })
 
@@ -38,10 +38,10 @@ jQuery.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "
 // });
 
 /*
-Submit a form with Ajax
-Use the class ajaxForm in your form declaration
-<% form_for @comment,:html => {:class => "ajaxForm"} do |f| -%>
-*/
+ Submit a form with Ajax
+ Use the class ajaxForm in your form declaration
+ <% form_for @comment,:html => {:class => "ajaxForm"} do |f| -%>
+ */
 // jQuery.fn.submitWithAjax = function() {
 //   this.unbind('submit', false);
 //   this.submit(function() {
@@ -53,10 +53,10 @@ Use the class ajaxForm in your form declaration
 // };
 
 /*
-Retreive a page with get
-Use the class get in your link declaration
-<%= link_to 'My link', my_path(),:class => "get" %>
-*/
+ Retreive a page with get
+ Use the class get in your link declaration
+ <%= link_to 'My link', my_path(),:class => "get" %>
+ */
 // jQuery.fn.getWithAjax = function() {
 //   this.unbind('click', false);
 //   this.click(function() {
@@ -67,10 +67,10 @@ Use the class get in your link declaration
 // };
 
 /*
-Post data via html
-Use the class post in your link declaration
-<%= link_to 'My link', my_new_path(),:class => "post" %>
-*/
+ Post data via html
+ Use the class post in your link declaration
+ <%= link_to 'My link', my_new_path(),:class => "post" %>
+ */
 // jQuery.fn.postWithAjax = function() {
 //   this.unbind('click', false);
 //   this.click(function() {
@@ -81,10 +81,10 @@ Use the class post in your link declaration
 // };
 
 /*
-Update/Put data via html
-Use the class put in your link declaration
-<%= link_to 'My link', my_update_path(data),:class => "put",:method => :put %>
-*/
+ Update/Put data via html
+ Use the class put in your link declaration
+ <%= link_to 'My link', my_update_path(data),:class => "put",:method => :put %>
+ */
 // jQuery.fn.putWithAjax = function() {
 //   this.unbind('click', false);
 //   this.click(function() {
@@ -95,10 +95,10 @@ Use the class put in your link declaration
 // };
 
 /*
-Delete data
-Use the class delete in your link declaration
-<%= link_to 'My link', my_destroy_path(data),:class => "delete",:method => :delete %>
-*/
+ Delete data
+ Use the class delete in your link declaration
+ <%= link_to 'My link', my_destroy_path(data),:class => "delete",:method => :delete %>
+ */
 // jQuery.fn.deleteWithAjax = function() {
 //   this.removeAttr('onclick');
 //   this.unbind('click', false);
@@ -110,9 +110,9 @@ Use the class delete in your link declaration
 // };
 
 /*
-Ajaxify all the links on the page.
-This function is called when the page is loaded. You'll probaly need to call it again when you write render new datas that need to be ajaxyfied.'
-*/
+ Ajaxify all the links on the page.
+ This function is called when the page is loaded. You'll probaly need to call it again when you write render new datas that need to be ajaxyfied.'
+ */
 // function ajaxLinks(){
 //     $('.ajaxForm').submitWithAjax();
 //     $('a.get').getWithAjax();
@@ -140,29 +140,36 @@ function initialiseNewRoleDialog()
     });
 
     //clicking on the new_role link will cause modal dialog to pop up
-	
-	$('#new_role_link').livequery(function() {
-		$(this).click(function(){	
-			$('#role_dialog').dialog("open");
-		});
-		//$('#add_new_role_form')[0].reset();
-	});
+
+    $('#new_role_link').livequery(function() {
+        $(this).click(function(){
+            $('#role_dialog').dialog("open");
+        });
+        //$('#add_new_role_form')[0].reset();
+    });
 
 }
 
 //function for outputting messages as Growl-style
-function growlMe(output)
+function growlMe(output,notice_type)
 {
-	  // Create a new notification (5 second timeout)
-        noticeid = $.achtung({
-            message: output,
-            timeout:2});
-	
+    // Create a new notification (5 second timeout)
+
+    var theclass = 'achtungSuccess';
+    if (notice_type == 'error')
+     theclass = 'achtungFail';
+
+    noticeid = $.achtung({
+        className: theclass ,
+        message: output,
+        timeout:2
+    });
+
 }
 
 function savingNewRoleDialog()
 {
-     var options = {
+    var options = {
         //target:        '#output1',   // target element(s) to be updated with server response
         //beforeSubmit:  showRequest,  // pre-submit callback
         success:       showResponse,  // post-submit callback
@@ -178,23 +185,23 @@ function savingNewRoleDialog()
         //timeout:   3000
     };
     // bind 'myForm' and provide a simple callback function
-    $('#add_new_role_form').ajaxForm(options); 
+    $('#add_new_role_form').ajaxForm(options);
 
-	function showResponse(responseText, statusText, xhr, $form)  { 
-	    // for normal html responses, the first argument to the success callback 
-	    // is the XMLHttpRequest object's responseText property 
+    function showResponse(responseText, statusText, xhr, $form)  {
+        // for normal html responses, the first argument to the success callback
+        // is the XMLHttpRequest object's responseText property
 
-	    // if the ajaxForm method was passed an Options Object with the dataType 
-	    // property set to 'xml' then the first argument to the success callback 
-	    // is the XMLHttpRequest object's responseXML property 
+        // if the ajaxForm method was passed an Options Object with the dataType
+        // property set to 'xml' then the first argument to the success callback
+        // is the XMLHttpRequest object's responseXML property
 
-	    // if the ajaxForm method was passed an Options Object with the dataType 
-	    // property set to 'json' then the first argument to the success callback 
-	    // is the json data object returned by the server 
-		growlMe('New role inserted');
-	    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText + 
-	     //   '\n\nThe output div should have already been updated with the responseText.'); 
-	}
+        // if the ajaxForm method was passed an Options Object with the dataType
+        // property set to 'json' then the first argument to the success callback
+        // is the json data object returned by the server
+        growlMe('New role inserted');
+        //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+        //   '\n\nThe output div should have already been updated with the responseText.');
+    }
 }
 
 //DOM STARTS HERE
@@ -211,7 +218,7 @@ $(document).ready(function() {
     });
 
     //setting tablesorter
-//$('.tablesorter').tablesorter();
+    //$('.tablesorter').tablesorter();
     $('.tableformat').colorize({altColor:'#ECF6FC' ,bgColor:'#EAF6CC', hoverColor:'green', hiliteColor:'red',oneClick:'true'});
 
     $('#click').click(function(){
@@ -220,7 +227,7 @@ $(document).ready(function() {
         // noticeid = $.achtung({
         //          message: 'title',
         //          timeout:3})
-		growlMe('Test me for all that you want. I want to try a bigger paragraph.');
+        growlMe('Test me for all that you want. I want to try a bigger paragraph.');
     });
 
     $('#changecolor').click(function()

@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
 
   filter_parameter_logging :password
 
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access denied!"
+    redirect_to root_url
+  end 
+
   helper_method :current_user
 
   private

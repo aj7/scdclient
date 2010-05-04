@@ -13,20 +13,24 @@
     <th>Infra Epithet</th>
   </tr>
   <% for taxon_name in @taxon_names %>
-    <tr>
-      <td><%=h taxon_name.scientific_name %></td>
-      <td><%=h taxon_name.basionym_authorship %></td>
-      <td><%=h taxon_name.authorship_year %></td>
-      <td><%=h taxon_name.basionym_id %></td>
-      <td><%=h taxon_name.is_usable %></td>
-      <td><%=h taxon_name.alternative_authorship_year %></td>
-      <td><%=h taxon_name.genus_part %></td>
-      <td><%=h taxon_name.epithet %></td>
-      <td><%=h taxon_name.infra_epithet %></td>
-      <td><%= link_to "Show", taxon_name %></td>
-      <td><%= link_to "Edit", edit_taxon_name_path(taxon_name) %></td>
-      <td><%= link_to "Destroy", taxon_name, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+      <tr>
+        <td><%=h taxon_name.scientific_name %></td>
+        <td><%=h taxon_name.basionym_authorship %></td>
+        <td><%=h taxon_name.authorship_year %></td>
+        <td><%=h taxon_name.basionym_id %></td>
+        <td><%=h taxon_name.is_usable %></td>
+        <td><%=h taxon_name.alternative_authorship_year %></td>
+        <td><%=h taxon_name.genus_part %></td>
+        <td><%=h taxon_name.epithet %></td>
+        <td><%=h taxon_name.infra_epithet %></td>
+        <td><%= link_to "Show", taxon_name %></td>
+        <% if can? :update, taxon_name %>
+            <td><%= link_to "Edit", edit_taxon_name_path(taxon_name) %></td>
+        <% end -%>
+        <% if can? :destroy, taxon_name %>
+            <td><%= link_to "Destroy", taxon_name, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end -%>
+      </tr>
   <% end %>
 </table>
 

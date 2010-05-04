@@ -12,55 +12,55 @@
   <component name="GemRequirementsHolder" version="2">
     <requirement>
       <requirement>
-        <dependency name="acts-as-taggable-on" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="acts-as-taggable-on" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="acts_as_audited" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="acts_as_audited" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="cancan" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="cancan" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="formtastic" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="formtastic" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="inherited_resources" version="1.0.6" bound="EQUAL" />
+        <dependency name="inherited_resources" version="1.0.6" bound="EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/database.yml" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/boot.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="validation_reflection" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="validation_reflection" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>

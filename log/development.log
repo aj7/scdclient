@@ -27917,3 +27917,1297 @@ Rendering users/index
 Rendered shared/_login (9.7ms)
 Rendered shared/_menu (0.2ms)
 Completed in 118ms (View: 111, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 14:47:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (59.6ms)
+Rendered shared/_menu (23.1ms)
+Completed in 194ms (View: 192, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 14:47:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (5.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (2.0ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+ERROR: compiling _run_erb_app47views47taxon_names47index46html46erb RAISED compile error
+/Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/views/taxon_names/index.html.erb:27: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+... if can? :update, taxon_name ).to_s); @output_buffer.concat ...
+                              ^
+/Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/views/taxon_names/index.html.erb:37: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47taxon_names47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "Taxon Names" ; @output_buffer.concat "\n\n<table>\n  <tr>\n    <th>Scientific Name</th>\n    <th>Basionym Authorship</th>\n    <th>Authorship Year</th>\n    <th>Basionym</th>\n    <th>Is Usable</th>\n    <th>Alternative Authorship Year</th>\n    <th>Genus Part</th>\n    <th>Epithet</th>\n    <th>Infra Epithet</th>\n  </tr>\n  "
+
+
+
+
+
+
+
+
+
+
+
+
+
+;  for taxon_name in @taxon_names ; @output_buffer.concat "\n      <tr>\n        <td>"
+
+; @output_buffer.concat((h taxon_name.scientific_name ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.basionym_authorship ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.authorship_year ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.basionym_id ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.is_usable ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.alternative_authorship_year ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.genus_part ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.epithet ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat((h taxon_name.infra_epithet ).to_s); @output_buffer.concat "</td>\n        <td>"
+; @output_buffer.concat(( link_to "Show", taxon_name ).to_s); @output_buffer.concat "</td>\n        "
+; @output_buffer.concat(( if can? :update, taxon_name ).to_s); @output_buffer.concat "\n            <td>"
+; @output_buffer.concat(( link_to "Edit", edit_taxon_name_path(taxon_name) ).to_s); @output_buffer.concat "</td>\n        "
+;  end 
+@output_buffer.concat "        <td>"; @output_buffer.concat(( link_to "Destroy", taxon_name, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n      </tr>\n  "
+
+;  end ; @output_buffer.concat "\n</table>\n\n<p>"
+
+
+; @output_buffer.concat(( link_to "New Taxon Name", new_taxon_name_path ).to_s); @output_buffer.concat "</p>\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/views/taxon_names/index.html.erb:37:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+/Library/Ruby/Gems/1.8/gems/responders-0.4.7/lib/responders/flash_responder.rb:93:in `to_html'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+/Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:638:in `run_before_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:206:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:206:in `around_proc'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/callbacks.rb:182:in `call'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/callbacks.rb:182:in `evaluate_method'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:184:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:635:in `run_before_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:615:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/views/taxon_names/index.html.erb:27: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+... if can? :update, taxon_name ).to_s); @output_buffer.concat ...
+                              ^
+/Users/ackbarjoolia/Dropbox/Work/railsprojects/scdclient/app/views/taxon_names/index.html.erb:37: syntax error, unexpected kENSURE, expecting $end) on line #27 of app/views/taxon_names/index.html.erb:
+24:         <td><%=h taxon_name.epithet %></td>
+25:         <td><%=h taxon_name.infra_epithet %></td>
+26:         <td><%= link_to "Show", taxon_name %></td>
+27:         <%= if can? :update, taxon_name %>
+28:             <td><%= link_to "Edit", edit_taxon_name_path(taxon_name) %></td>
+29:         <% end -%>
+30:         <td><%= link_to "Destroy", taxon_name, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/taxon_names/index.html.erb:37:in `compile!'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 14:47:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.3ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 41ms (View: 17, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 14:54:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.3ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 41ms (View: 15, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 14:55:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  cancan (1.1.1) lib/cancan/controller_additions.rb:151:in `authorize!'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:33:in `authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:19:in `load_and_authorize_resource'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `send'
+  cancan (1.1.1) lib/cancan/resource_authorization.rb:7:in `add_before_filter'
+
+Rendered rescues/_trace (91.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 14:59:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 14:59:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (89.6ms)
+Rendered shared/_menu (0.1ms)
+Completed in 104ms (View: 102, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:02:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.4ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 115ms (View: 15, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:02:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:02:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (15.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:02:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (77.8ms)
+Rendered shared/_menu (0.1ms)
+Completed in 87ms (View: 86, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:02:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:02:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (17.8ms)
+Rendered shared/_menu (0.1ms)
+Completed in 27ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (74.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 87ms (View: 85, DB: 0) | 200 OK [http://localhost/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:03:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.3ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 86ms (View: 65, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:03:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (16.4ms)
+Rendered shared/_menu (0.1ms)
+Completed in 94ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (19.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 30ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (16.0ms)
+Rendered shared/_menu (0.1ms)
+Completed in 28ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (24.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 36ms (View: 35, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:03:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:03:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (15.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 25ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:07:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.3ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 38ms (View: 16, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:07:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:07:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (16.9ms)
+Rendered shared/_menu (0.1ms)
+Completed in 27ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:07:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (18.6ms)
+Rendered shared/_menu (0.1ms)
+Completed in 29ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:07:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:07:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (19.0ms)
+Rendered shared/_menu (0.1ms)
+Completed in 28ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:09:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.5ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 33ms (View: 10, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:09:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:09:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (77.4ms)
+Rendered shared/_menu (0.1ms)
+Completed in 86ms (View: 84, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:10:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.3ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.3ms)
+Rendered shared/_menu (0.1ms)
+Completed in 88ms (View: 66, DB: 2) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:10:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mRole Load (1.3ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = NULL) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:10:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_login (15.1ms)
+Rendered shared/_menu (0.1ms)
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-04 15:11:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_login (1.0ms)
+Rendered shared/_menu (0.1ms)
+Completed in 41ms (View: 15, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-04 15:11:15) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"test1", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"q9ndPuxqXKvY5Vprb3gXSNm73rqFF9SIaevCOX3xaw4=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (7.6ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = E'test1') LIMIT 1[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (8.5ms)[0m   [0;1mUPDATE "users" SET "login_count" = 3, "updated_at" = '2010-05-04 14:11:15.997096', "last_request_at" = '2010-05-04 14:11:15.994583', "last_login_at" = '2010-04-29 10:21:41.431695', "current_login_at" = '2010-05-04 14:11:15.978390' WHERE "id" = 2[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 242ms (DB: 18) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:11:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:11:16.134057', "last_request_at" = '2010-05-04 14:11:16.133349' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (23.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 96ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:17:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:17:00.689635', "last_request_at" = '2010-05-04 14:17:00.689075' WHERE "id" = 2[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (2.8ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.6ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 119ms (View: 17, DB: 6) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:17:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:17:03.611951', "last_request_at" = '2010-05-04 14:17:03.611177' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:17:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:17:03.693676', "last_request_at" = '2010-05-04 14:17:03.692929' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (25.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 35, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-05-04 15:17:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:17:37.323784', "last_request_at" = '2010-05-04 14:17:37.323105' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (17.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 58ms (View: 42, DB: 3) | 200 OK [http://localhost/roles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#destroy (for 127.0.0.1 at 2010-05-04 15:17:43) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"q9ndPuxqXKvY5Vprb3gXSNm73rqFF9SIaevCOX3xaw4=", "id"=>"55", "controller"=>"roles"}
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."id" = 55) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Destroy (0.2ms)[0m   [0;1mDELETE FROM "roles" WHERE "id" = 55[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/roles
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/roles/55]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-05-04 15:17:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"roles"}
+  [4;36;1mRole Load (1.3ms)[0m   [0;1mSELECT * FROM "roles" [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:17:43.241463', "last_request_at" = '2010-05-04 14:17:43.240849' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (20.7ms)
+Rendered shared/_menu (0.3ms)
+Completed in 48ms (View: 41, DB: 3) | 200 OK [http://localhost/roles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-04 15:21:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mRole Load (0.9ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 6)) [0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 11)) [0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:21:37.358129', "last_request_at" = '2010-05-04 14:21:37.357499' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (8.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 45ms (View: 38, DB: 4) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:28:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:28:21.664422', "last_request_at" = '2010-05-04 14:28:21.663828' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.4ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 44ms (View: 11, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:28:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:28:24.448549', "last_request_at" = '2010-05-04 14:28:24.447969' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:28:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:28:24.589086', "last_request_at" = '2010-05-04 14:28:24.588387' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (89.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 100ms (View: 97, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:28:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:28:30.930869', "last_request_at" = '2010-05-04 14:28:30.930188' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (22.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 33ms (View: 29, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:29:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:29:30.759646', "last_request_at" = '2010-05-04 14:29:30.758939' WHERE "id" = 2[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (29.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 36, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:29:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:29:36.196856', "last_request_at" = '2010-05-04 14:29:36.196314' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.3ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 41ms (View: 12, DB: 3) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:29:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:29:38.501932', "last_request_at" = '2010-05-04 14:29:38.501094' WHERE "id" = 2[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:29:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:29:39.060735', "last_request_at" = '2010-05-04 14:29:39.060006' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (90.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 100ms (View: 97, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:30:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:30:02.226542', "last_request_at" = '2010-05-04 14:30:02.225868' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (88.0ms)
+Rendered shared/_menu (0.2ms)
+Completed in 98ms (View: 94, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:30:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:30:06.221361', "last_request_at" = '2010-05-04 14:30:06.220810' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.3ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 107ms (View: 77, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:30:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:30:08.297649', "last_request_at" = '2010-05-04 14:30:08.297005' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:30:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:30:08.455514', "last_request_at" = '2010-05-04 14:30:08.454824' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (23.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 34ms (View: 30, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:31:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:01.398484', "last_request_at" = '2010-05-04 14:31:01.397785' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (99.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 112ms (View: 108, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:31:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:01.459802', "last_request_at" = '2010-05-04 14:31:01.459180' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (26.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 36ms (View: 33, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:31:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:05.717916', "last_request_at" = '2010-05-04 14:31:05.717336' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.3ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.3ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 42ms (View: 11, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:31:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:08.366492', "last_request_at" = '2010-05-04 14:31:08.365968' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:31:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:08.509411', "last_request_at" = '2010-05-04 14:31:08.508711' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (96.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 105ms (View: 101, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:31:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:42.692599', "last_request_at" = '2010-05-04 14:31:42.691031' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (103.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 115ms (View: 111, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:31:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:31:42.755365', "last_request_at" = '2010-05-04 14:31:42.754595' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (27.4ms)
+Rendered shared/_menu (0.2ms)
+Completed in 37ms (View: 33, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:32:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:32:41.261423', "last_request_at" = '2010-05-04 14:32:41.260870' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.4ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 42ms (View: 11, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:32:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:32:43.832242', "last_request_at" = '2010-05-04 14:32:43.831714' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (2.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:32:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:32:43.983360', "last_request_at" = '2010-05-04 14:32:43.982698' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (88.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 102ms (View: 98, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:33:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:33:14.829519', "last_request_at" = '2010-05-04 14:33:14.828893' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (21.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 32ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:33:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:33:20.069753', "last_request_at" = '2010-05-04 14:33:20.069031' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.5ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.6ms)
+Rendered shared/_menu (0.2ms)
+Completed in 55ms (View: 12, DB: 5) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:33:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:33:22.504869', "last_request_at" = '2010-05-04 14:33:22.504327' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:33:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:33:22.650478', "last_request_at" = '2010-05-04 14:33:22.649770' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (96.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 107ms (View: 104, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:34:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:34:07.308758', "last_request_at" = '2010-05-04 14:34:07.307535' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (99.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 108ms (View: 105, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:34:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:34:07.373521', "last_request_at" = '2010-05-04 14:34:07.372723' WHERE "id" = 2[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (28.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 39ms (View: 34, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:34:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:34:11.556266', "last_request_at" = '2010-05-04 14:34:11.555693' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.3ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.2ms)
+Completed in 41ms (View: 11, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:34:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:34:13.812647', "last_request_at" = '2010-05-04 14:34:13.811982' WHERE "id" = 2[0m
+  [4;35;1mSQL (11.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:34:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:34:14.601200', "last_request_at" = '2010-05-04 14:34:14.600526' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (91.2ms)
+Rendered shared/_menu (0.2ms)
+Completed in 102ms (View: 98, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:37:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:37:33.319218', "last_request_at" = '2010-05-04 14:37:33.318628' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;36;1mTaxonName Load (0.4ms)[0m   [0;1mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 110ms (View: 13, DB: 4) | 200 OK [http://localhost/taxon_names]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:37:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:37:36.455325', "last_request_at" = '2010-05-04 14:37:36.454743' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:37:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:37:36.626783', "last_request_at" = '2010-05-04 14:37:36.625714' WHERE "id" = 2[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (37.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 51ms (View: 44, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:38:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:38:01.561996', "last_request_at" = '2010-05-04 14:38:01.561344' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (103.3ms)
+Rendered shared/_menu (0.2ms)
+Completed in 114ms (View: 110, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:38:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:38:01.628372', "last_request_at" = '2010-05-04 14:38:01.627713' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login (30.8ms)
+Rendered shared/_menu (0.2ms)
+Completed in 40ms (View: 37, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#index (for 127.0.0.1 at 2010-05-04 15:38:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"taxon_names"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-05-04 14:38:05.002537', "last_request_at" = '2010-05-04 14:38:05.001986' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+  [4;35;1mTaxonName Load (0.4ms)[0m   [0mSELECT * FROM "taxon_names" [0m
+Rendering template within layouts/application
+Rendering taxon_names/index
+Rendered shared/_login (0.5ms)
+Rendered shared/_menu (0.1ms)
+Completed in 41ms (View: 11, DB: 3) | 200 OK [http://localhost/taxon_names]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TaxonNamesController#new (for 127.0.0.1 at 2010-05-04 15:38:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"taxon_names"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:38:07.466393', "last_request_at" = '2010-05-04 14:38:07.465780' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mRole Load (1.1ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'superuser')) LIMIT 1[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 2) AND (name = E'administrator')) LIMIT 1[0m
+Redirected to http://localhost:3000/
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-04 15:38:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = E'2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-05-04 14:38:07.613914', "last_request_at" = '2010-05-04 14:38:07.612374' WHERE "id" = 2[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered shared/_login (26.7ms)
+Rendered shared/_menu (0.2ms)
+Completed in 109ms (View: 105, DB: 2) | 200 OK [http://localhost/]
