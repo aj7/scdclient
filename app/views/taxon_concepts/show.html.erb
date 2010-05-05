@@ -1,0 +1,28 @@
+<% title "Taxon Concept" %>
+
+<p>
+  <strong>Comments:</strong>
+  <%=h @taxon_concept.comments %>
+</p>
+<p>
+  <strong>Taxon Name:</strong>
+  <%=h @taxon_concept.taxon_name %>
+</p>
+<p>
+  <strong>Has Taxon Status:</strong>
+  <%=h @taxon_concept.has_taxon_status %>
+</p>
+<p>
+  <strong>Rank:</strong>
+  <%=h @taxon_concept.rank %>
+</p>
+<p>
+  <strong>Is Current:</strong>
+  <%=h @taxon_concept.is_current %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_taxon_concept_path(@taxon_concept) %> |
+  <%= link_to "Destroy", @taxon_concept, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", taxon_concepts_path %>
+</p>

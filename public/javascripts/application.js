@@ -157,7 +157,7 @@ function growlMe(output,notice_type)
 
     var theclass = 'achtungSuccess';
     if (notice_type == 'error')
-     theclass = 'achtungFail';
+        theclass = 'achtungFail';
 
     noticeid = $.achtung({
         className: theclass ,
@@ -219,7 +219,11 @@ $(document).ready(function() {
 
     //setting tablesorter
     //$('.tablesorter').tablesorter();
-    $('.tableformat').colorize({altColor:'#ECF6FC' ,bgColor:'#EAF6CC', hoverColor:'green', hiliteColor:'red',oneClick:'true'});
+    $('.tableformat').colorize({altColor:'#ECF6FC' ,
+        bgColor:'#EAF6CC',
+        hoverColor:'#658093',
+        hiliteColor:'#ffcccc',
+        oneClick:'true'});
 
     $('#click').click(function(){
 

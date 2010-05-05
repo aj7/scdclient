@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :taxon_concepts
+
   map.resources :roles
   map.resources :name_relationships
 
