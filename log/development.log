@@ -29638,3 +29638,69 @@ Migrating to ChangeTypeofTaxonConcept (20100505125722)
   [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505125722')[0m
   [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT max("taxon_concepts".rgt) AS max_rgt FROM "taxon_concepts" [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "taxon_concepts" ("has_taxon_status", "created_at", "comments", "updated_at", "is_current", "lft", "rank", "taxon_name_id", "parent_id", "rgt") VALUES(NULL, '2010-05-05 14:05:36.098817', E'test', '2010-05-05 14:05:36.098817', 'f', 1, NULL, NULL, NULL, 2) RETURNING "id"[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT max("audits".version) AS max_version FROM "audits" WHERE ("audits"."auditable_type" = E'TaxonConcept' AND "audits"."auditable_id" = 1) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "audits" ("created_at", "username", "action", "user_type", "auditable_type", "user_id", "version", "auditable_id", "changes") VALUES('2010-05-05 14:05:36.120794', NULL, E'create', NULL, E'TaxonConcept', NULL, 1, 1, E'--- 
+has_taxon_status: 
+comments: test
+is_current: false
+lft: 1
+rank: 
+taxon_name_id: 
+parent_id: 
+rgt: 2
+') RETURNING "id"[0m
+  [4;35;1mTag Load (0.6ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE E'accepted' OR name LIKE E'synonym' OR name LIKE E'unchecked') [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'accepted') LIMIT 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'accepted') RETURNING "id"[0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'synonym') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'synonym') RETURNING "id"[0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'unchecked') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'unchecked') RETURNING "id"[0m
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = E'status_types' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = 1) AND ("taggings".taggable_type = E'TaxonConcept'))) AND (("taggings".taggable_id = 1) AND ("taggings".taggable_type = E'TaxonConcept'))) [0m
+  [4;35;1mTagging Load (0.2ms)[0m   [0mSELECT * FROM "taggings" WHERE ((("taggings"."tag_id" IN (NULL) AND "taggings"."tagger_type" IS NULL AND "taggings"."tagger_id" IS NULL AND "taggings"."context" = E'status_types') AND ("taggings".taggable_id = 1 AND "taggings".taggable_type = E'TaxonConcept')) AND ("taggings".taggable_id = 1 AND "taggings".taggable_type = E'TaxonConcept')) [0m
+  [4;36;1mTagging Load (0.2ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings".taggable_type = E'TaxonConcept' AND "taggings".taggable_id = 1 AND "taggings".context = E'status_types' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-05-05 14:05:36.145888', 1, 1, E'status_types', NULL, E'TaxonConcept') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.3ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 2 AND "taggings".taggable_type = E'TaxonConcept' AND "taggings".taggable_id = 1 AND "taggings".context = E'status_types' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-05-05 14:05:36.152018', 2, 1, E'status_types', NULL, E'TaxonConcept') RETURNING "id"[0m
+  [4;36;1mTagging Load (0.2ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings".taggable_type = E'TaxonConcept' AND "taggings".taggable_id = 1 AND "taggings".context = E'status_types' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-05-05 14:05:36.154390', 3, 1, E'status_types', NULL, E'TaxonConcept') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (0.9ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = E'status_types' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'TaxonConcept'))) AND (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = E'TaxonConcept'))) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT max("taxon_concepts".rgt) AS max_rgt FROM "taxon_concepts" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "taxon_concepts" ("has_taxon_status", "created_at", "comments", "updated_at", "is_current", "lft", "rank", "taxon_name_id", "parent_id", "rgt") VALUES(NULL, '2010-05-05 14:06:31.861831', E'test2', '2010-05-05 14:06:31.861831', 'f', 3, NULL, NULL, NULL, 4) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT max("audits".version) AS max_version FROM "audits" WHERE ("audits"."auditable_type" = E'TaxonConcept' AND "audits"."auditable_id" = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "audits" ("created_at", "username", "action", "user_type", "auditable_type", "user_id", "version", "auditable_id", "changes") VALUES('2010-05-05 14:06:31.916833', NULL, E'create', NULL, E'TaxonConcept', NULL, 1, 2, E'--- 
+has_taxon_status: 
+comments: test2
+is_current: false
+lft: 3
+rank: 
+taxon_name_id: 
+parent_id: 
+rgt: 4
+') RETURNING "id"[0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = E'status_types' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = 2) AND ("taggings".taggable_type = E'TaxonConcept'))) AND (("taggings".taggable_id = 2) AND ("taggings".taggable_type = E'TaxonConcept'))) [0m
+  [4;36;1mTagging Load (0.2ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ((("taggings"."tag_id" IN (NULL) AND "taggings"."tagger_type" IS NULL AND "taggings"."tagger_id" IS NULL AND "taggings"."context" = E'status_types') AND ("taggings".taggable_id = 2 AND "taggings".taggable_type = E'TaxonConcept')) AND ("taggings".taggable_id = 2 AND "taggings".taggable_type = E'TaxonConcept')) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTagging Load (0.9ms)[0m   [0;1mSELECT * FROM "taggings" WHERE ("taggings".taggable_id = 2 AND "taggings".taggable_type = E'TaxonConcept' AND (taggings.tagger_id IS NULL AND taggings.context = E'status_types')) [0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = E'TaxonConcept') AND ((taggings.tagger_id IS NULL AND taggings.context = E'status_types'))) [0m
+  [4;36;1mTag Load (1.0ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = E'status_types' INNER JOIN taxon_concepts ON taxon_concepts.id = taggings.taggable_id WHERE (taggings.taggable_type = E'TaxonConcept' AND taggings.taggable_id = 1) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (1.1ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = E'status_types' INNER JOIN taxon_concepts ON taxon_concepts.id = taggings.taggable_id WHERE (taggings.taggable_type = E'TaxonConcept' AND taggings.taggable_id = 2) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mTag Load (0.8ms)[0m   [0;1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = E'status_types' INNER JOIN taxon_concepts ON taxon_concepts.id = taggings.taggable_id WHERE (taggings.taggable_type = E'TaxonConcept') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;35;1mTag Load (1.0ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = E'status_types' INNER JOIN taxon_concepts ON taxon_concepts.id = taggings.taggable_id WHERE (taggings.taggable_type = E'TaxonConcept') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT * FROM "tags" WHERE (name LIKE E'invalid') [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT "tags".id FROM "tags" WHERE ("tags"."name" = E'invalid') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "tags" ("name") VALUES(E'invalid') RETURNING "id"[0m
+  [4;36;1mTag Load (0.5ms)[0m   [0;1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (((taggings.context = E'status_types' AND taggings.tagger_id IS NULL) AND (("taggings".taggable_id = 2) AND ("taggings".taggable_type = E'TaxonConcept'))) AND (("taggings".taggable_id = 2) AND ("taggings".taggable_type = E'TaxonConcept'))) [0m
+  [4;35;1mTagging Load (0.2ms)[0m   [0mSELECT * FROM "taggings" WHERE ((("taggings"."tag_id" IN (NULL) AND "taggings"."tagger_type" IS NULL AND "taggings"."tagger_id" IS NULL AND "taggings"."context" = E'status_types') AND ("taggings".taggable_id = 2 AND "taggings".taggable_type = E'TaxonConcept')) AND ("taggings".taggable_id = 2 AND "taggings".taggable_type = E'TaxonConcept')) [0m
+  [4;36;1mTagging Load (0.2ms)[0m   [0;1mSELECT "taggings".id FROM "taggings" WHERE ("taggings"."tag_id" = 4 AND "taggings".taggable_type = E'TaxonConcept' AND "taggings".taggable_id = 2 AND "taggings".context = E'status_types' AND "taggings".tagger_id IS NULL AND "taggings".tagger_type IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "taggings" ("tagger_id", "created_at", "tag_id", "taggable_id", "context", "tagger_type", "taggable_type") VALUES(NULL, '2010-05-05 14:11:15.833380', 4, 2, E'status_types', NULL, E'TaxonConcept') RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTag Load (1.2ms)[0m   [0mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = E'status_types' INNER JOIN taxon_concepts ON taxon_concepts.id = taggings.taggable_id WHERE (taggings.taggable_type = E'TaxonConcept') GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m

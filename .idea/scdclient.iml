@@ -18,13 +18,19 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="acts_as_audited" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="acts_as_audited" version="0" bound="GREATER_OR_EQUAL" lib="false" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
         <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="awesome_nested_set" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
@@ -89,6 +95,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] pg (v0.9.0, /Library/Ruby/Gems/1.8/gems/pg-0.9.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] formtastic (v0.9.8, /Library/Ruby/Gems/1.8/gems/formtastic-0.9.8)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] cancan (v1.1.1, /Library/Ruby/Gems/1.8/gems/cancan-1.1.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_nested_set (v1.4.3, /Library/Ruby/Gems/1.8/gems/awesome_nested_set-1.4.3)" level="application" />
   </component>
 </module>
 
