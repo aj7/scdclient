@@ -13,6 +13,8 @@ class TaxonConcept < ActiveRecord::Base
   ### Relationships
   ###
 
-  has_one :hasTaxonName, :class_name => 'TaxonName', :foreign_key => :taxon_name_id #A TaxonConcept has got one TaxonName associated to it
+  #A TaxonConcept has got one TaxonName associated to it
+  has_many :taxon_concept_names
+  has_many :taxon_names, :through => :taxon_concept_names
 
 end

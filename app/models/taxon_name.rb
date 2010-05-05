@@ -6,7 +6,7 @@ class TaxonName < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :properties
   acts_as_audited
- 
+
 
   ###
   #Relationships
@@ -19,6 +19,11 @@ class TaxonName < ActiveRecord::Base
   #One TaxonName has a set of name relationships
   has_many :taxon_name_relationships
   has_many :name_relationships, :through => :taxon_name_relationships
+
+
+  #one TaxonName can belong to multiple TaxonConcepts
+  has_many :taxon_concept_names
+  has_many :taxon_names, :through => :taxon_concept_names   #A TaxonConcept has got one TaxonName associated to it
 
 
   ###
