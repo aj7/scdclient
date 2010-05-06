@@ -1,5 +1,5 @@
 class TaxonConcept < ActiveRecord::Base
-  attr_accessible :comments, :taxon_name, :has_taxon_status, :rank, :is_current
+  #attr_accessible :comments, :has_taxon_status, :rank, :is_current
   
   ###
   ### Plugins/Gems declarations
@@ -13,8 +13,7 @@ class TaxonConcept < ActiveRecord::Base
   ### Relationships
   ###
 
-  #A TaxonConcept has got one TaxonName associated to it
-  has_many :taxon_concept_names
-  has_many :taxon_names, :through => :taxon_concept_names
+  #A TaxonConcept has got one TaxonName associated to it ; but one TaxonName can belongs_to_many TaxonConcepts
+  belongs_to :taxon_name
 
 end
