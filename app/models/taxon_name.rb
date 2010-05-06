@@ -1,6 +1,6 @@
 class TaxonName < ActiveRecord::Base
-  #attr_accessible :scientific_name, :basionym_authorship, :authorship_year, :basionym_id, :is_usable, :alternative_authorship_year, :genus_part, :epithet, :infra_epithet
- ###
+  # attr_accessible :scientific_name, :basionym_authorship, :authorship_year, :basionym_id, :is_usable, :alternative_authorship_year, :genus_part, :epithet, :infra_epithet
+  ###
   ### Plugins/Gems declarations
   ###
   acts_as_taggable
@@ -18,7 +18,10 @@ class TaxonName < ActiveRecord::Base
   has_many :taxon_name_relationships
   has_many :name_relationships, :through => :taxon_name_relationships
 
-  accepts_nested_attributes_for :name_relationships, :reject_if => :all_blank
+
+  #one TaxonName can belong to multiple TaxonConcepts
+  has_many :taxon_concepts
+
   ###
   ###   Validations
   ###

@@ -1,0 +1,13 @@
+one:
+  comments: MyText
+  taxon_name: 
+  has_taxon_status: MyString
+  rank: MyString
+  is_current: false
+
+two:
+  comments: MyText
+  taxon_name: 
+  has_taxon_status: MyString
+  rank: MyString
+  is_current: false

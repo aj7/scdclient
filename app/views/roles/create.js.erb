@@ -1,0 +1,7 @@
+//This is emptying the whole div first (update_role_ and then re-rendering the partial
+
+$("#update_role").empty().append("<%= escape_javascript(render :partial => 'users/userroles') %>");
+$("#update_role").append("<%= escape_javascript(link_to "Create a new role",'#', :id => "new_role")  %>");
+$("#add_new_role_form")[0].reset();
+
+        

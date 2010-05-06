@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100426115042) do
+ActiveRecord::Schema.define(:version => 20100506131414) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "role_id"
@@ -70,6 +70,19 @@ ActiveRecord::Schema.define(:version => 20100426115042) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "taxon_concepts", :force => true do |t|
+    t.text     "comments"
+    t.string   "has_taxon_status"
+    t.string   "rank"
+    t.boolean  "is_current",       :default => false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "taxon_name_id"
   end
 
   create_table "taxon_name_relationships", :force => true do |t|

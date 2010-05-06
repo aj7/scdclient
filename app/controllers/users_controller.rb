@@ -1,29 +1,17 @@
-class UsersController < ApplicationController
+class UsersController < InheritedResources::Base
+  #Using InheritedResources doesnt require all the blurb - need to overwrite the specific actions if one wants more functionality
+  respond_to :html, :xml, :json
+
   def new
-    @user = User.new
+    new!
+    #@user.roles.build
   end
-  
+
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      flash[:notice] = "Registration successful"
-      redirect_to root_url
-    else
-      render :action => 'new'
-    end
+    debugger
+    create!
+   # @user.roles << params[:role]
+   # @user.save
   end
-  
-  def edit
-    @user = current_user
-  end
-  
-  def update
-    @user = current_user
-    if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated profile."
-      redirect_to root_url
-    else
-      render :action => 'edit'
-    end
-  end
+
 end

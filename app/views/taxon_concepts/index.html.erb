@@ -1,0 +1,25 @@
+<% title "Taxon Concepts" %>
+
+<table>
+  <tr>
+    <th>Comments</th>
+    <th>Taxon Name</th>
+    <th>Has Taxon Status</th>
+    <th>Rank</th>
+    <th>Is Current</th>
+  </tr>
+  <% for taxon_concept in @taxon_concepts %>
+    <tr>
+      <td><%=h taxon_concept.comments %></td>
+      <td><%=h taxon_concept.taxon_name %></td>
+      <td><%=h taxon_concept.has_taxon_status %></td>
+      <td><%=h taxon_concept.rank %></td>
+      <td><%=h taxon_concept.is_current %></td>
+      <td><%= link_to "Show", taxon_concept %></td>
+      <td><%= link_to "Edit", edit_taxon_concept_path(taxon_concept) %></td>
+      <td><%= link_to "Destroy", taxon_concept, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Taxon Concept", new_taxon_concept_path %></p>
