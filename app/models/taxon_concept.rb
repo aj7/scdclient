@@ -1,6 +1,6 @@
 class TaxonConcept < ActiveRecord::Base
   #attr_accessible :comments, :has_taxon_status, :rank, :is_current
-  
+
   ###
   ### Plugins/Gems declarations
   ###
@@ -21,4 +21,12 @@ class TaxonConcept < ActiveRecord::Base
   ###
 
   validates_presence_of :taxon_name , :has_taxon_status
+
+  def add_status status
+    t = TaxonConcept.find(:first)
+    t.status_type_list.add(status)
+    t.save
+  end
+
+
 end

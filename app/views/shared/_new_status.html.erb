@@ -1,0 +1,9 @@
+<div id="new_status_form"  >
+  <% form_tag  create_status_path, :html => {:id =>"add_new_status_form", :class => "ajaxForm"} do |f| %>
+      <%= f.error_messages %>
+      <%= f.label :has_taxon_status %><br />
+      <%= f.text_field :has_taxon_status %><br /><br />
+
+      <%#= f.submit 'Add new role', :id => 'submit_role' %>
+  <% end %>
+</div>

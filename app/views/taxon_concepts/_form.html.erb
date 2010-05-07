@@ -1,4 +1,3 @@
-
 <div class="span-15 colborder">
   <% semantic_form_for @taxon_concept do |f| %>
       <% f.inputs do	%>
@@ -8,13 +7,15 @@
           <%= f.input :has_taxon_status, :label => 'Status',
                       :collection => TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]},
                       :prompt => 'Select status' %>
+          <%= link_to "Add Status" ,'#',:id => "add_new_status", :class => "link_class" %>
           <%= f.input :rank, :label => 'Taxon level'%>
           <%= f.input :is_current, :label => 'Active'%>
-          <%= f.input :comments, :label => ''%>
+          <%= f.input :comments, :label => 'Extra Comments'%>
+          <!--<label>Status*</label>-->
+          <%#= select :taxon_concept, :has_taxon_status,  TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select' %>
       <% end -%>
       <% f.buttons do %>
           <%= f.commit_button %>
-      <% end %>
-
+      <% end -%>
   <% end -%>
 </div>

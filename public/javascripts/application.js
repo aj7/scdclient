@@ -150,6 +150,34 @@ function initialiseNewRoleDialog()
 
 }
 
+//APPLICATION SPECIFIC FUNCTIONS
+function initialiseNewStatusDialog()
+    //function to get the dialog box to pop up, setup done here too
+{
+    $.fx.speeds._default = 1000;
+    $('#status_dialog').dialog({autoOpen:false, height: 400, width: 400,  modal:true,
+        buttons:{
+            Cancel:function() {
+                $(this).dialog('close');
+            },
+            'Add Status':function() {
+                $('#add_new_status_form').submit();
+                $(this).dialog('close');
+            }
+        }
+    });
+
+    //clicking on the new_role link will cause modal dialog to pop up
+
+    $('#new_role_link').livequery(function() {
+        $(this).click(function(){
+            $('#role_dialog').dialog("open");
+        });
+        //$('#add_new_role_form')[0].reset();
+    });
+
+}
+
 //function for outputting messages as Growl-style
 function growlMe(output,notice_type)
 {
