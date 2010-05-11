@@ -11,6 +11,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  
+  map.create_status "create_status", :controller => "taxon_concepts", :action => "create_status" 
 
   map.home 'home', :controller => "home" ,:action =>"index"
 

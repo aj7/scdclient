@@ -126,6 +126,7 @@ jQuery.ajaxSetup({ 'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "
 function initialiseNewRoleDialog()
     //function to get the dialog box to pop up, setup done here too
 {
+	$('#role_dialog').dialog('destroy');
     $.fx.speeds._default = 1000;
     $('#role_dialog').dialog({autoOpen:false, height: 400, width: 400,  modal:true,
         buttons:{
@@ -139,14 +140,19 @@ function initialiseNewRoleDialog()
         }
     });
 
-    //clicking on the new_role link will cause modal dialog to pop up
-
+    //clicking on the new_role link will cause modal dialog to pop ups
     $('#new_role_link').livequery(function() {
-        $(this).click(function(){
-            $('#role_dialog').dialog("open");
+            $(this).click(function(){
+                $('#role_dialog').dialog("open");
+            });
+            //$('#add_new_role_form')[0].reset();
         });
-        //$('#add_new_role_form')[0].reset();
-    });
+
+	// $('#new_role_link').livequery('click',function(e) {
+	// 	e.preventDefault();
+	// 	$('#role_dialog').dialog("open");
+	// 
+	// });
 
 }
 
@@ -155,7 +161,10 @@ function initialiseNewStatusDialog()
     //function to get the dialog box to pop up, setup done here too
 {
     $.fx.speeds._default = 1000;
-    $('#status_dialog').dialog({autoOpen:false, height: 400, width: 400,  modal:true,
+    $('#status_dialog').dialog({autoOpen:false, 
+		//height: 400, 
+		//width: 400,  
+		modal:true,
         buttons:{
             Cancel:function() {
                 $(this).dialog('close');
@@ -168,14 +177,13 @@ function initialiseNewStatusDialog()
     });
 
     //clicking on the new_role link will cause modal dialog to pop up
+    $('#add_new_status_link').livequery(function() {
+              $(this).click(function(){
+                  $('#status_dialog').dialog("open");
+              });
+          });
 
-    $('#new_role_link').livequery(function() {
-        $(this).click(function(){
-            $('#role_dialog').dialog("open");
-        });
-        //$('#add_new_role_form')[0].reset();
-    });
-
+	
 }
 
 //function for outputting messages as Growl-style
@@ -232,6 +240,27 @@ function savingNewRoleDialog()
     }
 }
 
+function savingNewStatusDialog()
+{
+    var options = {
+        success:       showResponse,  // post-submit callback
+        dataType:  'script'       // 'xml', 'script', or 'json' (expected server response type) 
+        //clearForm: true        // clear all form fields after successful submit
+        //resetForm: true        // reset the form after successful submit
+
+        // $.ajax options can be used here too, for example:
+        //timeout:   3000
+    };
+    // bind 'myForm' and provide a simple callback function
+    $('#add_new_status_form').ajaxForm(options);
+
+    function showResponse(responseText, statusText, xhr, $form)  {       
+        growlMe('New status inserted');
+        //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+        //   '\n\nThe output div should have already been updated with the responseText.');
+    }
+}
+
 //DOM STARTS HERE
 
 $(document).ready(function() {
@@ -279,7 +308,13 @@ $(document).ready(function() {
         $("#flash_notice").fadeOut("fast");
     }, 2000);
 
-    /*call new role modal dialog*/
-    initialiseNewRoleDialog();
-    savingNewRoleDialog();
+	//setting the menu
+	$('#potato_menu').ptMenu();
+    
+	/*call new role modal dialog*/
+	initialiseNewRoleDialog();
+	// Call the new status dialog
+	initialiseNewStatusDialog();
+	savingNewRoleDialog();
+ 	savingNewStatusDialog();
 });

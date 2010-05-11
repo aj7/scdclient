@@ -1,9 +1,9 @@
 <% title "New Taxon Concept" %>
 
 <%= render :partial => 'form' %>
+<div id="status_dialog"  title="Add new status"><%= render :partial => "shared/new_status" %></div>
 
 <div class="span-5 last">
   <%= link_to "Back to List", taxon_concepts_path %>
 </div>
 
-<div id="status_dialog"  title="Add new status"><%= render :partial => "shared/new_status" %></div>

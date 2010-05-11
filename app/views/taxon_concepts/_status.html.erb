@@ -1,0 +1,4 @@
+<li>
+<label>Select status:</label>
+<%= select :taxon_concept,:has_taxon_status, TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select status' %>
+</li>

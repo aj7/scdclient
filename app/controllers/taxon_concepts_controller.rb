@@ -6,10 +6,11 @@ class TaxonConceptsController < InheritedResources::Base
   end
 
   def create_status
-    @status = params[:status]
+    debugger
+    @status = params[:taxon_concept][:has_taxon_status]
     TaxonConcept.first.add_status @status
      respond_to do |format|
-        format.html {redirect_to roles_path}
+        format.html {redirect_to taxon_concepts_path}
         format.js
       end
   end
