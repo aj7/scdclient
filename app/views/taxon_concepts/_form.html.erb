@@ -1,22 +1,23 @@
 <div class="span-15 colborder">
-	<% semantic_form_for @taxon_concept do |f| %>
-	<% f.inputs do	%>
-	<%= f.input :taxon_name, :label => 'Scientific Name',
-	:collection => TaxonName.find(:all).collect{|p| [p.scientific_name, p.id]},
-	:prompt => 'Select name' %>
-	<div id="update_status"> 
-		<%= render :partial => 'taxon_concepts/status' %>
+  <% semantic_form_for @taxon_concept do |f| %>
+      <% f.inputs do	%>
+          <%= f.input :taxon_name, :label => 'Scientific Name',
+                      :collection => TaxonName.find(:all).collect{|p| [p.scientific_name, p.id]},
+                      :prompt => 'Select name' %>
+          <div id="update_status">
+            <%= render :partial => 'taxon_concepts/status' %>
 
-	</div>
-	<%= link_to "Add Status" ,'#',:id => "add_new_status_link"%>
-	<%= f.input :rank, :label => 'Taxon level'%>
-	<%= f.input :is_current, :label => 'Active'%>
-	<%= f.input :comments, :label => 'Extra Comments'%>
-	<!--<label>Status*</label>-->
-	<%#= select :taxon_concept, :has_taxon_status,  TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select' %>
-	<% end -%>
-	<% f.buttons do %>
-	<%= f.commit_button %>
-	<% end -%>
-	<% end -%>
+          </div>
+          <%= link_to "Add Status" ,'#',:id => "add_new_status_link"%>
+          <%= link_to image_tag "icons/add.png" %>
+          <%= f.input :rank, :label => 'Taxon level'%>
+          <%= f.input :is_current, :label => 'Active'%>
+          <%= f.input :comments, :label => 'Extra Comments'%>
+          <!--<label>Status*</label>-->
+          <%#= select :taxon_concept, :has_taxon_status,  TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select' %>
+      <% end -%>
+      <% f.buttons do %>
+          <%= f.commit_button %>
+      <% end -%>
+  <% end -%>
 </div>
