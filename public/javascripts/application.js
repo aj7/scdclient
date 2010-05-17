@@ -171,7 +171,7 @@ function initialiseNewStatusDialog()
             },
             'Add Status':function() {
                 $('#add_new_status_form').submit();
-                $(this).dialog('close');
+                //$(this).dialog('close');
             }
         }
     });
@@ -179,6 +179,7 @@ function initialiseNewStatusDialog()
     //clicking on the new_role link will cause modal dialog to pop up
     $('#add_new_status_link').livequery(function() {
               $(this).click(function(){
+				  $("#add_new_status_form")[0].reset();
                   $('#status_dialog').dialog("open");
               });
           });
@@ -243,9 +244,9 @@ function savingNewRoleDialog()
 function savingNewStatusDialog()
 {
     var options = {
-        success:       showResponse,  // post-submit callback
-        dataType:  'script'       // 'xml', 'script', or 'json' (expected server response type) 
-        //clearForm: true        // clear all form fields after successful submit
+        success:   showResponse,  // post-submit callback
+        dataType:  'script',       // 'xml', 'script', or 'json' (expected server response type) 
+        clearForm: true        // clear all form fields after successful submit
         //resetForm: true        // reset the form after successful submit
 
         // $.ajax options can be used here too, for example:

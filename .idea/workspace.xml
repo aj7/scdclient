@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="9df7eb2d-d820-4f41-8bef-a44093a49bb3" name="Default" comment="" />
-    <ignored path="scdclient.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="scdclient.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,64 +24,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="create_status.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/create_status.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/roles/create.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="60" selection-start="1714" selection-end="1714" vertical-scroll-proportion="-19.772728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roles_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/roles_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="9" selection-start="302" selection-end="398" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_newrole.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_newrole.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="87" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,16 +45,43 @@
       <file leaf-file-name="_menu.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_menu.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="-8.181818">
+            <state line="12" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="42" selection-start="544" selection-end="544" vertical-scroll-proportion="0.23571429">
+            <state line="11" column="42" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_new_status.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_new_status.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="69" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="taxon_concepts_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="56" selection-start="511" selection-end="511" vertical-scroll-proportion="0.20352781">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="taxon_concept.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="60" selection-start="716" selection-end="859" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,22 +100,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20100506131414_delete_taxon_conceptfrom_taxon_name.rb" />
-        <option value="$PROJECT_DIR$/public/stylesheets/formtastic_changes.css" />
         <option value="$PROJECT_DIR$/app/views/taxon_names/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/edit.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/blueprint/screen.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_new_status.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/public/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/shared/_menu.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/jquery.ui.potato.menu.css" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/taxon_concepts/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/overcast/jquery-ui-1.8.1.custom.css" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_new_status.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb" />
       </list>
     </option>
   </component>
@@ -229,6 +202,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scdclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scdclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -250,14 +237,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taxon_concepts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -270,6 +249,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,10 +264,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.fileTypes" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="preferences.general" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: scdclient">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -497,64 +480,49 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.potato.menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.061058346" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="116" selection-start="568" selection-end="715" vertical-scroll-proportion="0.4525862" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_status.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="64" selection-start="187" selection-end="187" vertical-scroll-proportion="0.066079296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/taxon_names_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="73" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.5034965" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/overcast/jquery-ui-1.8.1.custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="363" column="35" selection-start="23365" selection-end="23365" vertical-scroll-proportion="0.020775624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.062937066" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_new_status.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="33" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/create_status.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/roles_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="302" selection-end="398" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_newrole.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="87" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="33" selection-start="80" selection-end="80" vertical-scroll-proportion="0.04070556" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/roles/create.js.erb">
@@ -562,37 +530,40 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="1714" selection-end="1714" vertical-scroll-proportion="-19.772728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="4" selection-start="9757" selection-end="9757" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.ui.potato.menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.061058346">
-          <folding />
-        </state>
+        <state line="312" column="4" selection-start="9757" selection-end="9757" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_menu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="-8.181818">
+        <state line="12" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="544" selection-end="544" vertical-scroll-proportion="0.23571429">
+        <state line="11" column="42" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_new_status.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="69" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="60" selection-start="716" selection-end="859" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="56" selection-start="511" selection-end="511" vertical-scroll-proportion="0.20352781">
           <folding />
         </state>
       </provider>

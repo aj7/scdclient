@@ -1,2 +1,3 @@
 $("#update_status").empty().append("<%= escape_javascript(render :partial => 'taxon_concepts/status') %>");
+$("#status_list").empty().append("<%= escape_javascript(render :partial => 'taxon_concepts/status_list') %>");
 $("#add_new_status_form")[0].reset();

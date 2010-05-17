@@ -28,5 +28,8 @@ class TaxonConcept < ActiveRecord::Base
     t.save
   end
 
+  def delete_status  status
+    TaxonConcept.status_type_counts.find(:first, :conditions => {:name => status}).delete
+  end
 
 end
