@@ -8,7 +8,7 @@
             <%= render :partial => 'taxon_concepts/status' %>
 
           </div>
-          <%= link_to "Add Status" ,'#',:id => "add_new_status_link"%>
+          <%= link_to "Manage Status" ,'#',:id => "add_new_status_link"%>
           <%= link_to image_tag "icons/add.png" %>
           <%= f.input :rank, :label => 'Taxon level'%>
           <%= f.input :is_current, :label => 'Active'%>
@@ -23,4 +23,4 @@
 </div>
 
 <!-- Div for dialog box which shows for adding a new status -->
-<div id="status_dialog"  title="Add new status"><%= render :partial => "shared/new_status" %></div>
+<div id="status_dialog"  title="Manage Status"><%= render :partial => "shared/new_status" %></div>

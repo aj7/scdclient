@@ -1,13 +1,25 @@
 <div id="new_status_form"  >
-	<% form_tag  create_status_path,:method => "post",:id =>"add_new_status_form",  :class => "ajaxForm" do %>
-	<%= error_messages_for :taxon_concept %>
-	<label>Status value:</label>
-	<%= text_field :taxon_concept, :has_taxon_status, :value => ""  %><br />
+	<div id="add_status_div">
+		<% form_tag  create_status_path,:method => "post",:id =>"add_new_status_form" do %>
+		<%= error_messages_for :taxon_concept %>
+		<label>Status value:</label>
+		<%= text_field :taxon_concept, :has_taxon_status, :value => ""  %><br />
 
-	<%= submit_tag 'Add status', :id => 'submit_role',:html => {:float => 'left'}%>
+		<%= submit_tag 'Add status', :id => 'submit_role',:html => {:float => 'left'}%>
+		<% end %>
+	</div>
+	
+	<div id="edit_status_div">
+		<% form_tag  create_status_path,:method => "post",:id =>"edit_status_form" do %>
+		<%= error_messages_for :taxon_concept %>
+		<label>Status value:</label>
+		<%= text_field :taxon_concept, :has_taxon_status, :value => ""  %><br />
+
+		<%= submit_tag 'Add status', :id => 'submit_role',:html => {:float => 'left'}%>
+		<% end %>
+	</div>
+	
 	<div id="status_list">
 		<%= render :partial => 'status_list' %>
 	</div>
-
-	<% end %>
 </div>

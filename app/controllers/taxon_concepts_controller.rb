@@ -9,10 +9,10 @@ class TaxonConceptsController < InheritedResources::Base
     #debugger
     @status = params[:taxon_concept][:has_taxon_status]
     TaxonConcept.first.add_status @status
-     respond_to do |format|
-        format.html {redirect_to taxon_concepts_path}
-        format.js
-      end
+    respond_to do |format|
+      format.html {redirect_to taxon_concepts_path}
+      format.js
+    end
   end
 
   def delete_status
@@ -24,6 +24,12 @@ class TaxonConceptsController < InheritedResources::Base
       format.html {redirect_to  new_taxon_concept_path}
       format.js
     end
+  end
+  
+  def update_status
+    @status = params[:status]
+    
+    
   end
 end
 
