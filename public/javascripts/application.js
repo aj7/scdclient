@@ -104,9 +104,14 @@ jQuery.fn.deleteWithAjax   = function() {
 	this.removeAttr('onclick');
 	this.unbind('click', false);
 	this.click(function() {
-		$.delete_($(this).attr("href"), $(this).serialize(), null, "script");
-		return false;
-	})
+        if(confirm("Are you sure?")){
+            $.delete_($(this).attr("href"), $(this).serialize(), null, "script");
+            return false;
+        } else {
+            //they clicked no.
+            return false;
+        }
+    })
 	return this;
 };
 
@@ -283,6 +288,9 @@ function showResponse(responseText, statusText, xhr, $form)  {
 
 function initialiseControls()
 {
+	//Using tipsy
+	$('.tipsyme').tipsy({fade:true, gravity: 'n', offset:10, opacity:0.7});
+	
 	// $("[title]").tooltip();
 	$('#add_status_div, #edit_status_div').hide();
 	//using tipTip
