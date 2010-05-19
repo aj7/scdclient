@@ -19,17 +19,21 @@ class TaxonConceptsController < InheritedResources::Base
     #debugger
     @status = params[:status]
     TaxonConcept.try(:first).delete_status @status      
-    #flash[:notice] = @status + " status has been deleted!"
+    flash[:notice] = @status + " status has been deleted!"
     respond_to do |format|
-      format.html {redirect_to  new_taxon_concept_path}
+      format.html {redirect_to taxon_concepts_path}
       format.js
     end
   end
   
   def update_status
-    @status = params[:status]
-    
-    
+    debugger
+    TaxonConcept.try(:first).update_status(params[:old_status][:value], params[:new_status])
+     flash[:notice] =  " Status has been updated!"
+    respond_to do |format|
+      format.html {redirect_to taxon_concepts_path}
+      format.js
+    end
   end
 end
 

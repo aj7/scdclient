@@ -236,6 +236,29 @@ function showResponse(responseText, statusText, xhr, $form)  {
 }
 }
 
+function savingEditStatusDialog()
+{
+var options             = {
+	success:   showResponse,  // post-submit callback
+	dataType:  'script',       // 'xml', 'script', or 'json' (expected server response type) 
+	clearForm: true        // clear all form fields after successful submit
+	//resetForm: true        // reset the form after successful submit
+
+	// $.ajax options can be used here too, for example:
+	//timeout:   3000
+};
+// bind 'myForm' and provide a simple callback function
+$('#edit_status_form').ajaxForm(options);
+
+function showResponse(responseText, statusText, xhr, $form)  {       
+	growlMe('Status updated!');
+	$('#edit_status_div').hide('slow');
+	//alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+	//   '\n\nThe output div should have already been updated with the responseText.');
+}
+}
+
+
 function savingNewStatusDialog()
 {
 var options             = {
@@ -252,6 +275,7 @@ $('#add_new_status_form').ajaxForm(options);
 
 function showResponse(responseText, statusText, xhr, $form)  {       
 	growlMe('New status inserted');
+	$('#add_status_div').hide('slow');
 	//alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +
 	//   '\n\nThe output div should have already been updated with the responseText.');
 }
@@ -260,7 +284,7 @@ function showResponse(responseText, statusText, xhr, $form)  {
 function initialiseControls()
 {
 	// $("[title]").tooltip();
-	$('#add_status_div').hide();
+	$('#add_status_div, #edit_status_div').hide();
 	//using tipTip
 	$('.tipme').tipTip({edgeOffset:10, delay :100});
 	
@@ -269,6 +293,22 @@ function initialiseControls()
 		$(this).click(function()
 		{
 				$('#add_status_div').slideToggle();
+				$('#edit_status_div').hide();
+		});
+	});
+	
+	//This section is looking working with editing status
+	$('.edit_status_class').livequery(function()
+	{
+		$(this).click(function()
+		{
+			$('#edit_status_div').show('slow');
+			$('#add_status_div').hide();
+			//$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
+			var old_status = $(this).attr("id");
+			$('#new_status').val(old_status);
+			$('#old_status_value').val(old_status);
+			//alert ($(this).attr("id"));
 		});
 	});
 }
@@ -348,4 +388,5 @@ $('#click').click(function(){
 		initialiseNewStatusDialog();
 		savingNewRoleDialog();
 		savingNewStatusDialog();
+		savingEditStatusDialog();
 	});

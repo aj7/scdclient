@@ -10,12 +10,13 @@
 	</div>
 	
 	<div id="edit_status_div">
-		<% form_tag  create_status_path,:method => "post",:id =>"edit_status_form" do %>
+		<% form_tag  update_status_path,:method => "post",:id =>"edit_status_form" do %>
 		<%= error_messages_for :taxon_concept %>
 		<label>Status value:</label>
-		<%= text_field :taxon_concept, :has_taxon_status, :value => ""  %><br />
+		<%= text_field_tag :new_status  %><br />
+		<%= hidden_field :old_status, :value => "" %>
 
-		<%= submit_tag 'Add status', :id => 'submit_role',:html => {:float => 'left'}%>
+		<%= submit_tag 'Update status', :id => 'edit_status_submit',:html => {:float => 'left'}%>
 		<% end %>
 	</div>
 	

@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.create_status "create_status", :controller => "taxon_concepts", :action => "create_status"
   map.delete_status "delete_status", :controller => "taxon_concepts", :action => "delete_status"
+  map.update_status "update_status", :controller => "taxon_concepts", :action => "update_status"
   map.home 'home', :controller => "home" ,:action =>"index"
 
   # The priority is based upon order of creation: first created -> highest priority.
