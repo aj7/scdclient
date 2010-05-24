@@ -46,4 +46,29 @@ class TaxonConcept < ActiveRecord::Base
    t.save
   end
 
+#  def add_tag (tag, method_value)
+#    t = TaxonConcept.find(:first)
+#    t.send("#{method_value}_list").add(tag)
+#    #t.status_type_list.add(status)
+#    t.save
+#  end
+#
+#  def delete_tag (tag, method_value)
+#    TaxonConcept.send("#{method_value}_counts").find(:first, :conditions => {:name => tag}).delete
+#  end
+#
+#  def update_tag (old_tag, new_tag, method_value, model_field )
+#    debugger
+#    taxons = TaxonConcept.send("find_all_by_#{model_field}",old_tag)
+#    taxons.each do |e|
+#      e.send("#{model_field}").to_sym = new_tag
+#      e.save
+#    end
+#
+#   t = TaxonConcept.send("#{method_value}_counts").find(:first,:conditions => {:name => old_tag},:readonly => false)
+#   t.name = new_tag
+#   t.save
+#  end
+
+
 end

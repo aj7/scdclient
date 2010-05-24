@@ -16,6 +16,10 @@ ActionController::Routing::Routes.draw do |map|
   map.delete_status "delete_status", :controller => "taxon_concepts", :action => "delete_status"
   map.update_status "update_status", :controller => "taxon_concepts", :action => "update_status"
 
+  map.create_tag "create_tag", :controller => :control.to_s,:action => "create_tag" 
+  map.delete_tag "delete_tag", :controller => :control, :action => "delete_tag"
+  map.update_tag "update_tag", :controller => :control, :action => "update_tag" 
+
   map.create_taxon_rank "create_taxon_rank", :controller => "taxon_concepts", :action => "create_taxon_rank"
   map.delete_taxon_rank "delete_taxon_rank", :controller => "taxon_concepts", :action => "delete_taxon_rank"
   map.update_taxon_rank "update_taxon_rank", :controller => "taxon_concepts", :action => "update_taxon_rank"

@@ -27,7 +27,7 @@
       <file leaf-file-name="_managetags.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_managetags.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="521" selection-end="521" vertical-scroll-proportion="-8.863636">
+            <state line="16" column="63" selection-start="778" selection-end="778" vertical-scroll-proportion="-10.909091">
               <folding />
             </state>
           </provider>
@@ -36,7 +36,7 @@
       <file leaf-file-name="_taglist.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_taglist.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="121" selection-start="153" selection-end="153" vertical-scroll-proportion="-1.3636364">
+            <state line="10" column="88" selection-start="802" selection-end="859" vertical-scroll-proportion="-6.818182">
               <folding />
             </state>
           </provider>
@@ -45,16 +45,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="4" selection-start="1591" selection-end="1591" vertical-scroll-proportion="-23.181818">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_rank.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_rank.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="58" selection-start="216" selection-end="233" vertical-scroll-proportion="-2.0454545">
+            <state line="13" column="78" selection-start="643" selection-end="643" vertical-scroll-proportion="-8.863636">
               <folding />
             </state>
           </provider>
@@ -63,25 +54,43 @@
       <file leaf-file-name="taxon_concepts_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="44" column="27" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxon_concept_name.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/taxon_concept_name.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="35" column="72" selection-start="1357" selection-end="1668" vertical-scroll-proportion="0.7123473">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taxon_concept.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="taxon_concept.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="13" selection-start="601" selection-end="1196" vertical-scroll-proportion="0.9348711">
+            <state line="41" column="29" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="26" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genericmethods.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/genericmethods.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="5" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,22 +118,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/new.html.erb" />
-        <option value="$PROJECT_DIR$/public/stylesheets/overcast/jquery-ui-1.8.1.custom.css" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_new_status.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_status_refresh.js.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/_rank.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_taglist.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/update_status.js.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/create_status.js.erb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/delete_status.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/shared/_managetags.html.erb" />
         <option value="$PROJECT_DIR$/public/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/lib/generic_methods.rb" />
+        <option value="$PROJECT_DIR$/lib/GenericMethods.rb" />
+        <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
         <option value="$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/genericmethods.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_taglist.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_managetags.html.erb" />
       </list>
     </option>
   </component>
@@ -262,46 +271,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,6 +484,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17569546" sideWeight="0.6619898" order="0" side_tool="false" content_ui="tabs" />
@@ -524,7 +494,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -561,18 +530,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_status.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="57" selection-start="187" selection-end="187" vertical-scroll-proportion="0.062937066" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_status_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="58" selection-start="736" selection-end="736" vertical-scroll-proportion="-8.863636">
@@ -583,20 +540,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/shared/_status_refresh.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="41" selection-start="78" selection-end="78" vertical-scroll-proportion="0.02097902">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="96" selection-start="979" selection-end="979" vertical-scroll-proportion="0.40705562">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_taglist.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="121" selection-start="153" selection-end="153" vertical-scroll-proportion="-1.3636364">
           <folding />
         </state>
       </provider>
@@ -629,30 +572,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="4" selection-start="1591" selection-end="1591" vertical-scroll-proportion="-23.181818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_managetags.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="521" selection-end="521" vertical-scroll-proportion="-8.863636">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="328" column="24" selection-start="10853" selection-end="10853" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -664,9 +586,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/genericmethods.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="5" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="13" selection-start="601" selection-end="1196" vertical-scroll-proportion="0.9348711">
+        <state line="41" column="29" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="78" selection-start="643" selection-end="643" vertical-scroll-proportion="-8.863636">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_taglist.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="88" selection-start="802" selection-end="859" vertical-scroll-proportion="-6.818182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="27" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_managetags.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="63" selection-start="778" selection-end="778" vertical-scroll-proportion="-10.909091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="72" selection-start="1357" selection-end="1668" vertical-scroll-proportion="0.7123473">
           <folding />
         </state>
       </provider>

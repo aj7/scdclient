@@ -27,11 +27,11 @@
 
 <!-- Div for dialog box which shows for adding a new status -->
 <div id="status_dialog"  title="Manage Status" class="hidden_dialog">
-  <%= render :partial => "shared/managetags", :locals => {:model => "TaxonConcept", :controller_value => "status", :field_value => "status_type", :button => "Status"} %>
+  <%= render :partial => "shared/managetags", :locals => {:model => "TaxonConcept", :controller_value => "tag", :field_value => "status_type", :button => "Status"} %>
 </div>
 
 <!-- Div for dialog box which shows for adding a new status -->
 <div id="rank_dialog"  title="Manage Rank" class="hidden_dialog">
-  <%= render :partial => "shared/managetags", :locals => {:model => "TaxonConcept", :controller_value => "taxon_rank", :field_value => "taxon_rank", :button => "Taxon Rank"} %>
+  <%= render :partial => "shared/managetags", :locals => {:model => "TaxonConcept", :controller_value => "tag", :field_value => "taxon_rank", :button => "Taxon Rank"} %>
 </div>
 <%#= render :partial => "shared/new_status" %>
