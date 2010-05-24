@@ -1,0 +1,14 @@
+<table class ="tableformat">
+	<thead>
+		<tr><th>Status name &nbsp;&nbsp;<%= link_to image_tag ("mini_icons/folder_new.gif"),"#",{:class => "tipsyme", :title => "Add status", :id => "add_test"} %></th></tr>
+	</thead>
+	<tbody>
+		<% for status in TaxonConcept.status_type_counts %>
+		<tr>
+			<td><%=h status.name %></td>
+			<td><%= link_to (image_tag "icons/user_edit.png"),"#",{:title => "Edit Status",:class => "edit_status_class tipsyme", :id => status.name} %></td>
+			<td><%= link_to (image_tag "icons/application_delete.png"),  delete_status_path(:params => {:status => status.name}), :confirm => 'Are you sure?' ,:class => "delete tipme",:title => "Delete Status",  :method => :delete %></td>
+		</tr>
+		<% end -%>
+	</tbody>
+</table>

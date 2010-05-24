@@ -1,5 +1,5 @@
 body{background:#cedce9 url(../images/backgd1.jpg);/*cedce9*/
-background-repeat:repeat-x;font-family:Verdana,Helvetica,Arial;font-size:14px;height:90%;}
+background-repeat:repeat-x;font-family:'Droid Sans','Inconsolata','Molengo','Cantarell', Verdana,Arial;font-size:12px;height:90%;}
 html{height:100%;}
 a img{border:none;}
 a.headerlink{color:#C8BDA1;}

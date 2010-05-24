@@ -5,9 +5,12 @@
 <head>
   <title><%= h(yield(:title) || "Untitled") %></title>
 
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata|Molengo|Cantarell|Droid+Sans">
+
   <!-- Blueprint stuff -->
   <link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
   <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+
 
   <!--[if lt IE 8]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
   <!--End Blueprint stuff -->
@@ -28,6 +31,7 @@
                            'application' %>
 
   <%= yield(:head) %>
+  
 
 </head>
 <body>
@@ -44,32 +48,30 @@
   </div>
 </div>
 <div class="wrap">
-  <div class="container">
+	<div class="container">
 
-    <div class="inner_container span-24 last">
-      <div class="content_container">
+		<div class="inner_container span-24 last">
+			<div class="content_container">
 
-        <%- flash.each do |name, msg| -%>
-            <%#= content_tag :div, msg, :id => "flash_#{name}" %>
-			<%#= javascript_tag "alert('The message: #{msg}')" %>
-			<%= javascript_tag "growlMe('#{msg}','#{name}')" %>
-            <% flash.delete(name) %>
-        <%- end -%>
+				<%- flash.each do |name, msg| -%>
+				<%#= content_tag :div, msg, :id => "flash_#{name}" %>
+				<%#= javascript_tag "alert('The message: #{msg}')" %>
+				<%= javascript_tag "growlMe('#{msg}','#{name}')" %>
+				<% flash.delete(name) %>
+				<%- end -%>
 
-        <%- if show_title? -%>
-            <h2><%=h yield(:title) %></h2>
-        <%- end -%>
+				<%- if show_title? -%>
+				<h2><%=h yield(:title) %></h2>
+				<%- end -%>
 
-        <%= yield %>
+				<%= yield %>
 
-      </div>
-    </div>
-    <div class="span-24 last">&nbsp;
-
-    </div>
-
-
-  </div>
+			</div>
+		</div>
+		<div class="span-24 last">&nbsp;
+		</div>
+	</div>
+	
 </div>
 <div class="footer">
   <div class="container" >

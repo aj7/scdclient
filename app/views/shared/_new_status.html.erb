@@ -21,6 +21,6 @@
 	</div>
 	
 	<div id="status_list">
-		<%= render :partial => 'status_list' %>
+		<%= render :partial => 'shared/taglist', :locals => {:field_value => "status_type", :button => "Status"} %>
 	</div>
 </div>

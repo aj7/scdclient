@@ -6,6 +6,7 @@ class TaxonName < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :properties
   acts_as_audited
+  has_paper_trail #used for versionning
 
   ###
   #Relationships

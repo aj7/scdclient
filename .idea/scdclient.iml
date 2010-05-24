@@ -54,6 +54,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="paper_trail" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="pg" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/database.yml" />
@@ -96,6 +102,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] formtastic (v0.9.8, /Library/Ruby/Gems/1.8/gems/formtastic-0.9.8)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] cancan (v1.1.1, /Library/Ruby/Gems/1.8/gems/cancan-1.1.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_nested_set (v1.4.3, /Library/Ruby/Gems/1.8/gems/awesome_nested_set-1.4.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] paper_trail (v1.5.0, /Library/Ruby/Gems/1.8/gems/paper_trail-1.5.0)" level="application" />
   </component>
 </module>
 
