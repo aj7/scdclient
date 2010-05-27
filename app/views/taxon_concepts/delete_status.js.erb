@@ -1,6 +1,0 @@
-$("#update_status").empty().append("<%= escape_javascript(render :partial => 'taxon_concepts/status') %>");
-$(".tag_list").empty().append("<%= escape_javascript(render :partial => 'shared/taglist', :locals => {:field_value => "status_type",
-        :controller_value => "status", :button => "status", :model => "TaxonConcept" , :title => nil, :other_options => nil}) %>");
-
-TaxonConceptStatusRefresh('Status has been deleted!');
-
