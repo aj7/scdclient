@@ -6,8 +6,8 @@
         <%#= error_messages_for :taxon_concept %>
         <label><%= button %> value:</label>
         <%= text_field_tag :new_tag  %><br />
-        <%= hidden_field :tag_list, field_value , :class => "tag_list" %>
-        <%= hidden_field :model, model %>
+        <%= hidden_field_tag :tag_list, field_value , :class => "tag_list" %>
+        <%= hidden_field_tag :model, model %>
         <%= submit_tag "Add #{button}", :id => 'submit_role',:html => {:float => 'left'}%>
     <% end %>
   </div>
@@ -17,8 +17,10 @@
         <%#= error_messages_for :taxon_concept %>
         <label>Status value:</label>
         <%= text_field_tag :new_tag , nil, :class => "new_tag" %><br />
-        <%= hidden_field :old_tag, nil, :class => "old_tag" %>
-        <%= hidden_field :model_field, model_field %>
+        <%= hidden_field_tag :old_tag, nil, :class => "old_tag" %>
+        <%= hidden_field_tag :model_field, model_field %>
+        <%= hidden_field_tag :tag_list, field_value %>        
+        <%= hidden_field_tag :model, model %>
 
         <%= submit_tag "Update #{button}", :id => "edit_#{controller_value}_submit",:html => {:float => 'left'}%>
     <% end %>

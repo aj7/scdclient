@@ -7,8 +7,7 @@
       <tr>
         <td><%=h tag.name %></td>
         <td><%= link_to (image_tag "icons/user_edit.png"),"#",{:title => "Edit #{button.humanize}",:class => "edit_tag_class tipsyme", :id => tag.name} %></td>
-        <td><%= link_to (image_tag "icons/application_delete.png"),  delete_tag_path(:params => {:controller => "taxon_concepts", :delete_tag => tag.name}), :confirm => 'Are you sure?' ,:class => "delete tipme",:title => "Delete #{button}",  :method => :delete %></td>
-        <td><%= link_to "Test", create_tag_path(:params => {:controller => "taxon_concepts"}) %></td>
+        <td><%= link_to (image_tag "icons/application_delete.png"),  delete_tag_path(:params => {:controller => "taxon_concepts", :delete_tag => tag.name, :model => model, :tag_list => field_value}), :delete_text => 'Are you sure you want to delete?' ,:class => "delete tipme",:title => "Delete #{button}",  :method => :delete %></td>
       </tr>
   <% end -%>
   </tbody>

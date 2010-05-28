@@ -24,7 +24,7 @@ module GenericMethods
   #new_tag is the new name for the tag
   #model_field is the field which is storing the current instance of the tag e.g. for status_type in TaxonConcept, this is has_taxon_status
   def GenericMethods.update_tag (model, old_tag, new_tag, tag_list, model_field )
-    debugger
+    #debugger
     taxons = model.constantize.send("find_all_by_#{model_field}",old_tag)
     taxons.each do |e|
       e.send("#{model_field}").to_sym = new_tag

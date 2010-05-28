@@ -38,12 +38,12 @@ class TaxonConceptsController < InheritedResources::Base
   end
 
   def create_tag
-    debugger
+    #debugger
     @status = params[:new_tag]
     GenericMethods.add_tag params[:model],params[:new_tag], params[:tag_list]
     #TaxonConcept.try(:first).add_status @status
     @value = 'create_' + params[:tag_list].to_s.downcase + '.js.erb'
-    debugger
+    #debugger
     respond_to do |format|
       format.html {redirect_to taxon_concepts_path}
 
@@ -54,7 +54,7 @@ class TaxonConceptsController < InheritedResources::Base
   def delete_tag
     #debugger
     @status = params[:delete_tag]
-    GenericMethods.delete_tag params[:model],params[:new_tag], params[:tag_list]
+    GenericMethods.delete_tag params[:model], params[:delete_tag], params[:tag_list]
     #TaxonConcept.try(:first).delete_status @status
     #flash[:notice] = @status + " status has been deleted!"
     respond_to do |format|

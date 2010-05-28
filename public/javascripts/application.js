@@ -104,7 +104,11 @@ jQuery.fn.deleteWithAjax   = function() {
     this.removeAttr('onclick');
     this.unbind('click', false);
     this.click(function() {
-        if(confirm("Are you sure?")){
+        var del = true;
+        if($(this).attr('delete_text').length > 0)
+            del = confirm($(this).attr("delete_text"));
+        if(del)
+        {
             $.delete_($(this).attr("href"), $(this).serialize(), null, "script");
             return false;
         } else {
@@ -324,10 +328,9 @@ function initialiseControls()
             $('.add_tag_div').hide();
             //$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
             var old_status = $(this).attr("id");
-            alert('value is: ' + old_status);
+            //alert('value is: ' + old_status);
             $('.new_tag').val(old_status);
             $('.old_tag').val(old_status);
-            //alert ($(this).attr("id"));
         });
     });
 }
