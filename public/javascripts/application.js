@@ -183,7 +183,7 @@ function initialiseNewStatusDialog()
     //clicking on the new_role link will cause modal dialog to pop up
     $('#add_new_status_link').livequery(function() {
         $(this).click(function(){
-            $("#add_new_tag_form")[0].reset();
+            $(".add_new_tag_form")[0].reset();
             $('#status_dialog').dialog("open");
         });
     });
@@ -191,7 +191,7 @@ function initialiseNewStatusDialog()
     //clicking on the new_role link will cause modal dialog to pop up
     $('#add_new_rank_link').livequery(function() {
         $(this).click(function(){
-            $("#add_new_tag_form")[0].reset();
+            $(".add_new_tag_form")[0].reset();
             $('#rank_dialog').dialog("open");
         });
     });
@@ -265,7 +265,7 @@ function savingEditStatusDialog()
         //timeout:   3000
     };
     // bind 'myForm' and provide a simple callback function
-    $('#edit_tag_form').ajaxForm(options);
+    $('.edit_tag_form').ajaxForm(options);
 
     function showResponse(responseText, statusText, xhr, $form)  {
         growlMe('Status updated!');
@@ -288,7 +288,7 @@ function savingNewStatusDialog()
         //timeout:   3000
     };
     // bind 'myForm' and provide a simple callback function
-    $('#add_new_tag_form').ajaxForm(options);
+    $('.add_new_tag_form').ajaxForm(options);
 
     function showResponse(responseText, statusText, xhr, $form)  {
         growlMe('New status inserted');

@@ -1,4 +1,6 @@
 <li>
-<label>Select status:</label>
-<%= select :taxon_concept,:has_taxon_status, TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select status' %>
+  <label>Select status:</label>
+  <%= select :taxon_concept,:has_taxon_status, TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select status' %>
+  <%= link_to "Manage Status" ,'#',:id => "add_new_status_link"%>
+  <%= link_to image_tag "icons/add.png" %>
 </li>

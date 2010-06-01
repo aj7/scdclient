@@ -6,10 +6,13 @@ module GenericMethods
   end
   #adding a tag to the model, with the
   def GenericMethods.add_tag(model, tag, tag_list)
-    t = model.constantize.find(:first)
-    t.send("#{tag_list}_list").add(tag)
-    #t.status_type_list.add(status)
-    t.save
+
+    if model.constantize.send("#{tag_list}_counts").find_by_name(tag).nil?
+       t = model.constantize.find(:first)
+      t.send("#{tag_list}_list").add(tag)
+      #t.status_type_list.add(status)
+      t.save
+    end
   end
 
   #The model is the name of the Model which has got the tags
@@ -30,10 +33,13 @@ module GenericMethods
       e.send("#{model_field}").to_sym = new_tag
       e.save
     end
-
-   t = model.constantize.send("#{tag_list}_counts").find(:first,:conditions => {:name => old_tag},:readonly => false)
-   t.name = new_tag
-   t.save
+    if model.constantize.send("#{tag_list}_counts").find_by_name(new_tag).nil?
+      t = model.constantize.send("#{tag_list}_counts").find(:first,:conditions => {:name => old_tag},:readonly => false)
+      t.name = new_tag
+      t.save
+    else
+      model.constantize.send("#{tag_list}_counts").find(:first, :conditions => {:name => old_tag}).delete
+    end
   end
 
 end

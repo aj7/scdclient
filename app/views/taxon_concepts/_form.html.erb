@@ -1,4 +1,4 @@
-<div class="span-15 colborder">
+<div class="span-18 colborder">
   <% semantic_form_for @taxon_concept do |f| %>
       <% f.inputs do	%>
           <%= f.input :taxon_name, :label => 'Scientific Name',
@@ -8,9 +8,8 @@
             <%= render :partial => 'taxon_concepts/status' %>
 
           </div>
-          <%= link_to "Manage Status" ,'#',:id => "add_new_status_link"%>
-          <%= link_to image_tag "icons/add.png" %>
-          <%= f.input :rank, :label => 'Taxon level'%>
+          
+          <%#= f.input :rank, :label => 'Taxon level'%>
           <div id="update_rank">
             <%= render :partial => "taxon_concepts/rank" %>
           </div>
