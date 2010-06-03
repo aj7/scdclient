@@ -9,6 +9,7 @@ class TaxonConcept < ActiveRecord::Base
   acts_as_audited
   acts_as_nested_set
   has_paper_trail #used for versioning
+  acts_as_commentable #used for comments management
 
   ###
   ### Relationships
@@ -17,7 +18,7 @@ class TaxonConcept < ActiveRecord::Base
   #A TaxonConcept has got one TaxonName associated to it ; but one TaxonName can belongs_to_many TaxonConcepts
   belongs_to :taxon_name
   has_many :concept_common_links
-  has_many :common_names
+  has_many :common_names, :through => :concept_common_links
 
   ###
   ### Validations

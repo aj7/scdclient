@@ -298,41 +298,96 @@ function savingNewStatusDialog()
     }
 }
 
+
+function savingNewComment()
+{
+    var options             = {
+        success:   showResponse,  // post-submit callback
+        dataType:  'script',       // 'xml', 'script', or 'json' (expected server response type)
+        clearForm: true        // clear all form fields after successful submit
+
+    };
+    // bind 'myForm' and provide a simple callback function
+    $('.add_new_comment_form').ajaxForm(options);
+
+    function showResponse(responseText, statusText, xhr, $form)  {
+        growlMe('New comment inserted');
+      
+    }
+}
+
+
 //INITIALISE VALUES
 function initialiseControls()
 {
-    //Using tipsy
-    $('.tipsyme').tipsy({fade:true, gravity: 'n', offset:10, opacity:0.7});
+    //setting autogrow to all textareas
+    $('textarea').livequery(function(){
+        $(this).elastic();
 
-    // $("[title]").tooltip();
-    $('.add_tag_div, .edit_tag_div').hide();
-    //using tipTip
-    $('.tipme').tipTip({edgeOffset:10, delay :100});
-
-    $('#add_tag_button, .add_tag_class').livequery(function()
+    });
+    //setting the tabs in TaxonConcept to work
+    $(".otherinfo-tabs").tabs(
     {
-        $(this).click(function()
-        {
-            //alert('click in ' + $(this).attr("id"));
-            $('.add_tag_div').slideToggle();
-            $('.edit_tag_div').hide();
+        collapsible: true
+        
+    }).find(".ui-tabs-nav").sortable({axis:'x'});
+
+    //setting accordion on the TaxonConcept page
+//Hide (Collapse) the toggle containers on load
+    $(".toggle_container").hide();
+
+    //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+
+    $('.ui-accordion-header').livequery(function()
+    {
+        $(this).click(function(){
+            
+            $(this).siblings('.hideme').slideToggle();
+            if ($(this).find('span').is('.ui-icon-triangle-1-s'))
+            {
+                $(this).children('span').removeClass('ui-icon-triangle-1-s').addClass('ui-icon-triangle-1-e');
+
+            }
+            else
+            {
+                $(this).find('span').removeClass('ui-icon-triangle-1-e').addClass('ui-icon-triangle-1-s');
+            }
         });
     });
 
-    //This section is looking working with editing status
-    $('.edit_tag_class').livequery(function()
+
+//Using tipsy
+$('.tipsyme').tipsy({fade:true, gravity: 'n', offset:10, opacity:0.7});
+
+// $("[title]").tooltip();
+$('.add_tag_div, .edit_tag_div').hide();
+//using tipTip
+$('.tipme').tipTip({edgeOffset:10, delay :100});
+
+$('#add_tag_button, .add_tag_class').livequery(function()
+{
+    $(this).click(function()
     {
-        $(this).click(function()
-        {
-            $('.edit_tag_div').show('slow');
-            $('.add_tag_div').hide();
-            //$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
-            var old_status = $(this).attr("id");
-            //alert('value is: ' + old_status);
-            $('.new_tag').val(old_status);
-            $('.old_tag').val(old_status);
-        });
+        //alert('click in ' + $(this).attr("id"));
+        $('.add_tag_div').slideToggle();
+        $('.edit_tag_div').hide();
     });
+});
+
+//This section is looking working with editing status
+$('.edit_tag_class').livequery(function()
+{
+    $(this).click(function()
+    {
+        $('.edit_tag_div').show('slow');
+        $('.add_tag_div').hide();
+        //$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
+        var old_status = $(this).attr("id");
+        //alert('value is: ' + old_status);
+        $('.new_tag').val(old_status);
+        $('.old_tag').val(old_status);
+    });
+});
 }
 
 function TaxonConceptStatusRefresh(message)
@@ -418,4 +473,5 @@ $(document).ready(function() {
     savingNewRoleDialog();
     savingNewStatusDialog();
     savingEditStatusDialog();
+    savingNewComment();
 });

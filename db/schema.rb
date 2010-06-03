@@ -9,7 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100601123159) do
+ActiveRecord::Schema.define(:version => 20100603170929) do
+
+  create_table "archived_comments", :id => false, :force => true do |t|
+    t.integer  "id"
+    t.string   "title",            :limit => 50
+    t.text     "comment"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+    t.integer  "deleted_by"
+  end
+
+  create_table "archived_tags", :id => false, :force => true do |t|
+    t.integer  "id"
+    t.string   "name"
+    t.datetime "deleted_at"
+  end
 
   create_table "assignments", :force => true do |t|
     t.integer  "role_id"
@@ -33,6 +52,21 @@ ActiveRecord::Schema.define(:version => 20100601123159) do
   add_index "audits", ["auditable_id", "auditable_type"], :name => "auditable_index"
   add_index "audits", ["created_at"], :name => "index_audits_on_created_at"
   add_index "audits", ["user_id", "user_type"], :name => "user_index"
+
+  create_table "comments", :force => true do |t|
+    t.string   "title",            :limit => 50, :default => ""
+    t.text     "comment",                        :default => ""
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "deleted_by"
+  end
+
+  add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
+  add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "common_names", :force => true do |t|
     t.string   "language"

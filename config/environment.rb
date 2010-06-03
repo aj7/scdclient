@@ -5,6 +5,8 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
+#
+
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
@@ -29,6 +31,9 @@ Rails::Initializer.run do |config|
   config.gem 'acts_as_audited', :lib => false
   config.gem 'awesome_nested_set'
   config.gem 'paper_trail' #for versioning
+  config.gem 'jackdempsey-acts_as_commentable', :lib => 'acts_as_commentable', :source => "http://gems.github.com" #for comments
+  config.gem 'acts_as_archive' #if some models are being deleted, then archive them just for the sake of doing so
+
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

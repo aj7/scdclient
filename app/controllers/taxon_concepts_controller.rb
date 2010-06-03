@@ -37,10 +37,39 @@ class TaxonConceptsController < InheritedResources::Base
     GenericMethods.update_tag params[:model],params[:old_tag], params[:new_tag], params[:tag_list] ,params[:model_field]
     #TaxonConcept.try(:first).update_status(params[:old_tag], params[:new_tag])
     #flash[:notice] =  " Status has been updated!"
+    @message = "This is a message from the controller"
     respond_to do |format|
       #format.html {redirect_to taxon_concepts_path}
       format.js {render :action => 'update_' + params[:tag_list].to_s.downcase + '.js.erb'}
     end
+  end
+
+  def add_comment
+    #debugger
+    @taxon_concept = TaxonConcept.find(params[:model])
+    @taxon_concept.comments.create(:comment => params[:new_comment], :user => current_user).save;
+    flash[:notice]= ("Comment added successfully!")
+
+    respond_to do |format|
+      format.js { render :action => "add_comment.js.erb"   }
+    end
+  end
+
+  def delete_comment
+
+    @comment = Comment.find(params[:delete_comment])
+    @taxon_concept = @comment.commentable
+    @comment_id = @comment.id
+    debugger
+    @comment.destroy
+
+    #Add the user to the archived comment
+    Comment::Archive.find(@comment_id).deleted_by = current_user
+
+    respond_to do |format|
+      format.js { render :action => "add_comment.js.erb"   }
+    end
+
   end
 end
 

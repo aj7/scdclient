@@ -1,27 +1,53 @@
-<div class="span-18 colborder">
+<div class="span-19 colborder">
   <% semantic_form_for @taxon_concept do |f| %>
-      <% f.inputs do	%>
-          <%= f.input :taxon_name, :label => 'Scientific Name',
-                      :collection => TaxonName.find(:all).collect{|p| [p.scientific_name, p.id]},
-                      :prompt => 'Select name' %>
-          <div id="update_status">
-            <%= render :partial => 'taxon_concepts/status' %>
 
+
+      <% f.inputs do	%>
+          <div class="span-9 ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-active ui-corner-top">
+              <span class="ui-icon ui-icon-triangle-1-s"></span>
+              <a href="#">General</a></h3>
+            <div class="hideme ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+              <%= f.input :taxon_name, :label => 'Scientific Name',
+                          :collection => TaxonName.find(:all).collect{|p| [p.scientific_name, p.id]},
+                          :prompt => 'Select name' %>
+              <div id="update_status">
+                <%= render :partial => 'taxon_concepts/status' %>
+
+              </div>
+
+              <%#= f.input :rank, :label => 'Taxon level'%>
+              <div id="update_rank">
+                <%= render :partial => "taxon_concepts/rank" %>
+              </div>
+              <%= f.input :is_current, :label => 'Active'%>
+            </div>
           </div>
-          
-          <%#= f.input :rank, :label => 'Taxon level'%>
-          <div id="update_rank">
-            <%= render :partial => "taxon_concepts/rank" %>
+          <div class="span-9 ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-active ui-corner-top">
+              <span class="ui-icon ui-icon-triangle-1-s"></span>
+              <a href="#">Comments</a>
+            </h3>
+            <div class="hideme ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+              <%= f.input :comments, :label => 'Extra Comments'%>
+            </div>
           </div>
-          <%= f.input :is_current, :label => 'Active'%>
-          <%= f.input :comments, :label => 'Extra Comments'%>
+
+
           <!--<label>Status*</label>-->
           <%#= select :taxon_concept, :has_taxon_status,  TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select' %>
       <% end -%>
-      <% f.buttons do %>
+       <% f.buttons do %>
           <%= f.commit_button %>
       <% end -%>
+
+      <hr class="space"/>
+
+
   <% end -%>
+   <div class="span-19">
+        <%= render :partial => "otherinfo", :locals => {:f => @taxon_concept} %>
+    </div>
 </div>
 
 <!-- Div for dialog box which shows for adding a new status -->

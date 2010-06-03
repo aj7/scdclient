@@ -14,13 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
-  map.create_status "create_status", :controller => "taxon_concepts", :action => "create_status"
-  map.delete_status "delete_status", :controller => "taxon_concepts", :action => "delete_status"
-  map.update_status "update_status", :controller => "taxon_concepts", :action => "update_status"
-
-  #map.create_tag "create_tag", :controller => :control.to_s,:action => "create_tag"
-  #map.delete_tag "delete_tag", :controller => :control, :action => "delete_tag"
-  #map.update_tag "update_tag", :controller => :control, :action => "update_tag"
+  map.add_comment "add_comment", :controller => "taxon_concepts", :action => "add_comment"
+  map.delete_comment "delete_comment", :controller => "taxon_concepts", :action => "delete_comment"
 
   map.create_tag "create_tag/:controller" , :action => "create_tag"
   map.delete_tag "delete_tag/:controller" , :action => "delete_tag"

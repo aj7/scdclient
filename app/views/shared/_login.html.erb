@@ -1,6 +1,6 @@
   <% if current_user %>
 	
-      Welcome <%= link_to  current_user.username, edit_user_path(:current),:class => "headerlink" %> ! |
+      Welcome <%= link_to  current_user.username, edit_user_path(current_user),:class => "headerlink" %> ! |
       <%= link_to "Logout", logout_path, :class => "headerlink" %>
  <% else %>
       <%= link_to "Register", new_user_path,:class => "headerlink" %> |

@@ -4,8 +4,9 @@
 class ApplicationController < ActionController::Base
    #This module contains generic methods that can used through the whole application
   require 'GenericMethods'
+  #require 'Authentication'
 
-
+  before_filter :current_user
   helper :all # include all helpers, all the time
                         
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
@@ -28,7 +29,7 @@ class ApplicationController < ActionController::Base
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
   end
-  
+
 
   def current_user
     return @current_user if defined?(@current_user)

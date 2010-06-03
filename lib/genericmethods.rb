@@ -19,7 +19,7 @@ module GenericMethods
   #The tag is the value of the tag being deleted
   #The tag_list is the name of the tag_list which has been given in the model e.g. status_type in TaxonConcept
   def GenericMethods.delete_tag (model, tag, tag_list)
-    model.constantize.send("#{tag_list}_counts").find(:first, :conditions => {:name => tag}).delete
+    model.constantize.send("#{tag_list}_counts").find(:first, :conditions => {:name => tag}).destroy
   end
 
 

@@ -18,6 +18,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="acts_as_archive" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="acts_as_audited" version="0" bound="GREATER_OR_EQUAL" lib="false" git="false" />
       </requirement>
       <source from="config/environment.rb" />
@@ -49,6 +55,12 @@
     <requirement>
       <requirement>
         <dependency name="inherited_resources" version="1.0.6" bound="EQUAL" git="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="jackdempsey-acts_as_commentable" version="0" bound="GREATER_OR_EQUAL" url="http://gems.github.com" lib="acts_as_commentable" git="false" />
       </requirement>
       <source from="config/environment.rb" />
     </requirement>
@@ -103,6 +115,9 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] cancan (v1.1.1, /Library/Ruby/Gems/1.8/gems/cancan-1.1.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] awesome_nested_set (v1.4.3, /Library/Ruby/Gems/1.8/gems/awesome_nested_set-1.4.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] paper_trail (v1.5.0, /Library/Ruby/Gems/1.8/gems/paper_trail-1.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jackdempsey-acts_as_commentable (v2.0.2, /Library/Ruby/Gems/1.8/gems/jackdempsey-acts_as_commentable-2.0.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] require (v0.2.1, /Library/Ruby/Gems/1.8/gems/require-0.2.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] acts_as_archive (v0.2.5, /Library/Ruby/Gems/1.8/gems/acts_as_archive-0.2.5)" level="application" />
   </component>
 </module>
 
