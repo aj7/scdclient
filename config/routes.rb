@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :languages
+
   map.resources :common_names
 
   map.resources :taxon_concepts

@@ -1,6 +1,6 @@
 <% title "Edit Taxon Concept" %>
 
-<%= render :partial => 'form' %>
+<%= render :partial => 'form', :locals => {:new_instance => false}  %>
 
 <div class="span-2 box">
   <%= link_to "Show", @taxon_concept %> |

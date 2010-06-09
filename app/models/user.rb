@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :assignments
   has_many :roles, :through => :assignments
   has_many :comments
+  has_many :common_names
+  has_many :languages
 
   #accepts_nested_attributes_for :role, :reject_if => :all_blank
 

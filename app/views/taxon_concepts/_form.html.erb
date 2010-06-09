@@ -20,7 +20,8 @@
               <div id="update_rank">
                 <%= render :partial => "taxon_concepts/rank" %>
               </div>
-              <%= f.input :is_current, :label => 'Active'%>
+              <%= f.input :is_current, :label => 'Current'%>
+              <%= f.input :comments, :label => 'Extra Comments'%>
             </div>
           </div>
           <div class="span-9 ui-accordion ui-widget ui-helper-reset ui-accordion-icons">
@@ -37,7 +38,7 @@
           <!--<label>Status*</label>-->
           <%#= select :taxon_concept, :has_taxon_status,  TaxonConcept.status_type_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select' %>
       <% end -%>
-       <% f.buttons do %>
+      <% f.buttons do %>
           <%= f.commit_button %>
       <% end -%>
 
@@ -45,9 +46,12 @@
 
 
   <% end -%>
-   <div class="span-19">
+  <div class="span-19">
+    
+    <% if !new_instance  %>
         <%= render :partial => "otherinfo", :locals => {:f => @taxon_concept} %>
-    </div>
+    <% end -%>
+  </div>
 </div>
 
 <!-- Div for dialog box which shows for adding a new status -->

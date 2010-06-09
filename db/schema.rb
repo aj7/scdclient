@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100603170929) do
+ActiveRecord::Schema.define(:version => 20100609145449) do
 
   create_table "archived_comments", :id => false, :force => true do |t|
     t.integer  "id"
@@ -69,11 +69,12 @@ ActiveRecord::Schema.define(:version => 20100603170929) do
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "common_names", :force => true do |t|
-    t.string   "language"
     t.string   "name"
-    t.boolean  "preferred",  :default => false
+    t.boolean  "preferred",   :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "language_id"
+    t.integer  "user_id"
   end
 
   create_table "concept_common_links", :force => true do |t|
@@ -81,6 +82,14 @@ ActiveRecord::Schema.define(:version => 20100603170929) do
     t.integer  "common_name_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "languages", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "name_relationships", :force => true do |t|

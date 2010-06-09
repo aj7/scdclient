@@ -45,7 +45,7 @@ class TaxonConceptsController < InheritedResources::Base
   end
 
   def add_comment
-    #debugger
+    debugger
     @taxon_concept = TaxonConcept.find(params[:model])
     @taxon_concept.comments.create(:comment => params[:new_comment], :user => current_user).save;
     flash[:notice]= ("Comment added successfully!")
