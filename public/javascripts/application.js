@@ -340,6 +340,23 @@ function savingNewComment()
     }
 }
 
+function ajaxifySavingForm()
+{
+    var options             = {
+        success:   showResponse,  // post-submit callback
+        dataType:  'script',       // 'xml', 'script', or 'json' (expected server response type)
+        clearForm: true        // clear all form fields after successful submit
+
+    };
+    // bind 'myForm' and provide a simple callback function
+    $('.ajaxify_form').ajaxForm(options);
+
+    function showResponse(responseText, statusText, xhr, $form)  {
+        //growlMe('New Common Name inserted');
+
+    }
+}
+
 
 //INITIALISE VALUES
 function initialiseControls()

@@ -71,6 +71,24 @@ class TaxonConceptsController < InheritedResources::Base
     end
 
   end
+
+   def create_common_name
+    debugger
+    @common_name = CommonName.new(params[:common_name])
+    @common_name.user = current_user;
+    if @common_name.save
+      @message = "Successfully created common name."
+    end
+    @taxon_concept = TaxonConcept.find(params[:model])
+    @taxon_concept.common_names << @common_name
+#    flash[:notice]= ("Common name added successfully!")
+     @message = "Common Name added!"
+
+    respond_to do |format|
+      format.js { render :action => "common_names/add_common_name.js.erb"   }
+    end
+  end
+
 end
 
 

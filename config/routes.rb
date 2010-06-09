@@ -23,6 +23,9 @@ ActionController::Routing::Routes.draw do |map|
   map.delete_tag "delete_tag/:controller" , :action => "delete_tag"
   map.update_tag "update_tag/:controller" , :action => "update_tag"
 
+  map.create_common_name "create_common_name", :controller => "taxon_concepts", :action => "create_common_name"
+  map.update_common_name "update_common_name", :controller => "taxon_concepts", :action => "update_common_name"
+
   map.create_taxon_rank "create_taxon_rank", :controller => "taxon_concepts", :action => "create_taxon_rank"
   map.delete_taxon_rank "delete_taxon_rank", :controller => "taxon_concepts", :action => "delete_taxon_rank"
   map.update_taxon_rank "update_taxon_rank", :controller => "taxon_concepts", :action => "update_taxon_rank"
