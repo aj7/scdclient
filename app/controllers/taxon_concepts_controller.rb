@@ -16,7 +16,7 @@ class TaxonConceptsController < InheritedResources::Base
     #refactored into one update_tag.js.erb file
     respond_to do |format|
       #format.html {redirect_to taxon_concepts_path}
-      format.js {render :action => 'update_' + params[:tag_list].to_s.downcase + '.js.erb' }
+      format.js {render 'update_' + params[:tag_list].to_s.downcase + '.js.erb' }
     end
   end
 
@@ -40,19 +40,18 @@ class TaxonConceptsController < InheritedResources::Base
     @message = "This is a message from the controller"
     respond_to do |format|
       #format.html {redirect_to taxon_concepts_path}
-      format.js {render :action => 'update_' + params[:tag_list].to_s.downcase + '.js.erb'}
+      format.js {render 'update_' + params[:tag_list].to_s.downcase + '.js.erb'}
     end
   end
 
   def add_comment
-    debugger
+    #debugger
     @taxon_concept = TaxonConcept.find(params[:model])
     @taxon_concept.comments.create(:comment => params[:new_comment], :user => current_user).save;
-    flash[:notice]= ("Comment added successfully!")
+    #flash[:notice]= ("Comment added successfully!")
 
-    respond_to do |format|
-      format.js { render :action => "add_comment.js.erb"   }
-    end
+    render "add_comment.js.erb"
+    
   end
 
   def delete_comment
@@ -60,7 +59,7 @@ class TaxonConceptsController < InheritedResources::Base
     @comment = Comment.find(params[:delete_comment])
     @taxon_concept = @comment.commentable
     @comment_id = @comment.id
-    debugger
+    #debugger
     @comment.destroy
 
     #Add the user to the archived comment
@@ -72,8 +71,8 @@ class TaxonConceptsController < InheritedResources::Base
 
   end
 
-   def create_common_name
-    debugger
+  def create_common_name
+    #debugger
     @common_name = CommonName.new(params[:common_name])
     @common_name.user = current_user;
     if @common_name.save
@@ -82,11 +81,21 @@ class TaxonConceptsController < InheritedResources::Base
     @taxon_concept = TaxonConcept.find(params[:model])
     @taxon_concept.common_names << @common_name
 #    flash[:notice]= ("Common name added successfully!")
-     @message = "Common Name added!"
+    @message = "Common Name added!"
 
     respond_to do |format|
-      format.js { render :action => "common_names/add_common_name.js.erb"   }
+      format.js { render :action => "taxon_concepts/common_names/add_common_name.js.erb"   }
     end
+  end
+
+  def delete_common_name
+    #debugger
+    @common_name = CommonName.find(params[:delete_common_name])
+    @taxon_concept = @common_name.taxon_concepts.first
+
+    @taxon_concept.delete_common_name @common_name
+
+    render  "taxon_concepts/common_names/add_common_name.js.erb"
   end
 
 end

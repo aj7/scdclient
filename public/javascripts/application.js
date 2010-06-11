@@ -132,26 +132,26 @@ function ajaxLinks(){
 }
 
 /*
-INITIALISE THE COLLAPSIBLE PANELS
+ INITIALISE THE COLLAPSIBLE PANELS
 
-*/
+ */
 function initialisePanels()
 {
     $("div.panel-accordion").addClass("ui-accordion ui-accordion-icons ui-widget ui-helper-reset")
-  .find("h3")
-    .addClass("ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom")
-    .hover(function() { $(this).toggleClass("ui-state-hover"); })
-    .prepend('<span class="ui-icon ui-icon-triangle-1-e"></span>')
-    .click(function() {
-      $(this)
-        .toggleClass("ui-accordion-header-active ui-state-active ui-state-default ui-corner-bottom")
-        .find('span .ui-icon').toggleClass("ui-icon-triangle-1-e ui-icon-triangle-1-s").end()
-        .next().toggleClass("ui-accordion-content-active").slideToggle();
-      return false;
+            .find("h3")
+            .addClass("ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom")
+            .hover(function() { $(this).toggleClass("ui-state-hover"); })
+            .prepend('<span class="ui-icon ui-icon-triangle-1-e"></span>')
+            .click(function() {
+        $(this)
+                .toggleClass("ui-accordion-header-active ui-state-active ui-state-default ui-corner-bottom")
+                .find('span .ui-icon').toggleClass("ui-icon-triangle-1-e ui-icon-triangle-1-s").end()
+                .next().toggleClass("ui-accordion-content-active").slideToggle();
+        return false;
     })
-    .next()
-      .addClass("ui-accordion-content  ui-helper-reset ui-widget-content ui-corner-bottom")
-      .hide();
+            .next()
+            .addClass("ui-accordion-content  ui-helper-reset ui-widget-content ui-corner-bottom")
+            .hide();
 
 }
 
@@ -222,6 +222,33 @@ function initialiseNewStatusDialog()
 
 
 }
+
+//FUNCTION TO PREVENT FORM SUBMIT ON ENTER
+function detectKeypress()
+{
+    $('form input, form textarea').keypress(function(event) {
+        //alert("here");
+        if (event.which == 13)
+        {
+            //alert('Handler for .keypress() called.' + event.which);
+            event.preventDefault();
+            //event.keyCode = 9;
+            return false;
+        }
+    });
+
+}
+
+//enterAsTab = function(f, a){
+//    addEvent(f, "keypress", function(e){
+//        var l, i, f, j, o = e.target;
+//        if(e.key == 13 && (a || !/textarea|select/i.test(o.type))){
+//            for(i = l = (f = o.form.elements).length; f[--i] != o;);
+//            for(j = i; (j = (j + 1) % l) != i && (!f[j].type || f[j].disabled || f[j].readOnly || f[j].type.toLowerCase() == "hidden"););
+//            e.preventDefault(), j != i && f[j].focus();
+//        }
+//    });
+//};
 
 //function for outputting messages as Growl-style
 function growlMe(output,notice_type)
@@ -336,7 +363,7 @@ function savingNewComment()
 
     function showResponse(responseText, statusText, xhr, $form)  {
         growlMe('New comment inserted');
-      
+
     }
 }
 
@@ -357,6 +384,78 @@ function ajaxifySavingForm()
     }
 }
 
+//JQUERY UI AUTOCOMPLETE
+function autocompleteCommonNames2()
+{
+
+
+    $('#common_name_name').livequery(function(){
+
+        $(this).autocomplete({
+            minLength: 0,
+            source:"/common_names/get_common_names/1" ,
+            //			focus: function(event, ui) {
+            //				$('#project').val(ui.item.label);
+            //				return false;
+            //			},
+            select: function(event, ui) {
+                //alert(ui.item.common_name.name);
+                $(this).val(ui.item.common_name.name);
+                return false;
+            }
+        })
+                .data( "autocomplete" )._renderItem = function( ul, item ) {
+            //alert(item[0].common_name.name)
+            return $( "<li></li>" )
+                    .data( "item.autocomplete", item )
+                    .append( "<a>" + item.common_name.name + " - " + item.common_name.name + "</a>" )
+                    .appendTo( ul );
+        };
+    });
+
+}
+
+//AUTOCOMPLETE FOR COMMON_NAMES
+function autocompleteCommonNames()
+{
+
+    $('#common_name_name').livequery(function(){
+
+        $(this).autocomplete("/common_names/get_common_names/1",
+        {
+            dataType: 'json',
+            width: 320,
+            max: 20,
+            highlight: false,
+            scroll: true,
+            scrollHeight: 300,
+
+            parse: function(data) {
+                //alert('in parse : ' + data.length );
+                var rows = new Array();
+                for (var i = 0; i < data.length; i++)
+                {
+                    rows[i] = { data: data[i], value: data[i].name, result: data[i].name };
+                    //alert(data[i].toString() + ':' + data[i][0])
+                }
+                return rows;
+
+            },
+            formatItem: function(row, i,n, max) {
+                // alert('test: ' + max + ':' + i + row.common_name.name);
+                return row.common_name.name + " <" + row.common_name.name + ">";
+            },
+            formatResult: function(data, value) {
+                //alert('in format result');
+                //return value.split(".")[0];
+                return data.common_name.name;
+            }
+        }).result(function(event, item, formatted) {
+            //alert(item.common_name.name);
+        });
+    });
+
+}
 
 //INITIALISE VALUES
 function initialiseControls()
@@ -370,11 +469,11 @@ function initialiseControls()
     $(".otherinfo-tabs").tabs(
     {
         collapsible: true
-        
+
     }).find(".ui-tabs-nav").sortable({axis:'x'});
 
     //setting accordion on the TaxonConcept page
-//Hide (Collapse) the toggle containers on load
+    //Hide (Collapse) the toggle containers on load
     $(".toggle_container").hide();
 
     //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
@@ -382,7 +481,7 @@ function initialiseControls()
     $('.ui-accordion-header').livequery(function()
     {
         $(this).click(function(){
-            
+
             $(this).siblings('.hideme').slideToggle();
             if ($(this).find('span').is('.ui-icon-triangle-1-s'))
             {
@@ -397,38 +496,41 @@ function initialiseControls()
     });
 
 
-//Using tipsy
-$('.tipsyme').tipsy({fade:true, gravity: 'n', offset:10, opacity:0.7});
+    //Using tipsy
+    $('.tipsyme').tipsy({fade:true, gravity: 'n', offset:10, opacity:0.7});
 
-// $("[title]").tooltip();
-$('.add_tag_div, .edit_tag_div').hide();
-//using tipTip
-$('.tipme').tipTip({edgeOffset:10, delay :100});
-
-$('#add_tag_button, .add_tag_class').livequery(function()
-{
-    $(this).click(function()
-    {
-        //alert('click in ' + $(this).attr("id"));
-        $('.add_tag_div').slideToggle();
-        $('.edit_tag_div').hide();
+    // $("[title]").tooltip();
+    $('.add_tag_div, .edit_tag_div').hide();
+    //using tipTip
+    $('.tipme').livequery(function(){
+        $(this).tipTip({edgeOffset:10, delay :100});
     });
-});
 
-//This section is looking working with editing status
-$('.edit_tag_class').livequery(function()
-{
-    $(this).click(function()
+
+    $('#add_tag_button, .add_tag_class').livequery(function()
     {
-        $('.edit_tag_div').show('slow');
-        $('.add_tag_div').hide();
-        //$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
-        var old_status = $(this).attr("id");
-        //alert('value is: ' + old_status);
-        $('.new_tag').val(old_status);
-        $('.old_tag').val(old_status);
+        $(this).click(function()
+        {
+            //alert('click in ' + $(this).attr("id"));
+            $('.add_tag_div').slideToggle();
+            $('.edit_tag_div').hide();
+        });
     });
-});
+
+    //This section is looking working with editing status
+    $('.edit_tag_class').livequery(function()
+    {
+        $(this).click(function()
+        {
+            $('.edit_tag_div').show('slow');
+            $('.add_tag_div').hide();
+            //$('#taxon_concept_has_taxon_status').val($(this).attr("id"));
+            var old_status = $(this).attr("id");
+            //alert('value is: ' + old_status);
+            $('.new_tag').val(old_status);
+            $('.old_tag').val(old_status);
+        });
+    });
 }
 
 function TaxonConceptStatusRefresh(message)
@@ -516,4 +618,9 @@ $(document).ready(function() {
     savingEditStatusDialog();
     savingNewComment();
     initialisePanels();
+    //autocompleteCommonNames();
+    autocompleteCommonNames2();
+    //enterAsTab(document.forms.form, false);
+    detectKeypress();
+
 });
