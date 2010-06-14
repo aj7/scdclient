@@ -52,6 +52,14 @@ class TaxonConcept < ActiveRecord::Base
   def delete_common_name (common_name)
     common_names.delete(common_name)
   end
+
+  def update_common_name (params)
+     @common_name = CommonName.find(params[:common_name_id])
+     if (@common_name.update_attributes(params[:common_name]))
+
+     end
+
+  end
 #  def add_tag (tag, method_value)
 #    t = TaxonConcept.find(:first)
 #    t.send("#{method_value}_list").add(tag)

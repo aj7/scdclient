@@ -184,6 +184,12 @@ function initialiseNewRoleDialog()
 
 }
 
+//Nice little jQuery scroll to id of any element
+function scrollToId(id){
+   window.scrollTo(0,$("#"+id).offset().top);
+}
+
+
 //APPLICATION SPECIFIC FUNCTIONS
 function initialiseNewStatusDialog()
     //function to get the dialog box to pop up, setup done here too
@@ -204,6 +210,19 @@ function initialiseNewStatusDialog()
         }
     });
 
+    //setting the edit_common_name dialog box
+   // $('#edit_common_name').dialog({modal : true});
+    //hiding the edit common_name div on load
+   // $('#edit_common_name').hide();
+
+//    $('.edit_common').livequery(function(){
+//        $(this).click(function(){
+//           $('#add_common_name').hide('slow');
+//           $('#edit_common_name').show('slow');
+//            scrollToId('edit_common_name');
+//        });
+//    });
+
     //clicking on the new_role link will cause modal dialog to pop up
     $('#add_new_status_link').livequery(function() {
         $(this).click(function(){
@@ -219,8 +238,6 @@ function initialiseNewStatusDialog()
             $('#rank_dialog').dialog("open");
         });
     });
-
-
 }
 
 //FUNCTION TO PREVENT FORM SUBMIT ON ENTER
@@ -236,19 +253,7 @@ function detectKeypress()
             return false;
         }
     });
-
 }
-
-//enterAsTab = function(f, a){
-//    addEvent(f, "keypress", function(e){
-//        var l, i, f, j, o = e.target;
-//        if(e.key == 13 && (a || !/textarea|select/i.test(o.type))){
-//            for(i = l = (f = o.form.elements).length; f[--i] != o;);
-//            for(j = i; (j = (j + 1) % l) != i && (!f[j].type || f[j].disabled || f[j].readOnly || f[j].type.toLowerCase() == "hidden"););
-//            e.preventDefault(), j != i && f[j].focus();
-//        }
-//    });
-//};
 
 //function for outputting messages as Growl-style
 function growlMe(output,notice_type)
@@ -415,6 +420,22 @@ function autocompleteCommonNames2()
 
 }
 
+//COMMON NAME INITIALISATIONS
+function commonNameInit()
+{
+    $('#cancel_common_name_edit').livequery(function(){
+        $(this).click(function(){
+            var form_submit = $(this).offsetParent().find('form');
+            form_submit.effect("highlight", {}, 3000);
+            form_submit.attr('action',"/taxon_concepts/cancel_common_name/1");
+            form_submit.submit();
+
+        });
+    });
+
+}
+
+
 //AUTOCOMPLETE FOR COMMON_NAMES
 function autocompleteCommonNames()
 {
@@ -460,6 +481,8 @@ function autocompleteCommonNames()
 //INITIALISE VALUES
 function initialiseControls()
 {
+    //Highlight current table row
+
     //setting autogrow to all textareas
     $('textarea').livequery(function(){
         $(this).elastic();
@@ -622,5 +645,6 @@ $(document).ready(function() {
     autocompleteCommonNames2();
     //enterAsTab(document.forms.form, false);
     detectKeypress();
+    commonNameInit();
 
 });

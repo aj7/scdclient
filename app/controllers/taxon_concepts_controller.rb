@@ -51,7 +51,7 @@ class TaxonConceptsController < InheritedResources::Base
     #flash[:notice]= ("Comment added successfully!")
 
     render "add_comment.js.erb"
-    
+
   end
 
   def delete_comment
@@ -84,8 +84,24 @@ class TaxonConceptsController < InheritedResources::Base
     @message = "Common Name added!"
 
     respond_to do |format|
-      format.js { render :action => "taxon_concepts/common_names/add_common_name.js.erb"   }
+      format.js { render "taxon_concepts/common_names/add_common_name" }
     end
+  end
+
+  def update_common_name
+    @common_name = CommonName.find(params[:common_name_id])
+    @taxon_concept = TaxonConcept.find(params[:model])
+    if (@common_name.update_attributes(params[:common_name]))
+      render "taxon_concepts/common_names/add_common_name"
+    end
+
+  end
+
+  def cancel_common_name
+    #debugger
+    @common_name = CommonName.new
+    @taxon_concept = TaxonConcept.find(params[:model])
+    render "taxon_concepts/common_names/cancel_common_name"
   end
 
   def delete_common_name
@@ -95,7 +111,9 @@ class TaxonConceptsController < InheritedResources::Base
 
     @taxon_concept.delete_common_name @common_name
 
-    render  "taxon_concepts/common_names/add_common_name.js.erb"
+    respond_to do |format|
+      format.js { render "taxon_concepts/common_names/add_common_name" }
+    end
   end
 
 end

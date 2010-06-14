@@ -2,13 +2,13 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-   #This module contains generic methods that can used through the whole application
+  #This module contains generic methods that can used through the whole application
   require 'GenericMethods'
   #require 'Authentication'
 
-  before_filter :current_user
+  before_filter :current_user, :set_controller_and_action_names
   helper :all # include all helpers, all the time
-                        
+
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied!"
     redirect_to root_url
-  end 
+  end
 
   helper_method :current_user
 
@@ -36,6 +36,11 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.record
   end
 
-  
+
+  def set_controller_and_action_names
+    @current_controller = controller_name
+    @current_action     = action_name
+  end
+
 
 end
