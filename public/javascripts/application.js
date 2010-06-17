@@ -186,7 +186,7 @@ function initialiseNewRoleDialog()
 
 //Nice little jQuery scroll to id of any element
 function scrollToId(id){
-   window.scrollTo(0,$("#"+id).offset().top);
+    window.scrollTo(0,$("#"+id).offset().top);
 }
 
 
@@ -211,17 +211,17 @@ function initialiseNewStatusDialog()
     });
 
     //setting the edit_common_name dialog box
-   // $('#edit_common_name').dialog({modal : true});
+    // $('#edit_common_name').dialog({modal : true});
     //hiding the edit common_name div on load
-   // $('#edit_common_name').hide();
+    // $('#edit_common_name').hide();
 
-//    $('.edit_common').livequery(function(){
-//        $(this).click(function(){
-//           $('#add_common_name').hide('slow');
-//           $('#edit_common_name').show('slow');
-//            scrollToId('edit_common_name');
-//        });
-//    });
+    //    $('.edit_common').livequery(function(){
+    //        $(this).click(function(){
+    //           $('#add_common_name').hide('slow');
+    //           $('#edit_common_name').show('slow');
+    //            scrollToId('edit_common_name');
+    //        });
+    //    });
 
     //clicking on the new_role link will cause modal dialog to pop up
     $('#add_new_status_link').livequery(function() {
@@ -429,12 +429,117 @@ function commonNameInit()
             form_submit.effect("highlight", {}, 3000);
             form_submit.attr('action',"/taxon_concepts/cancel_common_name/1");
             form_submit.submit();
-
         });
     });
 
 }
 
+function initialiseTaxonTree()
+{
+    $.jstree._themes = RAILS_ROOT + "/stylesheets/jstree/themes/";
+
+    $('#taxon_tree').jstree({
+        "themes" : {
+            "theme" : "apple",
+            "dots" : true,
+            "icons" : true
+
+        },
+        "json_data" : {
+            correct_state : true,
+            "data" : [
+                {
+                    attr : { "id" : "linode_1" },
+                    data : "A anode",
+                    state :'closed',
+                    children : [ {data: "child node", state: 'open'}, "Child 2" ]
+                },
+                {
+                    "attr" : { "id" : "ranks" },
+                    state: 'closed',
+                    icon : "folder",
+                    "data" : {
+                        "title" : "Ranks",
+                        "attr" : { "href" : "#" }
+                    }
+
+                }
+            ],
+            "ajax" :{
+                "url" : "/rank_tree/get_ranks_jstree",
+                "data" : function  (n) {
+                    return {
+                        "operation" : "get_children",
+                        id : n.attr ? n.attr("id") : 0 };
+                }  ,
+                success : function(data, textStatus, XMLHttpRequest)
+                {
+                    //alert (textStatus);
+                }
+            }
+        },
+
+        "plugins" : [ "themes", "json_data", "ui" ]
+
+    });
+
+    $("#tree").dynatree({
+        onActivate: function(dtnode) {
+            // A DynaTreeNode object is passed to the activation handler
+            // Note: we also get this event, if persistence is on, and the page is reloaded.
+            growlMe("You activated " + dtnode.data.title,null);
+            // alert("You activated " + dtnode.data.title);
+        },
+        onLazyRead: function(dtnode){
+            dtnode.appendAjax({url: "/rank_tree/get_ranks",
+                data: {"key": dtnode.data.key, // Optional url arguments
+                    "mode": "all"
+                },
+                success: function(dtnode) {
+                    // Called after nodes have been created and the waiting icon was removed.
+                    // 'this' is the options for this Ajax request
+                    alert(dtnode);
+                },
+                error: function(dtnode, XMLHttpRequest, textStatus, errorThrown) {
+                    // Called on error, after error icon was created.
+                },
+                cache: false // Append random '_' argument to url to prevent caching.
+            });
+        },
+
+        persist: true,
+        children: [ // Pass an array of nodes.
+            {title: "Folder 2",
+                isFolder: true,
+                children: [
+                    {title: "Sub-item 2.1"},
+                    {title: "Sub-item 2.2"}
+                ]
+            },
+            {title: "Ranks", key : "ranks", isLazy :true, isFolder : true, state : "closed"}
+        ]
+    });
+
+
+    $("#tree2").jstree({
+        "json_data" : {"data" : [
+            {
+                "data" : "A aaanode",
+                "children" : [ "Child 1", "Child 2" ]
+            },
+            {
+                "attr" : { "id" : "li.node.id" },
+                "data" : {
+                    "title" : "Long format demo",
+                    "attr" : { "href" : "#" }
+                }
+            }
+        ]
+        },
+        "plugins" : [ "themes", "json_data" ]
+    });
+
+}
 
 //AUTOCOMPLETE FOR COMMON_NAMES
 function autocompleteCommonNames()
@@ -646,5 +751,6 @@ $(document).ready(function() {
     //enterAsTab(document.forms.form, false);
     detectKeypress();
     commonNameInit();
+    initialiseTaxonTree();
 
 });

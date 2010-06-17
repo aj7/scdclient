@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100609145449) do
+ActiveRecord::Schema.define(:version => 20100615102226) do
 
   create_table "archived_comments", :id => false, :force => true do |t|
     t.integer  "id"
@@ -131,10 +131,10 @@ ActiveRecord::Schema.define(:version => 20100609145449) do
   end
 
   create_table "taxon_concepts", :force => true do |t|
-    t.text     "comments"
+    t.text     "external_comments"
     t.string   "has_taxon_status"
     t.string   "rank"
-    t.boolean  "is_current",       :default => false
+    t.boolean  "is_current",        :default => false
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"

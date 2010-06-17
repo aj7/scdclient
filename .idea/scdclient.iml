@@ -66,6 +66,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="json" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="paper_trail" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
       <source from="config/environment.rb" />
@@ -118,6 +124,8 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] jackdempsey-acts_as_commentable (v2.0.2, /Library/Ruby/Gems/1.8/gems/jackdempsey-acts_as_commentable-2.0.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] require (v0.2.1, /Library/Ruby/Gems/1.8/gems/require-0.2.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] acts_as_archive (v0.2.5, /Library/Ruby/Gems/1.8/gems/acts_as_archive-0.2.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] json (v1.4.3, /Library/Ruby/Gems/1.8/gems/json-1.4.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] json_pure (v1.4.3, /Library/Ruby/Gems/1.8/gems/json_pure-1.4.3)" level="application" />
   </component>
 </module>
 

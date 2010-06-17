@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="9df7eb2d-d820-4f41-8bef-a44093a49bb3" name="Default" comment="" />
-    <ignored path="scdclient.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="scdclient.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,73 +24,46 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_list.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_list.html.erb">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="59" selection-start="135" selection-end="135" vertical-scroll-proportion="-2.7272727">
+            <state line="48" column="67" selection-start="2531" selection-end="2531" vertical-scroll-proportion="-17.045454">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cancel_common_name.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/cancel_common_name.js.erb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/common_names/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="62" selection-start="401" selection-end="401" vertical-scroll-proportion="-5.4545455">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common_names_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/common_names_controller.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+            <state line="50" column="21" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_common_names.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_common_names.html.erb">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="101" selection-start="513" selection-end="513" vertical-scroll-proportion="-6.1363635">
+            <state line="452" column="37" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_common_name.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/edit_common_name.js.erb">
+      <file leaf-file-name="rank_tree_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/rank_tree_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="56" selection-start="400" selection-end="400" vertical-scroll-proportion="-4.7727275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_otherinfo.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_otherinfo.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="106" selection-start="993" selection-end="994" vertical-scroll-proportion="-14.318182">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_common_name.js.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/add_common_name.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.14685315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_add.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_add.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="52" selection-start="915" selection-end="915" vertical-scroll-proportion="-19.09091">
+            <state line="46" column="108" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.25207755">
               <folding />
             </state>
           </provider>
@@ -99,7 +72,25 @@
       <file leaf-file-name="taxon_concepts_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="4" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0">
+            <state line="119" column="1" selection-start="3724" selection-end="3724" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tree.json.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/ranks/tree.json.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="-12.272727">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/taxon_names/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="60" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,7 +99,7 @@
       <file leaf-file-name="taxon_concept.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="8" selection-start="1462" selection-end="1590" vertical-scroll-proportion="0.0">
+            <state line="80" column="5" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,22 +120,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/common_names/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/common_names/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/common_names/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/_common_names.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/edit_common_name.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/cancel_common_name.js.erb" />
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/_add.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
+        <option value="$PROJECT_DIR$/public/javascripts/jquery.jstree.min.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/test.xhtml" />
+        <option value="$PROJECT_DIR$/public/javascripts/jquery.jstree.js" />
+        <option value="$PROJECT_DIR$/app/views/common_names/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/taxon_concepts/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/common_names_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/_list.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/taxon_concepts/common_names/add_common_name.js.erb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/new_rails_defaults.rb" />
+        <option value="$PROJECT_DIR$/app/views/taxon_concepts/ranks/tree.json.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/jquery.jstree.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/jstree/apple/jstree.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/controllers/rank_tree_controller.rb" />
       </list>
     </option>
   </component>
@@ -174,7 +165,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,7 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,7 +228,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jstree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scdclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scdclient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jstree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apple" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -254,54 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taxon_concepts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scdclient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taxon_concepts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common_names" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,8 +326,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,9 +503,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2297593" sideWeight="0.661705" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22902991" sideWeight="0.6632653" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -562,112 +547,88 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="53" selection-start="1936" selection-end="1936" vertical-scroll-proportion="0.90128756">
-          <folding />
-        </state>
+        <state line="23" column="37" selection-start="818" selection-end="818" vertical-scroll-proportion="0.51263" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/new_rails_defaults.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="39" selection-start="908" selection-end="908" vertical-scroll-proportion="0.49855492" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="2350" selection-end="2350" vertical-scroll-proportion="0.7615607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/common_names_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="4" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/common_names/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="316" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/common_names/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="50" column="21" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_names/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="426" column="33" selection-start="14012" selection-end="14012" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/languages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="53" selection-start="557" selection-end="607" vertical-scroll-proportion="0.0">
+        <state line="7" column="60" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="8" selection-start="1462" selection-end="1590" vertical-scroll-proportion="0.0">
+        <state line="80" column="5" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/ranks/tree.json.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="-12.272727">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/common_names_controller.rb">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/jquery.jstree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
+        <state line="1153" column="95" selection-start="43139" selection-end="43139" vertical-scroll-proportion="0.2672414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="67" selection-start="2531" selection-end="2531" vertical-scroll-proportion="-17.045454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="452" column="37" selection-start="14738" selection-end="14738" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/taxon_concepts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="4" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0">
+        <state line="119" column="1" selection-start="3724" selection-end="3724" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_otherinfo.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/rank_tree_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="106" selection-start="993" selection-end="994" vertical-scroll-proportion="-14.318182">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.9471366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_add.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="52" selection-start="915" selection-end="915" vertical-scroll-proportion="-19.09091">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_common_names.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="101" selection-start="513" selection-end="513" vertical-scroll-proportion="-6.1363635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="59" selection-start="135" selection-end="135" vertical-scroll-proportion="-2.7272727">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/cancel_common_name.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="62" selection-start="401" selection-end="401" vertical-scroll-proportion="-5.4545455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/edit_common_name.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="56" selection-start="400" selection-end="400" vertical-scroll-proportion="-4.7727275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/common_names/add_common_name.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.14685315">
+        <state line="46" column="108" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.25207755">
           <folding />
         </state>
       </provider>

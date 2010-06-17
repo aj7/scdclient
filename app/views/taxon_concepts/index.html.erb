@@ -17,7 +17,7 @@
 			<td><%=h taxon_concept.try(:has_taxon_status).try(:humanize) %></td>
 			<td><%=h taxon_concept.rank %></td>
 			<td><%=h taxon_concept.is_current %></td>
-			<td><%=h taxon_concept.comments %></td>
+			<td><%=h taxon_concept.external_comments %></td>
 			<td><%= link_to "Show", taxon_concept %></td>
 			<td><%= link_to "Destroy", taxon_concept, :confirm => 'Are you sure?', :method => :delete %></td>
 		</tr>

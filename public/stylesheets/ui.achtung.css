@@ -42,9 +42,9 @@
 #achtung-overlay {
     overflow: hidden;
     position: fixed;
-    top: 15px;
+    top: 35px;
     /*left: 15px;*/
-    right: 50px;
+    right: 40px;
     width: 250px;
     z-index:50;
 }
