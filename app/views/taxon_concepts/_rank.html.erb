@@ -1,6 +1,6 @@
 <li>
   <label>Select taxon rank:</label>
-  <%= select :taxon_concept,:rank, TaxonConcept.taxon_rank_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select rank' %>
+  <%= select :taxon_concept,:rank, TaxonConcept.taxon_rank_counts.collect{|p| [p.name.humanize, p.name]}, :prompt => 'Select rank'%>
   <%= link_to "Manage Rank" ,'#',:id => "add_new_rank_link"%>
-  <%= link_to image_tag "icons/add.png" %>
+  <%= link_to image_tag "icons/add.png", :class => "tipsyme", :title => "test" %>
 </li>

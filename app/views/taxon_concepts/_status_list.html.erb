@@ -7,7 +7,7 @@
 		<tr>
 			<td><%=h status.name %></td>
 			<td><%= link_to (image_tag "icons/user_edit.png"),"#",{:title => "Edit Status",:class => "edit_status_class tipsyme", :id => status.name} %></td>
-			<td><%= link_to (image_tag "icons/application_delete.png"),  delete_status_path(:params => {:status => status.name}), :confirm => 'Are you sure?' ,:class => "delete tipme",:title => "Delete Status",  :method => :delete %></td>
+			<td><%= link_to (image_tag "icons/application_delete.png"),  delete_status_path(:params => {:status => status.name}), :confirm => 'Are you sure?' ,:class => "delete tipsyme",:title => "Delete Status",  :method => :delete %></td>
 		</tr>
 		<% end -%>
 	</tbody>

@@ -1,6 +1,11 @@
 class TaxonConceptsController < InheritedResources::Base
   respond_to :html, :xml, :json , :js
 
+  def create
+    #debugger
+    create!
+  end
+
   def update
     update! {taxon_concepts_path}
   end

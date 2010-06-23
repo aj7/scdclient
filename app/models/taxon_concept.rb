@@ -24,7 +24,7 @@ class TaxonConcept < ActiveRecord::Base
   ### Validations
   ###
 
-  validates_presence_of :taxon_name , :has_taxon_status
+  validates_presence_of :taxon_name , :has_taxon_status, :rank
 
   def add_status status
     t = TaxonConcept.find(:first)
@@ -84,5 +84,10 @@ class TaxonConcept < ActiveRecord::Base
 #   t.save
 #  end
 
+  def add_child (child)
+     taxon_concept = TaxonConcept.find child
+     taxon_concept.move_to_child_of(self)
+    
+  end
 
 end
