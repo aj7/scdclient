@@ -27,7 +27,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="68" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+            <state line="14" column="68" selection-start="848" selection-end="848" vertical-scroll-proportion="-0.7083333">
               <folding />
             </state>
           </provider>
@@ -36,25 +36,16 @@
       <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="597" column="0" selection-start="19953" selection-end="19953" vertical-scroll-proportion="0.0">
+            <state line="464" column="12" selection-start="15107" selection-end="15107" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tree.json.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/rank_tree/tree.json.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="10" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.9288703">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rank_tree_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="rank_tree_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/rank_tree_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="96" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
+            <state line="23" column="32" selection-start="796" selection-end="796" vertical-scroll-proportion="0.34412956">
               <folding />
             </state>
           </provider>
@@ -118,9 +109,9 @@
         <option value="$PROJECT_DIR$/app/views/rank_tree/refresh_tree.js.erb" />
         <option value="$PROJECT_DIR$/app/models/taxon_concept.rb" />
         <option value="$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/rank_tree_controller.rb" />
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/rank_tree/tree.json.erb" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/controllers/rank_tree_controller.rb" />
       </list>
     </option>
   </component>
@@ -553,26 +544,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="68" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" />
+        <state line="14" column="68" selection-start="848" selection-end="848" vertical-scroll-proportion="-0.7083333">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/taxon_concept.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="22" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="597" column="0" selection-start="19953" selection-end="19953" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/rank_tree_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="96" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -591,7 +570,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/rank_tree/tree.json.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="10" selection-start="1606" selection-end="1606" vertical-scroll-proportion="0.9288703">
+        <state line="4" column="56" selection-start="150" selection-end="150" vertical-scroll-proportion="0.09483961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="12" selection-start="15107" selection-end="15107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/rank_tree_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="32" selection-start="796" selection-end="796" vertical-scroll-proportion="0.34412956">
           <folding />
         </state>
       </provider>

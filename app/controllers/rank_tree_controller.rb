@@ -102,10 +102,9 @@ class RankTreeController < InheritedResources::Base
     child_id = params[:child]
 
     @taxon_concept_parent = TaxonConcept.find(parent_id)
-    #@taxon_concept_parent.add_child(child_id)
+    @taxon_concept_parent.add_child(child_id)
 
     render :action => "rank_tree/refresh_tree"
-
   end
 
   def check_node_status
@@ -120,7 +119,7 @@ class RankTreeController < InheritedResources::Base
     node_rank = ""
     node_value = params[:node_id]
     if (node_value.include? 'node_' )
-       #debugger
+      #debugger
       node_rank = TaxonConcept.find(node_value.split('_').at(1)).rank
     end
     render :json => "Species"

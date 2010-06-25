@@ -438,7 +438,7 @@ function commonNameInit()
 //if it is not already attached
 function checkNodeBeforeAttach(node, taxon_concept)
 {
-    var is_child = false;
+   var is_child = false;
    $.ajax({
             url:"/rank_tree/check_node_status",
             dataType : 'json',
@@ -480,8 +480,8 @@ function attachChildToNode(node)
             //checkBeforeAttach();
             if (is_child)
                 return confirm($('#taxon_tree').jstree("get_text",node) + ' is already attached to a another Taxon. Are you sure you want to continue?');
-
-            return false;
+            else
+                return true;
         },
         success : function(data, textStatus, XMLHttpRequest)
         {
@@ -574,10 +574,10 @@ function initialiseTaxonTree()
                     // the context menu object here
                     'attach':{
                         label: 'Attach here',
-                        action : function (obj) {
+                         action : function (obj) {
                             growlMe(obj.attr('id'),null);
                             attachChildToNode(obj);
-                        //    this.refresh(obj)
+                            this.refresh(obj)
                         },
                         "separator_before"	: false,	// Insert a separator before the item
                         "separator_after"	: false		// Insert a separator after the item
