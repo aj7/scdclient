@@ -1,0 +1,12 @@
+$("#add_common_name").empty().append("<%= escape_javascript(render :partial => "taxon_concepts/common_names/add",
+                 :locals => {:modelinstance => @taxon_concept,
+                 :common_name => CommonName.new,
+                 :button_name => "Create"}) %>");
+
+$("#common_names_list").empty().append("<%= escape_javascript(render :partial => "taxon_concepts/common_names/list",
+                        :locals => {:modelinstance => @taxon_concept})%>");
+
+$("#common_names_list").effect("highlight", {}, 3000);
+
+$("#add_common_name_form")[0].reset();
+

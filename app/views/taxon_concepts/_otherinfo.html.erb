@@ -1,0 +1,36 @@
+
+<div class="span-19">
+  <div class='panel-accordion'>
+    <h3><a href="#panel-1">Internal Comments <%= image_tag "mini_icons/action_back.gif" , :align => "right"%></a></h3>
+    <div>
+      <div class="add_internal_comment">
+        <% form_tag  add_comment_path ,:method => "post",:class =>"add_new_comment_form" do %>
+            <%#= error_messages_for :taxon_concept %>
+            <label>Add comment :</label> <br />
+            <%= text_area_tag :new_comment, nil, :cols => 35  %>
+            <%= hidden_field_tag :model , f.id %>
+            <%= submit_tag "Add comment", :id => 'submit_comment',:html => {:float => 'left'}%>
+        <% end -%>
+      </div>
+      <div id="comments_list" class="list_comments">
+        <%= render :partial => "shared/comments", :locals => {:modelinstance => f} %>
+      </div>
+    </div>
+    <h3><a href="#panel-2">Common Names</a></h3>
+    <div>
+
+        <%= render :partial => "taxon_concepts/common_names/common_names", :locals => {:modelinstance => f} %>
+      
+    </div>
+    <h3><a href="#panel-3">Distribution</a></h3>
+    <div>
+     <p>
+       This is for distribution
+     </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- blank line-->
+<hr class="space"/>

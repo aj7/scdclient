@@ -1,0 +1,12 @@
+<div>
+  <div class="span-7 colborder">
+    <%= render :partial => "taxon_concepts/common_names/add", :locals => {:modelinstance => modelinstance,
+                                                                          :common_name => CommonName.new,
+                                                                          :button_name => "Create"} %>
+
+  </div>
+
+  <div id="common_names_list" class="span-9">
+    <%= render :partial => "taxon_concepts/common_names/list", :locals => {:modelinstance => modelinstance} %>
+  </div>
+</div>

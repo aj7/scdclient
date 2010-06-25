@@ -1,0 +1,31 @@
+<div style="overflow: auto;height:200px">
+  <table id="common_names_list" class="tableformat">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Language</th>
+      <th>By</th>
+      <th style="width:15%">Date</th>
+    </tr>
+    </thead>
+    <%# debugger %>
+    <tbody>
+    <% modelinstance.common_names.each do |common_name| %>
+        <tr>
+          <td><%=h common_name.name %></td>
+          <td><%=h common_name.language.try(:name).to_s.humanize%></td>
+          <td><%=h common_name.user.try(:username) %></td>
+          <td><%=h common_name.created_at.strftime('%d %b, %Y')%></td>
+          <td><%= link_to (image_tag "icons/application_edit.png"), {:action => "edit", :controller => 'common_names', :id => modelinstance.id, :params => {:edit_common_name => common_name, :source => "taxon_concepts"}}, :class => "get edit_common tipsyme",:title => "Edit Common Name" -%></td>
+          <td><%= link_to (image_tag "icons/application_delete.png"),  delete_common_name_path(:params => {:delete_common_name => common_name}), :delete_text => 'Are you sure you want to delete?' ,:class => "delete tipsyme",:title => "Unlink Common Name",  :method => :delete %></td>
+        </tr>
+
+    <% end -%>
+
+    </tbody>
+
+
+  </table>
+
+
+</div>

@@ -1,0 +1,6 @@
+$("#update_rank").empty().append("<%= escape_javascript(render :partial => 'taxon_concepts/rank') %>");
+
+$(".tag_list").empty().append("<%= escape_javascript(render :partial => 'shared/taglist', :locals => {:field_value => "taxon_rank",
+:controller_value => "rank", :button => "rank", :model => "TaxonConcept" , :title => nil, :other_options => nil}) %>");
+
+$(".edit_tag_form")[0].reset();

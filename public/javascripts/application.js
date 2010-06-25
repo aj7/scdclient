@@ -523,9 +523,7 @@ function initialiseTaxonTree()
 
         var nodeId = data.rslt.obj.attr("id");
 
-
-
-        growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + '') ;
+        growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + '',null) ;
 
     })
             .bind("hover_node.jstree", function(event, data) {
@@ -546,7 +544,7 @@ function initialiseTaxonTree()
 
         .jstree({
         "themes" : {
-            "theme" : "apple",
+            "theme" : "default",
             "dots" : true,
             "icons" : true
         },

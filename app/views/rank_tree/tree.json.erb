@@ -1,0 +1,52 @@
+
+<% if (@key == "ranks") %>
+        [<% @json.each_with_index do |element,i| %>
+            {
+                "attr":
+                {
+                    "id":"taxon_<%= element.name %>"
+                },
+                "data":{
+                    "title" : "<%=h element.name %>",
+                    "icon" : "<%= TaxonConcept.find_all_by_rank(element.name).empty? ? "/images/icons/page.png" : "test" %>"
+                },
+                "state":  "closed"
+            }<%= "," if i < @json.count-1 %>
+         <% end -%>
+        ]
+
+<%  elsif (@key.include? '_')
+      if @key.split('_').first() == "taxon" %>
+        [<% @json.each_with_index do |element,i| %>
+        {
+            "attr":
+            {
+                "id":"node_<%= element.id %>"
+            },
+            "data":
+            {
+                "title": "<%=h element.taxon_name.scientific_name %>" ,
+                "icon" : "<%= element.leaf? ? "/images/icons/page.png" : "null" %>"
+            },
+            "state":"closed"
+        }<%= "," if i < @json.count-1 %>
+        <% end -%>
+                ]
+<% elsif @key.split('_').first() == "node" %>
+        [<% @json.each_with_index do |element,i| %>
+        {
+            "attr":
+            {
+                "id":"node_<%= element.id %>"
+            },
+            "data":
+            {
+                "title": "<%=h element.taxon_name.scientific_name %>" ,
+                "icon" : "<%= element.leaf? ? "/images/icons/page.png" : "null" %>"
+            },
+            "state":"closed"
+        }<%= "," if i < @json.count-1 %>
+         <% end -%>
+        ]
+       <% end -%>
+<% end -%>

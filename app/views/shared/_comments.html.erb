@@ -1,0 +1,31 @@
+<div>
+  <table class="tableformat">
+    <thead>
+    <tr>
+      <th style="width:15%">Title</th>
+      <th>Comment</th>
+      <th>By</th>
+      <th style="width:15%">Date</th>
+    </tr>
+    </thead>
+    <%# debugger %>
+    <tbody>
+    <% modelinstance.comments.each do |com| %>
+        <tr>
+          <td><%=h com.title %></td>
+          <td><%=h com.comment%></td>
+          <td><%=h com.user.try(:username) %></td>
+          <td><%=h com.created_at.strftime('%d %b, %Y')%></td>
+          <td><%= link_to (image_tag "icons/application_delete.png"),  delete_comment_path(:params => {:delete_comment => com}), :delete_text => 'Are you sure you want to delete?' ,:class => "delete tipme",:title => "Delete comment",  :method => :delete %></td>
+
+        </tr>
+
+    <% end -%>
+
+    </tbody>
+
+
+  </table>
+
+
+</div>

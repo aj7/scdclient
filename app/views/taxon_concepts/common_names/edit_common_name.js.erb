@@ -1,0 +1,8 @@
+<%# debugger %>
+$("#add_common_name").empty().append("<%= escape_javascript(render :partial => "taxon_concepts/common_names/add",
+                 :locals => {:modelinstance => @taxon_concept,
+                 :common_name => @common_name,
+                 :button_name => "Update"}) %>");
+
+growlMe("Editing Common Name : " + "<%= @common_name.name %>", 'success');
+                                  

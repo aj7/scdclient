@@ -1,0 +1,21 @@
+<% title "Common Names" %>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Name</th>
+    <th>Preferred</th>
+  </tr>
+  <% for common_name in @common_names %>
+    <tr>
+      <td><%=h common_name.language.try(:name) %></td>
+      <td><%=h common_name.name %></td>
+      <td><%=h common_name.preferred %></td>
+      <td><%= link_to "Show", common_name %></td>
+      <td><%= link_to "Edit", edit_common_name_path(common_name) %></td>
+      <td><%= link_to "Destroy", common_name, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Common Name", new_common_name_path %></p>

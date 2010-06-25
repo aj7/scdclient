@@ -1,0 +1,25 @@
+<% title "Common Name" %>
+
+<p>
+  <strong>Language:</strong>
+  <%=h @common_name.language %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @common_name.name %>
+</p>
+<p>
+  <strong>Preferred:</strong>
+  <%=h @common_name.preferred %>
+</p>
+<hr />
+<div id="tree2">
+
+
+</div>
+
+<p>
+  <%= link_to "Edit", edit_common_name_path(@common_name) %> |
+  <%= link_to "Destroy", @common_name, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", common_names_path %>
+</p>

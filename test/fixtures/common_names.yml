@@ -1,0 +1,9 @@
+one:
+  language: MyString
+  name: MyString
+  preferred: false
+
+two:
+  language: MyString
+  name: MyString
+  preferred: false

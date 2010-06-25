@@ -1,0 +1,30 @@
+<div id="add_common_name">
+
+  <%# debugger %>
+  <% if button_name == "Update"
+      form_url = update_common_name_path
+  else
+      form_url = create_common_name_path
+  end
+  %>
+  <% semantic_form_for common_name, :url => form_url, :html => {:class => 'ajaxForm'}  do |form| %>
+      <%# semantic_form_for common_name,  :html => {:class => 'ajaxForm'}  do |form| %>
+
+      <%#= f.error_messages %>
+      <% form.inputs do	%>
+          <%= form.input :language, :prompt => "Select language" %>
+          <%= form.input :name %>
+          <%= form.input :preferred %>
+          <%= hidden_field_tag :model , modelinstance.id %>
+          <%= hidden_field_tag :common_name_id , common_name.id %>
+      <% end -%>
+      <%# form.buttons do %>
+      <%#= form.commit_button %>
+
+      <%# end -%>
+      <%= submit_tag button_name %>
+       <% if button_name == "Update" %>
+         <%= submit_tag "Cancel", :id => "cancel_common_name_edit" %>
+      <% end -%>
+  <% end %>
+</div>

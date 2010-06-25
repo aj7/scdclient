@@ -1,0 +1,1 @@
+$(".list_comments").empty().append("<%= escape_javascript(render :partial => 'shared/comments', :locals => {:modelinstance => @taxon_concept})%>");
