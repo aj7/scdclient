@@ -1,5 +1,5 @@
 <div id="new_role_form"  >
-<% form_for (@role || Role.new), :html => {:id =>"add_new_role_form", :class => "ajaxForm"} do |f| %>
+<%= form_for (@role || Role.new), :html => {:id =>"add_new_role_form", :class => "ajaxForm"} do |f| %>
   <%= f.error_messages %> 
     <%= f.label :name %><br />
     <%= f.text_field :name %><br /><br />

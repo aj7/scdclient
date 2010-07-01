@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
   #This module contains generic methods that can used through the whole application
-  require 'GenericMethods'
+#  require 'GenericMethods'
   #require 'Authentication'
 
   before_filter :current_user, :set_controller_and_action_names
@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
-  filter_parameter_logging :password
+  #filter_parameter_logging :password Moved to config/application.rb
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied!"

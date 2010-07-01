@@ -14,7 +14,7 @@
         <!-- Login Form -->
 
 
-        <% form_for @user_session || UserSession.new, :html => {:class => "clearfix"} do |f| %>
+        <%= form_for @user_session || UserSession.new, :html => {:class => "clearfix"} do |f| %>
             <%= f.error_messages %>
             <!--<form class="clearfix" action="#" method="post">-->
             <h1>Member Login</h1>

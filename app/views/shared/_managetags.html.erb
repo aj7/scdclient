@@ -1,7 +1,7 @@
 <div id="new_tag_form"  >
   <div class="add_tag_div">
     <%# form_tag  send("create_#{controller_value}_path") ,:method => "post",:id =>"add_new_tag_form" do %>
-    <% form_tag  create_tag_path(:params => {:controller => "taxon_concepts"}) ,:method => "post",:class =>"add_new_tag_form" do %>
+    <%= form_tag  create_tag_path(:params => {:controller => "taxon_concepts"}) ,:method => "post",:class =>"add_new_tag_form" do %>
 
         <%#= error_messages_for :taxon_concept %>
         <label><%= button %> value:</label>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="edit_tag_div">
-    <% form_tag update_tag_path(:params => {:controller => "taxon_concepts"}) ,:method => "post",:class =>"edit_tag_form" do %>
+    <%= form_tag update_tag_path(:params => {:controller => "taxon_concepts"}) ,:method => "post",:class =>"edit_tag_form" do %>
         <%#= error_messages_for :taxon_concept %>
         <label>Status value:</label>
         <%= text_field_tag :new_tag , nil, :class => "new_tag" %><br />

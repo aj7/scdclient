@@ -1,6 +1,6 @@
 <div id="new_status_form"  >
 	<div id="add_status_div">
-		<% form_tag  create_status_path,:method => "post",:id =>"add_new_status_form" do %>
+		<%= form_tag  create_status_path,:method => "post",:id =>"add_new_status_form" do %>
 		<%= error_messages_for :taxon_concept %>
 		<label>Status value:</label>
 		<%= text_field :taxon_concept, :has_taxon_status, :value => ""  %><br />
@@ -10,7 +10,7 @@
 	</div>
 	
 	<div id="edit_status_div">
-		<% form_tag  update_status_path,:method => "post",:id =>"edit_status_form" do %>
+		<%= form_tag  update_status_path,:method => "post",:id =>"edit_status_form" do %>
 		<%= error_messages_for :taxon_concept %>
 		<label>Status value:</label>
 		<%= text_field_tag :new_status  %><br />

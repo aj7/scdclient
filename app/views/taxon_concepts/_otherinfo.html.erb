@@ -4,7 +4,7 @@
     <h3><a href="#panel-1">Internal Comments <%= image_tag "mini_icons/action_back.gif" , :align => "right"%></a></h3>
     <div>
       <div class="add_internal_comment">
-        <% form_tag  add_comment_path ,:method => "post",:class =>"add_new_comment_form" do %>
+        <%= form_tag  add_comment_path ,:method => "post",:class =>"add_new_comment_form" do %>
             <%#= error_messages_for :taxon_concept %>
             <label>Add comment :</label> <br />
             <%= text_area_tag :new_comment, nil, :cols => 35  %>
