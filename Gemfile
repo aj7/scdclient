@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
+source 'http://gems.github.com'
 
 gem 'rails', '3.0.0.beta4'
-
+gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'authlogic'
 gem 'formtastic'
@@ -11,8 +12,7 @@ gem 'inherited_resources', '1.0.6'
 gem 'acts_as_audited'
 gem 'awesome_nested_set'
 gem 'paper_trail'
-source 'http://gems.github.com'
-#gem 'jackdempsey-acts_as_commentable', :require => 'acts_as_commentable'
+gem 'acts_as_commentable'
 gem 'acts_as_archive'
 gem 'json'
 
