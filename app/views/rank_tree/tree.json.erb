@@ -8,7 +8,7 @@
                     "icon" : "<%= TaxonConcept.find_all_by_rank(element.name).empty? ? "/images/icons/page.png" : "test" %>"
                 },
                 "state":  "closed"
-            }<%= "," if i < @json.count-1 %>
+            }<%= "," if i < (@json.size - 1) %>
          <% end -%>
         ]
 
@@ -23,7 +23,7 @@
                 "icon" : "<%= element.leaf? ? "/images/icons/page.png" : "null" %>"
             },
             "state":"closed"
-        }<%= "," if (i < @json.count - 1) %>
+        }<%= "," if (i < @json.size - 1) %>
         <% end -%>
                 ]
 <% elsif @key.split('_').first() == "node" %>
@@ -36,7 +36,7 @@
                 "icon" : "<%= element.leaf? ? "/images/icons/page.png" : "null" %>"
             },
             "state":"closed"
-        }<%= "," if i < @json.count-1 %>
+        }<%= "," if i < @json.size-1 %>
          <% end -%>
         ]
        <% end -%>
