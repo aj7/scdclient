@@ -10,8 +10,8 @@ gem 'formtastic', :git => 'git://github.com/justinfrench/formtastic.git', :branc
 gem 'validation_reflection', :git => 'git://github.com/redinger/validation_reflection.git', :branch => 'rails-3'
 gem 'cancan'
 gem 'inherited_resources', '1.1.2'
-gem 'acts_as_audited'
-gem 'awesome_nested_set'
+gem 'acts_as_audited' ,'1.1.1'
+#gem 'awesome_nested_set' - using the plugin for now
 gem 'paper_trail'
 gem 'acts_as_commentable'
 gem 'acts_as_archive'
