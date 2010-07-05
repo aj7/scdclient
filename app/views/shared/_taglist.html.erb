@@ -1,12 +1,12 @@
 <table class ="tableformat">
   <thead>
-  <tr><th><% %> name &nbsp;&nbsp;<%= link_to image_tag ("mini_icons/folder_new.gif"),"#",{:class => "add_tag_class tipsyme", :title => "Add", :id => "add_tag"} %></th></tr>
+  <tr><th>name &nbsp;&nbsp;<%= link_to (image_tag h("mini_icons/folder_new.gif")),"#",{:class => "add_tag_class tipsyme", :title => "Add", :id => "add_tag"} %></th></tr>
   </thead>
   <tbody>
   <% for tag in TaxonConcept.send("#{field_value}_counts".to_sym) %>
       <tr>
         <td><%=h tag.name %></td>
-        <td><%= link_to (image_tag "icons/user_edit.png"),"#",{:title => "Edit #{button.humanize}",:class => "edit_tag_class tipsyme", :id => tag.name} %></td>
+        <td><%= link_to (image_tag h("icons/user_edit.png")),"#",{:title => "Edit #{button.humanize}",:class => "edit_tag_class tipsyme", :id => tag.name} %></td>
         <td><%= link_to (image_tag "icons/application_delete.png"),  delete_tag_path(:params => {:controller => "taxon_concepts", :delete_tag => tag.name, :model => model, :tag_list => field_value}), :delete_text => 'Are you sure you want to delete?' ,:class => "delete tipme",:title => "Delete #{button}",  :method => :delete %></td>
       </tr>
   <% end -%>

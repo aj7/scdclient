@@ -5,7 +5,7 @@ class TaxonName < ActiveRecord::Base
   ###
   acts_as_taggable
   acts_as_taggable_on :properties
-  acts_as_audited
+  #acts_as_audited -- not working with rails3
   has_paper_trail #used for versionning
 
   ###

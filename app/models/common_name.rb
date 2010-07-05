@@ -14,7 +14,7 @@ class CommonName < ActiveRecord::Base
   ###
   acts_as_taggable
   acts_as_taggable_on :properties, :languages  #the  tags and tag lists
-  acts_as_audited
+  #acts_as_audited - doesn't work in rails3
   has_paper_trail #used for versioning
 
 end

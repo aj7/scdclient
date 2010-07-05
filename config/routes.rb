@@ -19,7 +19,9 @@ Scdclient::Application.routes.draw do |map|
   match "/add_comment", :to => "taxon_concepts#add_comment", :as => 'add_comment'
   match "/delete_comment", :to => "taxon_concepts#delete_comment", :as => 'delete_comment'
 
-  match "/create_tag/:controller" , :to => ':controller#create_tag', :as => 'create_tag'
+  match "create_tag/:controller" , :to => ':controller#create_tag', :as => 'create_tag'
+  match "update_tag/:controller" , :to => ":controller#update_tag", :as => "update_tag"
+  match "delete_tag/:controller" , :to => ":controller#delete_tag", :as => "delete_tag"
   #delete_tag "delete_tag/:controller" , :action => "delete_tag"
   #update_tag "update_tag/:controller" , :action => "update_tag"
 

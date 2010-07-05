@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 
   include ActsAsCommentable::Comment
 
-  acts_as_archive #make this class archivable on deletion
+  #acts_as_archive #make this class archivable on deletion
 
   belongs_to :commentable, :polymorphic => true
 

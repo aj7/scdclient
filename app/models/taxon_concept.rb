@@ -6,7 +6,7 @@ class TaxonConcept < ActiveRecord::Base
   ###
   acts_as_taggable
   acts_as_taggable_on :properties, :status_types , :taxon_ranks  #the  tags and tag lists
-  acts_as_audited
+ # acts_as_audited - doesn't work with rails3
   acts_as_nested_set
   has_paper_trail #used for versioning
   acts_as_commentable #used for comments management
