@@ -505,7 +505,8 @@ function getTaxonNodeRank(node)
 
 function initialiseTaxonTree()
 {
-    $.jstree._themes = RAILS_ROOT + "/stylesheets/jstree/themes/";
+    //$.jstree._themes = RAILS_ROOT + "/public/stylesheets/jstree/themes/";
+    $.jstree._themes = "/stylesheets/jstree/themes/";
 
     $('#taxon_tree').bind("loaded.jstree", function  (event, data) {
         growlMe("tree is loaded",null);

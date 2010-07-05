@@ -23,7 +23,7 @@
                 "icon" : "<%= element.leaf? ? "/images/icons/page.png" : "null" %>"
             },
             "state":"closed"
-        }<%= "," if i < @json.count-1 %>
+        }<%= "," if (i < @json.count - 1) %>
         <% end -%>
                 ]
 <% elsif @key.split('_').first() == "node" %>

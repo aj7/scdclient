@@ -8,8 +8,8 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
- * $Date: 2010-06-25 15:43:26 +0100 (Fri, 25 Jun 2010) $
- * $Revision: 182 $
+ * $Date: 2010-07-01 10:51:11 +0300 (четв, 01 юли 2010) $
+ * $Revision: 191 $
  */
 
 /*jslint browser: true, onevar: true, undef: true, bitwise: true, strict: true */
@@ -495,7 +495,8 @@
 			// open/close
 			open_node	: function (obj, callback, skip_animation) {
 				obj = this._get_node(obj);
-				if(!obj.length || !obj.hasClass("jstree-closed")) { return false; }
+				if(!obj.length) { return false; }
+				if(!obj.hasClass("jstree-closed")) { if(callback) { callback.call(); } return false; }
 				var s = skip_animation || is_ie6 ? 0 : this._get_settings().core.animation,
 					t = this;
 				if(!this._is_loaded(obj)) {
@@ -730,7 +731,7 @@
 				}
 				else {
 					if(!/^(before|after)$/.test(p.p) && !this._is_loaded(p.r)) {
-						return this.load_node(p.r, function () { this.prepare_move(o, r, p, cb, true); });
+						return this.load_node(p.r, function () { this.prepare_move(o, r, pos, cb, true); });
 					}
 					switch(p.p) {
 						case "before":
@@ -1155,6 +1156,8 @@
 				if(!this.data.crrm.ct_nodes && !this.data.crrm.cp_nodes) { return false; }
 				if(this.data.crrm.ct_nodes) { this.move_node(this.data.crrm.ct_nodes, obj); }
 				if(this.data.crrm.cp_nodes) { this.move_node(this.data.crrm.cp_nodes, obj, false, true); }
+				this.data.crrm.cp_nodes = false;
+				this.data.crrm.ct_nodes = false;
 			}
 		}
 	});
@@ -1698,7 +1701,7 @@
 			}
 			if(!!s.save_selected) {
 				tmp = $.cookie(s.save_selected);
-				if(tmp && tmp.length) { this.data.ui.to_select = tmp.split(","); }
+				if(tmp && tmp.length && this.data.ui) { this.data.ui.to_select = tmp.split(","); }
 			}
 			this.get_container()
 				.one( ( this.data.ui ? "reselect" : "reopen" ) + ".jstree", $.proxy(function () {
@@ -1804,6 +1807,7 @@
 		is_down : false,
 		is_drag : false,
 		helper : false,
+		scroll_spd : 10,
 		init_x : 0,
 		init_y : 0,
 		threshold : 5,
@@ -1841,14 +1845,14 @@
 				var d = $(document), t = d.scrollTop(), l = d.scrollLeft();
 				if(e.pageY - t < 20) { 
 					if(sti && dir1 === "down") { clearInterval(sti); sti = false; }
-					if(!sti) { dir1 = "up"; sti = setInterval(function () { $(document).scrollTop($(document).scrollTop() - 15); }, 150); }
+					if(!sti) { dir1 = "up"; sti = setInterval(function () { $(document).scrollTop($(document).scrollTop() - $.vakata.dnd.scroll_spd); }, 150); }
 				}
 				else { 
 					if(sti && dir1 === "up") { clearInterval(sti); sti = false; }
 				}
 				if($(window).height() - (e.pageY - t) < 20) {
 					if(sti && dir1 === "up") { clearInterval(sti); sti = false; }
-					if(!sti) { dir1 = "down"; sti = setInterval(function () { $(document).scrollTop($(document).scrollTop() + 15); }, 150); }
+					if(!sti) { dir1 = "down"; sti = setInterval(function () { $(document).scrollTop($(document).scrollTop() + $.vakata.dnd.scroll_spd); }, 150); }
 				}
 				else { 
 					if(sti && dir1 === "down") { clearInterval(sti); sti = false; }
@@ -1856,14 +1860,14 @@
 
 				if(e.pageX - l < 20) {
 					if(sli && dir2 === "right") { clearInterval(sli); sli = false; }
-					if(!sli) { dir2 = "left"; sli = setInterval(function () { $(document).scrollLeft($(document).scrollLeft() - 15); }, 150); }
+					if(!sli) { dir2 = "left"; sli = setInterval(function () { $(document).scrollLeft($(document).scrollLeft() - $.vakata.dnd.scroll_spd); }, 150); }
 				}
 				else { 
 					if(sli && dir2 === "left") { clearInterval(sli); sli = false; }
 				}
 				if($(window).width() - (e.pageX - l) < 20) {
 					if(sli && dir2 === "left") { clearInterval(sli); sli = false; }
-					if(!sli) { dir2 = "right"; sli = setInterval(function () { $(document).scrollLeft($(document).scrollLeft() + 15); }, 150); }
+					if(!sli) { dir2 = "right"; sli = setInterval(function () { $(document).scrollLeft($(document).scrollLeft() + $.vakata.dnd.scroll_spd); }, 150); }
 				}
 				else { 
 					if(sli && dir2 === "right") { clearInterval(sli); sli = false; }
@@ -1928,11 +1932,11 @@
 							// Horizontal scroll
 							if(e.pageX + 24 > this.data.dnd.cof.left + this.data.dnd.cw) {
 								if(this.data.dnd.i1) { clearInterval(this.data.dnd.i1); }
-								this.data.dnd.i1 = setInterval($.proxy(function () { this.scrollLeft += 5; }, cnt), 100);
+								this.data.dnd.i1 = setInterval($.proxy(function () { this.scrollLeft += $.vakata.dnd.scroll_spd; }, cnt), 100);
 							}
 							else if(e.pageX - 24 < this.data.dnd.cof.left) {
 								if(this.data.dnd.i1) { clearInterval(this.data.dnd.i1); }
-								this.data.dnd.i1 = setInterval($.proxy(function () { this.scrollLeft -= 5; }, cnt), 100);
+								this.data.dnd.i1 = setInterval($.proxy(function () { this.scrollLeft -= $.vakata.dnd.scroll_spd; }, cnt), 100);
 							}
 							else {
 								if(this.data.dnd.i1) { clearInterval(this.data.dnd.i1); }
@@ -1941,11 +1945,11 @@
 							// Vertical scroll
 							if(e.pageY + 24 > this.data.dnd.cof.top + this.data.dnd.ch) {
 								if(this.data.dnd.i2) { clearInterval(this.data.dnd.i2); }
-								this.data.dnd.i2 = setInterval($.proxy(function () { this.scrollTop += 5; }, cnt), 100);
+								this.data.dnd.i2 = setInterval($.proxy(function () { this.scrollTop += $.vakata.dnd.scroll_spd; }, cnt), 100);
 							}
 							else if(e.pageY - 24 < this.data.dnd.cof.top) {
 								if(this.data.dnd.i2) { clearInterval(this.data.dnd.i2); }
-								this.data.dnd.i2 = setInterval($.proxy(function () { this.scrollTop -= 5; }, cnt), 100);
+								this.data.dnd.i2 = setInterval($.proxy(function () { this.scrollTop -= $.vakata.dnd.scroll_spd; }, cnt), 100);
 							}
 							else {
 								if(this.data.dnd.i2) { clearInterval(this.data.dnd.i2); }
@@ -2565,14 +2569,17 @@
 										d = $(d);
 										this.get_container().children("ul").empty().append(d.children());
 										if(s.clean_node) { this.clean_node(obj); }
+										if(s_call) { s_call.call(this); }
 									}
 								}
 								else { 
-									if(s.correct_state) { this.get_container().children("ul").empty(); }
+									if(s.correct_state) { 
+										this.get_container().children("ul").empty(); 
+										if(s_call) { s_call.call(this); }
+									}
 								}
 							}, this));
 						}
-						if(s_call) { s_call.call(this); }
 						break;
 					case (!s.data && !!s.ajax) || (!!s.data && !!s.ajax && obj && obj !== -1):
 						error_func = function (x, t, e) {
@@ -2648,7 +2655,7 @@
 				obj = this._get_node(obj);
 				if(!obj || obj === -1) { obj = this.get_container().find("> ul > li"); }
 				li_attr = $.isArray(li_attr) ? li_attr : [ "id", "class" ];
-				if(!is_callback && this.data.types) { li_attr.push(s.types.type_attr); }
+				if(!is_callback && this.data.types && $.inArray(s.types.type_attr, li_attr) === -1) { li_attr.push(s.types.type_attr); }
 
 				a_attr = $.isArray(a_attr) ? a_attr : [ ];
 
@@ -2691,6 +2698,7 @@
 					tmp2 = li[0].id;
 					li = li.find("> ul > li");
 					if(li.length) { tmp2 = _this.get_xml(tp, li, li_attr, a_attr, tmp2); }
+					else { tmp2 = ""; }
 					if(tp == "nest") { result += tmp2; }
 					result += "</item>";
 					if(tp == "flat") { result += tmp2; }
@@ -3150,11 +3158,17 @@
 				}
 				if($.isFunction(v)) { v = v.call(this, obj); }
 				if(rule === "max_depth" && obj !== -1 && opts !== false && s.max_depth !== -2 && v !== 0) {
-					this._get_node(obj).parentsUntil(".jstree","li").each(function (i) {
+					// also include the node itself - otherwise if root node it is not checked
+					this._get_node(obj).children("a:eq(0)").parentsUntil(".jstree","li").each(function (i) {
+						// check if current depth already exceeds global tree depth
 						if(s.max_depth !== -1 && s.max_depth - (i + 1) <= 0) { v = 0; return false; }
-						d = _this._check(rule, this, false);
+						d = (i === 0) ? v : _this._check(rule, this, false);
+						// check if current node max depth is already matched or exceeded
 						if(d !== -1 && d - (i + 1) <= 0) { v = 0; return false; }
+						// otherwise - set the max depth to the current value minus current depth
 						if(d >= 0 && (d - (i + 1) < v || v < 0) ) { v = d - (i + 1); }
+						// if the global tree depth exists and it minus the nodes calculated so far is less than `v` or `v` is unlimited
+						if(s.max_depth >= 0 && (s.max_depth - (i + 1) < v || v < 0) ) { v = s.max_depth - (i + 1); }
 					});
 				}
 				return v;
@@ -3218,7 +3232,7 @@
 						ch = p === -1 ? this.get_container().children("> ul > li").length : p.children("> ul > li").length;
 						if(ch + 1 > mc) { return false; }
 					}
-					if(s.max_depth !== -2 && md !== -1 && (md - 1) <= 0) { return false; }
+					if(s.max_depth !== -2 && md !== -1 && (md - 1) < 0) { return false; }
 				}
 				return this.__call_old(true, obj, position, js, callback, is_loaded, skip_check);
 			}
@@ -3234,7 +3248,10 @@
 (function ($) {
 	$.jstree.plugin("html_data", {
 		__init : function () { 
+			// this used to use html() and clean the whitespace, but this way any attached data was lost
 			this.data.html_data.original_container_html = this.get_container().find(" > ul > li").clone(true);
+			// remove white space from LI node - otherwise nodes appear a bit to the right
+			this.data.html_data.original_container_html.find("li").andSelf().contents().filter(function() { return this.nodeType == 3; }).remove();
 		},
 		defaults : { 
 			data : false,
@@ -3354,10 +3371,10 @@
 			var s = this._get_settings().themeroller;
 			this.get_container()
 				.addClass("ui-widget-content")
-				.delegate("a","mouseenter", function () {
+				.delegate("a","mouseenter.jstree", function () {
 					$(this).addClass(s.item_h);
 				})
-				.delegate("a","mouseleave", function () {
+				.delegate("a","mouseleave.jstree", function () {
 					$(this).removeClass(s.item_h);
 				})
 				.bind("open_node.jstree create_node.jstree", $.proxy(function (e, data) { 
@@ -3380,6 +3397,17 @@
 				.bind("move_node.jstree", $.proxy(function (e, data) {
 						this._themeroller(data.rslt.o);
 					}, this));
+		},
+		__destroy : function () {
+			var s = this._get_settings().themeroller,
+				c = [ "ui-icon" ];
+			$.each(s, function (i, v) {
+				v = v.split(" ");
+				if(v.length) { c = c.concat(v); }
+			});
+			this.get_container()
+				.removeClass("ui-widget-content")
+				.find("." + c.join(", .")).removeClass(c.join(" "));
 		},
 		_fn : {
 			_themeroller : function (obj) {
