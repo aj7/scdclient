@@ -1,4 +1,6 @@
 #source 'http://rubygems.org'
+require 'rubygems'
+require 'mongo'
 source 'http://gems.github.com'
 source 'http://gemcutter.org'
 
@@ -16,6 +18,12 @@ gem 'paper_trail'
 gem 'acts_as_commentable'
 gem 'acts_as_archive'
 gem 'json'
+gem 'ruby-debug19'  #gem install ruby-debug19 -- --with-ruby-include=/Users/ackbarjoolia/.rvm/src/ruby-1.9.2-head/
+
+#mongomapper
+gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
