@@ -72,6 +72,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 
   map.root :home
+  #map.root 'public/enter/hello.html'
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
