@@ -79,7 +79,7 @@ class TaxonConceptsController < InheritedResources::Base
   def create_common_name
     #debugger
     @common_name = CommonName.new(params[:common_name])
-    @common_name.user = current_user;
+    @common_name.user = current_user
     if @common_name.save
       @message = "Successfully created common name."
     end
