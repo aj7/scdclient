@@ -39,8 +39,8 @@ test:
   encoding: unicode
   database: scdclient_test
   pool: 5
-  username: scdclient
-  password:
+  username: postgres
+  password: postgres
 
 production:
   adapter: postgresql

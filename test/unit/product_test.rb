@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
+   def test_should_be_true
     assert true
   end
 end

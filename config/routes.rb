@@ -1,27 +1,18 @@
 Scdclient::Application.routes.draw do |map|
-  resources :languages
-
-  resources :common_names
-
-  resources :taxon_concepts
-
-  resources :roles
-  resources :name_relationships
-
-  resources :taxon_names
-
-  resources :user_sessions
+  resources :languages , :common_names, :taxon_concepts, :roles, :name_relationships, :taxon_names, :user_sessions
   resources :users
 
-  match '/login', :to => 'user_sessions#new', :as => 'login'
-  match "/logout", :to => "user_sessions#destroy", :as => 'logout'
+  match '/login' => 'user_sessions#new', :as => 'login'
+  match "/logout" => "user_sessions#destroy", :as => 'logout'
 
   match "/add_comment", :to => "taxon_concepts#add_comment", :as => 'add_comment'
   match "/delete_comment", :to => "taxon_concepts#delete_comment", :as => 'delete_comment'
 
-  match "create_tag/:controller" , :to => ':controller#create_tag', :as => 'create_tag'
-  match "update_tag/:controller" , :to => ":controller#update_tag", :as => "update_tag"
-  match "delete_tag/:controller" , :to => ":controller#delete_tag", :as => "delete_tag"
+  match "create_tag/:controller" , :to => '#create_tag', :as => 'create_tag'
+  #match ":controller/create_tag" ,  :as => "create_tag"
+
+  match "update_tag/:controller" , :to => "#update_tag", :as => 'update_tag'
+  match "delete_tag/:controller" , :to => "#delete_tag", :as => 'delete_tag'
   #delete_tag "delete_tag/:controller" , :action => "delete_tag"
   #update_tag "update_tag/:controller" , :action => "update_tag"
 
@@ -35,9 +26,7 @@ Scdclient::Application.routes.draw do |map|
   match "/delete_taxon_rank", :to => "taxon_concepts#delete_taxon_rank", :as => 'delete_taxon_rank'
   match "/update_taxon_rank", :to => "taxon_concepts#update_taxon_rank", :as => 'update_taxon_rank'
 
-
-
-  match '/home', :to => "home#index", :as => 'home'
+  match '/home' => "home#index", :as => 'home'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

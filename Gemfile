@@ -47,6 +47,9 @@ gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
 
 # Bundle gems for certain environments:
 # gem 'rspec', :group => :test
-# group :test do
-#   gem 'webrat'
-# end
+ group :test do
+   gem 'faker'
+   gem 'shoulda'
+   gem 'machinist', '>= 2.0.0.beta1'
+   gem 'webrat'
+ end
