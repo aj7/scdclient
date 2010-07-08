@@ -19,6 +19,7 @@ class TaxonConcept < ActiveRecord::Base
   belongs_to :taxon_name
   has_many :concept_common_links
   has_many :common_names, :through => :concept_common_links
+  belongs_to :rank
 
   ###
   ### Validations
@@ -86,8 +87,7 @@ class TaxonConcept < ActiveRecord::Base
 
   def add_child (child)
      taxon_concept = TaxonConcept.find child
-     taxon_concept.move_to_child_of(self)
-    
+     taxon_concept.move_to_child_of(self)   
   end
 
 end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100615102226) do
+ActiveRecord::Schema.define(:version => 20100708130516) do
 
   create_table "archived_comments", :id => false, :force => true do |t|
     t.integer  "id"
@@ -102,6 +102,15 @@ ActiveRecord::Schema.define(:version => 20100615102226) do
   end
 
   create_table "products", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ranks", :force => true do |t|
+    t.string   "name"
+    t.integer  "ordering"
+    t.string   "preferred_name"
+    t.boolean  "display_parent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

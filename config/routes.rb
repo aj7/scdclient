@@ -1,4 +1,6 @@
 Scdclient::Application.routes.draw do |map|
+  resources :ranks
+
   resources :languages , :common_names, :taxon_concepts, :roles, :name_relationships, :taxon_names, :user_sessions
   resources :users
 
