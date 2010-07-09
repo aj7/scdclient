@@ -393,7 +393,6 @@ function ajaxifySavingForm()
 function autocompleteCommonNames2()
 {
 
-
     $('#common_name_name').livequery(function(){
 
         $(this).autocomplete({
@@ -438,22 +437,22 @@ function commonNameInit()
 //if it is not already attached
 function checkNodeBeforeAttach(node, taxon_concept)
 {
-   var is_child = false;
-   $.ajax({
-            url:"/rank_tree/check_node_status",
-            dataType : 'json',
-            async : false,
-            data : {operation : "get_children",
-                    parent : node.attr('id'),
-                    child : taxon_concept},
-            success: function(json){
-                          growlMe("from getJSON:" + json,null);
-                        is_child = json;
+    var is_child = false;
+    $.ajax({
+        url:"/rank_tree/check_node_status",
+        dataType : 'json',
+        async : false,
+        data : {operation : "get_children",
+            parent : node.attr('id'),
+            child : taxon_concept},
+        success: function(json){
+            growlMe("from getJSON:" + json,null);
+            is_child = json;
 
-                    }
+        }
     });
-     //   alert(is_child);
-     return is_child;
+    //   alert(is_child);
+    return is_child;
 
 }
 
@@ -487,6 +486,77 @@ function attachChildToNode(node)
         {
             //alert (textStatus);
         }
+    });
+}
+
+//Initialise Rank_Display tree
+function initialiseRankDisplay()
+{
+    $('#rank_display').bind("loaded.jstree", function  (event, data) {
+        growlMe("tree is loaded",null);
+    })
+            .jstree({
+        "themes" : {
+            "theme" : "default",
+            "dots" : true,
+            "icons" : true
+        },
+        "contextmenu":{
+            "items" :function (node) {
+                //NEED TO IMPLEMENT SELECTIVE NODE RIGHT-CLICK
+                growlMe((node.attr('id')) + '--' + this.get_text(node) ,null);
+                return {
+                    // the context menu object here
+                    'refresh':{
+                        label: 'Refresh',
+                        action : function (obj) {
+                            this.refresh(obj) },
+
+                        "separator_before"	: false,	// Insert a separator before the item
+                        "separator_after"	: false		// Insert a separator after the item
+
+                    }  ,
+                    // the context menu object here
+                    'attach':{
+                        label: 'Attach here',
+                        action : function (obj) {
+                            growlMe(obj.attr('id'),null);
+                            //attachChildToNode(obj);
+                            this.refresh(obj)
+                        },
+                        "separator_before"	: false,	// Insert a separator before the item
+                        "separator_after"	: false		// Insert a separator after the item
+                    }
+
+                }
+            }
+        },
+
+        "json_data" : {
+            correct_state : true,
+            "data" : [
+                {
+                    attr : { id : "ranks"},
+                    state: 'open',
+                    icon : "folder",
+                    data : {title : "Ranks", attr : { href : "#" }}
+                } ]
+            ,
+            "ajax" :{
+                url : "/rank_tree/get_ranks_display",
+                data : function  (n) {
+                    return {
+                        operation : "get_children",
+                        id : n.attr ? n.attr("id") : 0 };
+                }  ,
+                success : function(data, textStatus, XMLHttpRequest)
+                {
+                    //alert (textStatus);
+                }
+            }
+
+        },
+        "plugins" : [ "themes", "json_data", "ui","crrm","contextmenu" ]
     });
 }
 
@@ -543,7 +613,7 @@ function initialiseTaxonTree()
 
     })
 
-        .jstree({
+            .jstree({
         "themes" : {
             "theme" : "default",
             "dots" : true,
@@ -575,7 +645,7 @@ function initialiseTaxonTree()
                     // the context menu object here
                     'attach':{
                         label: 'Attach here',
-                         action : function (obj) {
+                        action : function (obj) {
                             growlMe(obj.attr('id'),null);
                             attachChildToNode(obj);
                             this.refresh(obj)
@@ -886,6 +956,7 @@ $(document).ready(function() {
     detectKeypress();
     commonNameInit();
     initialiseTaxonTree();
-   // tiptipMe();
+    initialiseRankDisplay();
+    // tiptipMe();
 
 });

@@ -63,25 +63,30 @@ class RankTreeController < InheritedResources::Base
     #debugger
     key = params[:id]
 
-    @json =[]
-    if (key == "ranks")
-      @json = TaxonConcept.taxon_rank_counts.each_with_object([]) { |obj , hash|
-        element = {:data => obj.name, :attr => {:id => "taxon_" + obj.name}, :state => "closed", :icon => "./file.png" }
-        hash << element
-      }
-
-    elsif (key.include? '_')
-      if key.split('_').first() == "taxon"
-        @json = TaxonConcept.find_all_by_rank(key.split('_').at(1)).each_with_object([]){|obj , hash|
-          element = {:data => obj.taxon_name.scientific_name, :attr =>{:id => "name_" + obj.taxon_name.scientific_name}, :state => "closed"}
-          hash << element
-
-        }
-      end
-    else
-      @json = {:data => "nothing here", :attr =>{:id => "a key"} , :state => "closed"}
-
-    end
+    @json ={
+            :attr => { :id => "ranks"},
+            :state => 'closed',
+            :icon => "folder",
+            :data => {:title => "Ranks", :attr => { :href => "#" }}
+    }
+#    if (key == "ranks")
+#      @json = TaxonConcept.taxon_rank_counts.each_with_object([]) { |obj , hash|
+#        element = {:data => obj.name, :attr => {:id => "taxon_" + obj.name}, :state => "closed", :icon => "./file.png" }
+#        hash << element
+#      }
+#
+#    elsif (key.include? '_')
+#      if key.split('_').first() == "taxon"
+#        @json = TaxonConcept.find_all_by_rank(key.split('_').at(1)).each_with_object([]){|obj , hash|
+#          element = {:data => obj.taxon_name.scientific_name, :attr =>{:id => "name_" + obj.taxon_name.scientific_name}, :state => "closed"}
+#          hash << element
+#
+#        }
+#      end
+#    else
+#      @json = {:data => "nothing here", :attr =>{:id => "a key"} , :state => "closed"}
+#
+#    end
 
 
     render :json => @json.to_json , :callback => params[:callback]
@@ -123,6 +128,21 @@ class RankTreeController < InheritedResources::Base
       node_rank = TaxonConcept.find(node_value.split('_').at(1)).rank
     end
     render :json => "Species"
+  end
+
+   def get_ranks_display
+   # debugger
+
+    key = params[:id]
+
+    @json =[]
+  
+    @json = Rank.all.each_with_object([]){|obj, hash|
+      element = {:data => obj.name, :attr => {:id => obj.name }, :state => 'opened'}
+      hash << element
+
+    }
+    render :json => @json.to_json , :callback => params[:callback]
   end
 
 end
