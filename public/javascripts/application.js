@@ -537,7 +537,7 @@ function initialiseRankDisplay()
             "data" : [
                 {
                     attr : { id : "ranks"},
-                    state: 'open',
+                    state: 'closed',
                     icon : "folder",
                     data : {title : "Ranks", attr : { href : "#" }}
                 } ]

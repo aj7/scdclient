@@ -1,5 +1,8 @@
 class RanksController < InheritedResources::Base
 
+  def create
+    create!{ranks_url}
+  end
 
   def get_ranks_display
     debugger

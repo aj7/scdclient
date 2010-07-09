@@ -24,10 +24,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ranks_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ranks_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ranks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.4857143">
               <folding />
             </state>
           </provider>
@@ -54,16 +54,16 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/ranks/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="52" selection-start="573" selection-end="573" vertical-scroll-proportion="-15.64">
+            <state line="38" column="41" selection-start="799" selection-end="799" vertical-scroll-proportion="-21.08">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common_names_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/common_names_controller.rb">
+      <file leaf-file-name="_add_rank.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/ranks/_add_rank.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -87,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="542" column="19" selection-start="17780" selection-end="17780" vertical-scroll-proportion="0.4097222">
+            <state line="539" column="34" selection-start="17655" selection-end="17655" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/unit/role_test.rb" />
         <option value="$PROJECT_DIR$/config/environments/test.rb" />
         <option value="$PROJECT_DIR$/app/models/tag.rb" />
         <option value="$PROJECT_DIR$/test/blueprints.rb" />
@@ -135,10 +134,11 @@
         <option value="$PROJECT_DIR$/app/models/rank.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_menu.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20100708154516_rename_ordering_in_ranks.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/rank_tree_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/ranks/_add_rank.html.erb" />
+        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/ranks/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/ranks_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/rank_tree_controller.rb" />
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -564,11 +564,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/rank.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20100615102226_rename_commentson_taxon_concept.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="64" selection-start="79" selection-end="139" vertical-scroll-proportion="0.047552448" />
@@ -599,11 +594,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/taxon_concepts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="17" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.0">
@@ -614,27 +604,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/shared/_menu.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="41" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ranks/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="573" selection-end="573" vertical-scroll-proportion="-15.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ranks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ranks/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="32" selection-end="335" vertical-scroll-proportion="0.023943663">
           <folding />
         </state>
       </provider>
@@ -653,9 +622,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ranks/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="19" selection-start="0" selection-end="814" vertical-scroll-proportion="0.7661972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="19" selection-start="17780" selection-end="17780" vertical-scroll-proportion="0.4097222">
+        <state line="539" column="34" selection-start="17655" selection-end="17655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ranks/_add_rank.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ranks/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="799" selection-end="799" vertical-scroll-proportion="-21.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ranks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.4857143">
           <folding />
         </state>
       </provider>
