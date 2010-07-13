@@ -19,6 +19,7 @@ gem 'acts_as_commentable'
 gem 'acts_as_archive'
 gem 'json'
 gem 'ruby-debug19'  #gem install ruby-debug19 -- --with-ruby-include=/Users/ackbarjoolia/.rvm/src/ruby-1.9.2-head/
+gem 'acts_as_list' 
 
 #mongomapper
 gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'

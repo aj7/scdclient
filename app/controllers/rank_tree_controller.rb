@@ -64,10 +64,10 @@ class RankTreeController < InheritedResources::Base
     key = params[:id]
 
     @json ={
-            :attr => { :id => "ranks"},
-            :state => 'closed',
-            :icon => "folder",
-            :data => {:title => "Ranks", :attr => { :href => "#" }}
+                   :attr => { :id => "ranks"},
+                   :state => 'closed',
+                   :icon => "folder",
+                   :data => {:title => "Ranks", :attr => { :href => "#" }}
     }
 #    if (key == "ranks")
 #      @json = TaxonConcept.taxon_rank_counts.each_with_object([]) { |obj , hash|
@@ -130,19 +130,37 @@ class RankTreeController < InheritedResources::Base
     render :json => "Species"
   end
 
-   def get_ranks_display
-   # debugger
+  def get_ranks_display
+    # debugger
 
     key = params[:id]
 
     @json =[]
-  
-    @json = Rank.all.each_with_object([]){|obj, hash|
+
+    @json = Rank.order('position asc').each_with_object([]){|obj, hash|
       element = {:data => obj.name, :attr => {:id => obj.name }, :state => 'opened'}
       hash << element
 
     }
     render :json => @json.to_json , :callback => params[:callback]
+  end
+
+  def delete_rank
+    #debugger
+    @rank = Rank.where(:name => params[:parent]).first
+    @rank.destroy
+    #flash[:notice] = "Successfully destroyed rank."
+    render 'rank_tree/refresh_rank'
+
+  end
+
+  def sort
+    # debugger
+    rank = params[:rank]
+    position = params[:position]
+
+    Rank.where(:name => rank).first.insert_at(position.to_i + 1)
+    redirect_to ranks_url
   end
 
 end

@@ -36,6 +36,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="acts_as_list" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="authlogic" version="0" bound="GREATER_OR_EQUAL" git="true" ref="rails3" />
       </requirement>
       <source from="Gemfile" />

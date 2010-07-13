@@ -489,11 +489,125 @@ function attachChildToNode(node)
     });
 }
 
+//Function to delete a rank through the tree
+function deleteRank(node)
+{
+    var value = $('#rank_display').jstree("get_text",node);
+    growlMe('Value of node is: ' + value, null);
+    growlMe('ID of node is: ' + node.attr('id'), null);
+    $.ajax({
+        url : "/rank_tree/delete_rank",
+        dataType : 'script',
+        data : {
+            operation : "get_children",
+            parent : node.attr('id')
+
+        }  ,
+
+        beforeSend : function(data, textStatus, XMLHttpRequest)
+        {
+            //alert (textStatus);
+
+            growlMe("in beforesend:" );
+            //checkBeforeAttach();
+
+                return confirm('Are you sure you want to delete ' + value +  ' ?');
+
+        },
+        success : function(data, textStatus, XMLHttpRequest)
+        {
+            $('#rank_display').jstree("refresh");
+            //growlMe('delete success ' + data, null);
+            //alert (textStatus);
+        }
+    });
+
+}
+
+function updateRankPosition(node, position)
+{
+    growlMe('IN UPDATERANK');
+    $.ajax({
+        url : "/ranks/sort",
+        type : 'POST',
+        dataType : 'script',
+        data : {
+            id : node,
+            rank : node,
+            position : position
+        }  ,
+        beforeSend : function(data, textStatus, XMLHttpRequest)
+        {
+            //alert (textStatus);
+
+        },
+        success : function(data, textStatus, XMLHttpRequest)
+        {
+           // $('#rank_display').jstree("refresh");
+        }
+    });
+
+}
+
 //Initialise Rank_Display tree
 function initialiseRankDisplay()
 {
     $('#rank_display').bind("loaded.jstree", function  (event, data) {
+         //var nodeId = data.rslt.obj.attr("id");
+         //growlMe('LOADED : ' + data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + '',null) ;
         growlMe("tree is loaded",null);
+    })
+     .bind("move_node.jstree",function(e,data) {
+
+        var tree = data.rslt.rt;
+        var nodes = tree._get_children(-1);
+        var moved_node = data.rslt.o.attr('id');
+        var position = data.rslt.cp;
+
+        updateRankPosition(moved_node, position);
+       // var bool_copy = (data.rslt.cy != undefined) ? true : false ;
+        return false;
+    })
+    .bind("rename.jstree", function (e, data) {
+        updateRank(data.rslt.obj.attr('id'), data.inst.get_text(data.rslt.obj) );
+        growlMe('in rename node: ' + data.rslt.obj.attr('id') + ' - textvalue = ' + data.inst.get_text(data.rslt.obj) , 'error');
+    })
+    .bind("select_node.jstree", function (e, data) {
+
+        growlMe('in select node', 'error');
+    })
+    .bind("create.jstree", function  (e, data) {     
+        growlMe('in rename node: ' + data.rslt.obj.attr('id') + ' - textvalue = ' + data.inst.get_text(data.rslt.obj) , 'error');
+        saveNewRank(data.inst.get_text(data.rslt.obj));
+    })
+    .bind("dehover_node.jstree", function (e, data) {
+
+    })
+    .bind("before.jstree", function (e, data) {
+        //var nodeId = data.rslt.obj.attr("id");
+        // growlMe('BEFORE : ' + data.inst.get_text(data.rslt) + ': id =' + nodeId + '',null) ;
+        //Move
+        if (data.func === "move_node") {
+            //decide if move or copy or cancel
+            // growlMe('Are u sure u want to move',null);
+            //if cancel, then stop propagation
+            //e.stopImmediatePropagation();
+            //return false;
+        }
+    })
+      .bind("hover_node.jstree", function(event, data) {
+
+        var href = data.rslt.obj.attr("href");
+        var path = window.location.href.toLowerCase();
+
+        setTooltipOnRank(data.rslt.obj);
+        //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
+        //alert(data.inst.get_text(data.rslt.obj));
+        //growlMe(data.rslt.obj.find('a').attr('href')) ;
+
+        var nodeId = data.rslt.obj.attr("id");
+        //growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + ', :href = ' + href , null) ;
+
     })
             .jstree({
         "themes" : {
@@ -507,14 +621,14 @@ function initialiseRankDisplay()
                 growlMe((node.attr('id')) + '--' + this.get_text(node) ,null);
                 return {
                     // the context menu object here
-                    'refresh':{
-                        label: 'Refresh',
+                    'edit':{
+                        label: 'Edit',
                         action : function (obj) {
-                            this.refresh(obj) },
+                            this.rename(obj);
+                           editRank(obj); },
 
                         "separator_before"	: false,	// Insert a separator before the item
                         "separator_after"	: false		// Insert a separator after the item
-
                     }  ,
                     // the context menu object here
                     'attach':{
@@ -526,22 +640,30 @@ function initialiseRankDisplay()
                         },
                         "separator_before"	: false,	// Insert a separator before the item
                         "separator_after"	: false		// Insert a separator after the item
+                    },
+                     'delete':{
+                        label: 'Delete',
+                        action : function (obj) {
+                            growlMe(obj.attr('id'),null);
+                            deleteRank(obj);
+                        },
+                        "separator_before"	: false,	// Insert a separator before the item
+                        "separator_after"	: false		// Insert a separator after the item
                     }
-
                 }
             }
         },
 
         "json_data" : {
             correct_state : true,
-            "data" : [
-                {
-                    attr : { id : "ranks"},
-                    state: 'closed',
-                    icon : "folder",
-                    data : {title : "Ranks", attr : { href : "#" }}
-                } ]
-            ,
+//            "data" : [
+//                {
+//                    attr : { id : "ranks"},
+//                    state: 'closed',
+//                    icon : "folder",
+//                    data : {title : "Ranks", attr : { href : "#" }}
+//                } ]
+//            ,
             "ajax" :{
                 url : "/rank_tree/get_ranks_display",
                 data : function  (n) {
@@ -556,8 +678,121 @@ function initialiseRankDisplay()
             }
 
         },
-        "plugins" : [ "themes", "json_data", "ui","crrm","contextmenu" ]
+        	"crrm" : {
+			"move" : {
+                default_position: 'last',
+				"check_move" : moveRankNode
+			}
+		},
+		"dnd" : {
+			"drop_target" : false,
+			"drag_target" : false
+		},
+        "plugins" : [ "themes", "json_data", "ui","crrm","contextmenu", "dnd" ]
     });
+}
+
+//Update the rank value
+function updateRank(node, updatedValue)
+{
+    $.ajax({
+        url : "/ranks/update",
+        type : 'POST',
+        dataType : 'script',
+        data : {
+            id : node,
+            value : updatedValue
+        }  ,
+        beforeSend : function(data, textStatus, XMLHttpRequest)
+        {
+            //alert (textStatus);
+
+        },
+        success : function(data, textStatus, XMLHttpRequest)
+        {
+           // $('#rank_display').jstree("refresh");
+        }
+    });
+}
+
+//Edit the rank
+function editRank(node)
+{
+
+
+}
+
+function saveNewRank(node)
+{
+    $.ajax({
+        url : "/ranks/create",
+        type : 'POST',
+        dataType : 'script',
+        data : {
+            name : node
+        }  ,
+        beforeSend : function(data, textStatus, XMLHttpRequest)
+        {
+            //alert (textStatus);
+
+        },
+        success : function(data, textStatus, XMLHttpRequest)
+        {
+           // $('#rank_display').jstree("refresh");
+        }
+    });
+}
+
+//create a new rank node
+function createRank()
+{
+    $('#add_rank').livequery(function(){
+       $(this).click(function(){
+            growlMe('add rank!!!', null);
+            $('#rank_display').jstree("create");
+       });
+    });
+
+}
+
+//check for the move rank
+function moveRankNode(m)
+{
+    //growlMe('In moveranknode ' + m.o.attr('id'), null);
+
+    var p = this._get_parent(m.o);
+    //growlMe('Position: ' + m.o.index() + '== move to = ' + m.rt, null);
+    if(!p) return false;
+    p = p == -1 ? this.get_container() : p;
+    if(p === m.np) return true;
+    if(p[0] && m.np[0] && p[0] === m.np[0]) return true;
+    return false;
+}
+
+//FUNCTION TO SHOW DATA IN TOOLTIPS ABOUT THE RANK
+function setTooltipOnRank(node)
+{
+        var node_id = node.attr('id');
+        node.find('a').attr('title', 'This is a test - ' + node_id ).addClass('tipme-click');
+//        node.find('a').attr('title', 'This is a test - ' + node_id )
+//         .tipsy({fade:true, gravity: $.fn.tipsy.autoWE , opacity:0.8, delayIn:0, delayOut:200})
+//          .tipsy('show');
+        //node.find('a').tipsy();
+       //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
+        //alert(data.inst.get_text(data.rslt.obj));
+
+}
+
+function unsetTooltipOnRank(node)
+{
+        var node_id = node.attr('id');
+        //node.find('a').attr('title', 'This is a test - ' + node_id ).addClass('tipme');
+    if (node.find('a').data("tipsy") != null)
+        node.find('a').tipsy('hide');
+        //node.find('a').tipsy();
+       //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
+        //alert(data.inst.get_text(data.rslt.obj));
+
 }
 
 //FUNCTION TO RETRIEVE THE RANK OF THE TAXONCONCEPT ON HOVER
@@ -581,9 +816,10 @@ function initialiseTaxonTree()
     $('#taxon_tree').bind("loaded.jstree", function  (event, data) {
         growlMe("tree is loaded",null);
     })
-            .bind("open_node.jstree close_node.jstree", function  (e) {
+    .bind("open_node.jstree close_node.jstree", function  (e) {
         growlMe(e.type,null);
     })
+
             .bind("select_node.jstree", function(event, data) {
 
         var href = data.rslt.obj.attr("href");
@@ -790,6 +1026,9 @@ function autocompleteCommonNames()
 //INITIALISE VALUES
 function initialiseControls()
 {
+    //Setting tooltips to appear on rank_tree
+    $('#rank_display.a').tipsy();
+
     //Highlight current table row
 
     //setting autogrow to all textareas
@@ -829,13 +1068,22 @@ function initialiseControls()
 
 
     //Using tipsy
-    $('.tipsyme').tipsy({fade:true, gravity: $.fn.tipsy.autoNS , offset:10, opacity:0.8, delayIn:0, delayOut:200});
+    $('.tipsyme').livequery(function(){
+            $(this).tipsy({fade:true, gravity: $.fn.tipsy.autoNS , offset:10, opacity:0.8, delayIn:0, delayOut:200});
+    });
+    $('.tipsy-right').livequery(function(){
+            $(this).tipsy({fade:true, gravity: $.fn.tipsy.autoWE , offset:10, opacity:0.8, delayIn:0, delayOut:200});
+    });
 
     // $("[title]").tooltip();
     $('.add_tag_div, .edit_tag_div').hide();
     //using tipTip
     $('.tipme').livequery(function(){
         $(this).tipTip({edgeOffset:10, delay :100});
+    });
+
+    $('.tipme-click').livequery(function(){
+        $(this).tipTip({activation:"click", edgeOffset:10, delay :100, defaultPosition:"right"});
     });
 
 
@@ -957,6 +1205,7 @@ $(document).ready(function() {
     commonNameInit();
     initialiseTaxonTree();
     initialiseRankDisplay();
+    createRank();
     // tiptipMe();
 
 });
