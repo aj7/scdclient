@@ -71,3 +71,6 @@
 .jstree-default .jstree-checked a .jstree-checkbox { _background-position:-38px -19px; }
 .jstree-default .jstree-unchecked a .jstree-checkbox { _background-position:-2px -19px; }
 /* IE6 END */
+
+/* user-defined for nodes */
+.jstree li.bigger { font-size:14px;}

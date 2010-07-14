@@ -138,7 +138,7 @@ class RankTreeController < InheritedResources::Base
     @json =[]
 
     @json = Rank.order('position asc').each_with_object([]){|obj, hash|
-      element = {:data => obj.name, :attr => {:id => obj.name }, :state => 'opened'}
+      element = {:data => obj.name, :attr => {:id => obj.name, :class => "bigger",  }, :state => 'opened'}
       hash << element
 
     }
