@@ -3,8 +3,7 @@ class RanksController < InheritedResources::Base
   respond_to :html, :xml, :json , :js
 
   def create
-    @rank = Rank.create(:name => params[:name])
-    respond_to do |format|
+    create! do |format|
       format.js {render "rank_tree/refresh_rank"}
     end
   end
