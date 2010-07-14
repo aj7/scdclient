@@ -580,9 +580,6 @@ function initialiseRankDisplay()
         growlMe('in rename node: ' + data.rslt.obj.attr('id') + ' - textvalue = ' + data.inst.get_text(data.rslt.obj) , 'error');
         saveNewRank(data.inst.get_text(data.rslt.obj));
     })
-    .bind("dehover_node.jstree", function (e, data) {
-
-    })
     .bind("before.jstree", function (e, data) {
         //var nodeId = data.rslt.obj.attr("id");
         // growlMe('BEFORE : ' + data.inst.get_text(data.rslt) + ': id =' + nodeId + '',null) ;
@@ -599,7 +596,7 @@ function initialiseRankDisplay()
 
         var href = data.rslt.obj.attr("href");
         var path = window.location.href.toLowerCase();
-
+        $('#manage_ranks').hide();
         setTooltipOnRank(data.rslt.obj);
         //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
         //alert(data.inst.get_text(data.rslt.obj));
@@ -624,7 +621,7 @@ function initialiseRankDisplay()
                     'edit':{
                         label: 'Edit',
                         action : function (obj) {
-                            this.rename(obj);
+                           //this.rename(obj);
                            editRank(obj); },
 
                         "separator_before"	: false,	// Insert a separator before the item
@@ -718,7 +715,23 @@ function updateRank(node, updatedValue)
 //Edit the rank
 function editRank(node)
 {
-
+    growlMe('EDIT:' + node.attr('id'), null);
+    $.ajax({
+        url : "/ranks/edit",
+        type : 'POST',
+        dataType : 'script',
+        data : {
+            id : node.attr('id')
+        }  ,
+        beforeSend : function(data, textStatus, XMLHttpRequest)
+        {
+            //alert (textStatus);
+        },
+        success : function(data, textStatus, XMLHttpRequest)
+        {
+           // $('#rank_display').jstree("refresh");
+        }
+    });
 
 }
 
@@ -749,11 +762,12 @@ function createRank()
     $('#add_rank').livequery(function(){
        $(this).click(function(){
             growlMe('add rank!!!', null);
-            $('#rank_display').jstree("create");
+            $.get('ranks/new');
        });
     });
 
 }
+
 
 //check for the move rank
 function moveRankNode(m)
@@ -772,14 +786,19 @@ function moveRankNode(m)
 //FUNCTION TO SHOW DATA IN TOOLTIPS ABOUT THE RANK
 function setTooltipOnRank(node)
 {
-        var node_id = node.attr('id');
-        node.find('a').attr('title', 'This is a test - ' + node_id ).addClass('tipme-click');
-//        node.find('a').attr('title', 'This is a test - ' + node_id )
-//         .tipsy({fade:true, gravity: $.fn.tipsy.autoWE , opacity:0.8, delayIn:0, delayOut:200})
-//          .tipsy('show');
-        //node.find('a').tipsy();
-       //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
-        //alert(data.inst.get_text(data.rslt.obj));
+    var node_id = node.attr('id');
+    $.post("ranks/get_rank", { id: node_id},
+            function(data){
+                var text = "Name : " + data.name + " <br /> Preferred Name: " + data.preferred_name;
+                node.find('a').attr('title', text ).addClass('tipme-click');
+            });
+
+    //        node.find('a').attr('title', 'This is a test - ' + node_id )
+    //         .tipsy({fade:true, gravity: $.fn.tipsy.autoWE , opacity:0.8, delayIn:0, delayOut:200})
+    //          .tipsy('show');
+    //node.find('a').tipsy();
+    //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
+    //alert(data.inst.get_text(data.rslt.obj));
 
 }
 
@@ -1028,6 +1047,9 @@ function initialiseControls()
 {
     //Setting tooltips to appear on rank_tree
     $('#rank_display.a').tipsy();
+    //Hide the add rank form first
+    $('#manage_ranks').hide(); 
+
 
     //Highlight current table row
 

@@ -8,6 +8,9 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Scdclient
   class Application < Rails::Application
+
+  #Added this for json generation to remove the root
+  ActiveRecord::Base.include_root_in_json = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

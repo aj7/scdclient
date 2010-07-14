@@ -2,6 +2,13 @@ class RanksController < InheritedResources::Base
 
   respond_to :html, :xml, :json , :js
 
+  def new
+    #debugger
+    new! do |format|
+      format.js {render "ranks/edit"}
+    end
+  end
+
   def create
     create! do |format|
       format.js {render "rank_tree/refresh_rank"}
@@ -10,17 +17,23 @@ class RanksController < InheritedResources::Base
 
   def update
    # debugger
-    @rank = Rank.where(:name => params[:id]).first
-    @rank.name = params[:value]
-    @rank.save
-    respond_to do |format|
+    update! do |format|
       format.js { render "rank_tree/refresh_rank"}
     end
 
   end
 
+  def edit
+   # debugger
+    @rank = Rank.where(:name => params[:id]).first
+    respond_to do |format|
+      format.js {render "ranks/edit"}
+    end
+
+  end
+
   def delete_rank
-    debugger
+    #debugger
     @rank = Rank.find(params[:id])
     @rank.destroy
     flash[:notice] = "Successfully destroyed rank."
@@ -53,4 +66,11 @@ class RanksController < InheritedResources::Base
     render "/rank_tree/refresh_rank"
 
   end
+
+  def get_rank
+    @rank = Rank.where(:name => params[:id] ).first
+    #debugger
+    render :json => @rank.to_json
+  end
+
 end
