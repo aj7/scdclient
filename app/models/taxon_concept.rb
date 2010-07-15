@@ -11,6 +11,12 @@ class TaxonConcept < ActiveRecord::Base
   has_paper_trail #used for versioning
   acts_as_commentable #used for comments management
 
+  #thinking_sphink
+  define_index do
+    indexes taxon_name.scientific_name, :as => :scientific_name
+    indexes common_names(:name), :as => :common_name
+  end
+
   ###
   ### Relationships
   ###

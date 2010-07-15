@@ -868,7 +868,7 @@ function initialiseTaxonTree()
 
     })
 
-            .jstree({
+        .jstree({
         "themes" : {
             "theme" : "default",
             "dots" : true,
@@ -1045,10 +1045,17 @@ function autocompleteCommonNames()
 //INITIALISE VALUES
 function initialiseControls()
 {
+    //Initialise watermark class
+     $.watermark.options.className = 'watermark';
     //Setting tooltips to appear on rank_tree
     $('#rank_display.a').tipsy();
     //Hide the add rank form first
-    $('#manage_ranks').hide(); 
+    $('#manage_ranks').hide();
+
+    //setting search taxon_concept box
+    $('#search_taxon_concept').livequery(function(){
+       $(this).width("400px").height("32px").watermark('Search for: taxon name, common name ...'); 
+    });
 
 
     //Highlight current table row

@@ -24,6 +24,12 @@ gem 'acts_as_list'
 #mongomapper
 gem 'mongo_mapper', :git => 'git://github.com/jnunemaker/mongomapper.git'
 
+#thinking sphinx for searching
+gem 'thinking-sphinx',
+  :git     => 'git://github.com/freelancing-god/thinking-sphinx.git',
+  :branch  => 'rails3',
+  :require => 'thinking_sphinx'
+
 
 
 # Bundle edge Rails instead:

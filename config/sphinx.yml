@@ -1,0 +1,8 @@
+#Need to install the sphinx server on the machine first
+#
+
+development:
+  port: 9313
+  enable_star: 1
+  min_infix_len: 1
+  #config_file: "/config/development.sphinx.conf"

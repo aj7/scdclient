@@ -17,4 +17,9 @@ class CommonName < ActiveRecord::Base
   #acts_as_audited - doesn't work in rails3
   has_paper_trail #used for versioning
 
+  #thinking_sphinx
+  define_index do
+    indexes :name
+  end
+
 end

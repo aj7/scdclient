@@ -64,3 +64,35 @@ h2.active {background-position: left bottom;} /*--When toggle is triggered, it w
 }
 /*========== css to do the toggle stuff  =========*/
 h2.trigger {
+
+}
+
+/*=================== search box =================*/
+.searchdiv{
+    border:blue;
+    background-color: #99ccff;
+    padding-left: 10px;
+    margin-bottom:6px;
+}
+
+.searchbox{
+    padding-left:8px;
+    margin-left:10px;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:16px;
+    -moz-box-shadow:#f0f8ff;
+    
+    -moz-border-radius:6px;
+}
+
+.search_button{
+    padding-top:6px;
+}
+
+/*=================== search box end =================*/
+
+/*watermark class*/
+.watermark{
+    color: #999999;
+}
