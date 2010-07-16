@@ -5,7 +5,7 @@
                 "attr":{"id":"taxon_<%= element.name %>"},
                 "data":{
                     "title" : "<%=h element.name %>",
-                    "icon" : "<%= TaxonConcept.find_all_by_rank(element.name).empty? ? "/images/icons/page.png" : "test" %>"
+                    "icon" : "<%= Rank.find_all_by_name(element.name).empty? ? "/images/icons/page.png" : "test" %>"
                 },
                 "state":  "closed"
             }<%= "," if i < (@json.size - 1) %>

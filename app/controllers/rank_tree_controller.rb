@@ -40,15 +40,17 @@ class RankTreeController < InheritedResources::Base
   end
 
   def get_ranks_jstree2
-    #debugger
+    debugger
     @key = params[:id]
     @json =[]
     if (@key == "ranks")
-      @json = TaxonConcept.taxon_rank_counts
+      @json = Rank.display_by_position
 
     elsif (@key.include? '_')
       if @key.split('_').first() == "taxon"
-        @json = TaxonConcept.find_all_by_rank(@key.split('_').at(1))
+      
+        @json = Rank.find_all_by_name(@key.split('_').at(1)).first.taxon_concepts
+        #@json = TaxonConcept.find_all_by_rank(@key.split('_').at(1))
       elsif @key.split('_').first() == "node"
         @json = TaxonConcept.find(@key.split('_').at(1)).children
       end

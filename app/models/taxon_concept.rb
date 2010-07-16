@@ -23,9 +23,9 @@ class TaxonConcept < ActiveRecord::Base
 
   #A TaxonConcept has got one TaxonName associated to it ; but one TaxonName can belongs_to_many TaxonConcepts
   belongs_to :taxon_name
-  has_many :concept_common_links
-  has_many :common_names, :through => :concept_common_links
   belongs_to :rank
+  has_many :concept_common_links
+  has_many :common_names, :through => :concept_common_links 
 
   ###
   ### Validations
