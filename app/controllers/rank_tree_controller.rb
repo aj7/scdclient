@@ -40,7 +40,7 @@ class RankTreeController < InheritedResources::Base
   end
 
   def get_ranks_jstree2
-    debugger
+    #debugger
     @key = params[:id]
     @json =[]
     if (@key == "ranks")
@@ -140,7 +140,7 @@ class RankTreeController < InheritedResources::Base
     @json =[]
 
     @json = Rank.order('position asc').each_with_object([]){|obj, hash|
-      element = {:data => obj.name, :attr => {:id => obj.name, :class => "bigger",  }, :state => 'opened'}
+      element = {:data => obj.name, :attr => {:id => obj.name, :class => "bigger" }, :state => 'opened'}
       hash << element
 
     }

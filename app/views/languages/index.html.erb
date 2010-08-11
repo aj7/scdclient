@@ -6,14 +6,16 @@
     <th>Description</th>
   </tr>
   <% for language in @languages %>
-    <tr>
-      <td><%=h language.name.humanize %></td>
-      <td><%=h language.description %></td>
-      <td><%= link_to "Show", language %></td>
-      <td><%= link_to "Edit", edit_language_path(language) %></td>
-      <td><%= link_to "Destroy", language, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+
+        <tr>
+          <td><%=h language.name.humanize %></td>
+          <td><%=h language.description %></td>
+          <td><%= link_to image_tag("icons/eye.png") + "Show", language, :class => "buttons" %>
+          <%= link_to image_tag("icons/page_white_edit.png") + "Edit", edit_language_path(language), :class => "buttons positive" %>
+          <%= link_to image_tag("icons/cancel.png") + "Delete", language, :confirm => 'Are you sure?', :method => :delete, :class => "buttons negative" %></td>
+        </tr>
+
   <% end %>
 </table>
 
-<p><%= link_to "New Language", new_language_path %></p>
+<p><%= link_to image_tag("icons/add.png") + "New Language", new_language_path, :class => "buttons" %></p>

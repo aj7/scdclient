@@ -2,10 +2,10 @@
 <% if (@key == "ranks") %>
         [<% @json.each_with_index do |element,i| %>
             {
-                "attr":{"id":"taxon_<%= element.name %>"},
+                "attr":{"id":"taxon_<%= element.name %>", "class" : "bigger"},
                 "data":{
                     "title" : "<%=h element.name %>",
-                    "icon" : "<%= Rank.find_all_by_name(element.name).empty? ? "/images/icons/page.png" : "test" %>"
+                    "icon" : "<%= Rank.find_all_by_name(element.name).first.taxon_concepts.empty? ? "/images/icons/page.png" : "test" %>"
                 },
                 "state":  "closed"
             }<%= "," if i < (@json.size - 1) %>
@@ -29,7 +29,7 @@
 <% elsif @key.split('_').first() == "node" %>
         [<% @json.each_with_index do |element,i| %>
         {
-            "attr":{"id":"node_<%= element.id %>"},
+            "attr":{"id":"node_<%= element.id %>", "class" : "bigger"},
             "data":
             {
                 "title": "<%=h element.taxon_name.scientific_name %>" ,

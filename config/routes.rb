@@ -5,7 +5,13 @@ Scdclient::Application.routes.draw do |map|
     end
   end
 
-  resources :languages , :common_names, :taxon_concepts, :roles, :name_relationships, :taxon_names, :user_sessions
+  resources :taxon_concepts do
+  collection do
+    get  :search, :to => "taxon_concepts#search_taxon"
+  end
+end
+
+  resources :languages , :common_names, :roles, :name_relationships, :taxon_names, :user_sessions
   resources :users
 
   match '/login' => 'user_sessions#new', :as => 'login'

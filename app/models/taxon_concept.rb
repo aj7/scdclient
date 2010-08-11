@@ -17,6 +17,7 @@ class TaxonConcept < ActiveRecord::Base
     indexes common_names(:name), :as => :common_name
   end
 
+
   ###
   ### Relationships
   ###
@@ -67,6 +68,8 @@ class TaxonConcept < ActiveRecord::Base
      end
 
   end
+
+ 
 #  def add_tag (tag, method_value)
 #    t = TaxonConcept.find(:first)
 #    t.send("#{method_value}_list").add(tag)

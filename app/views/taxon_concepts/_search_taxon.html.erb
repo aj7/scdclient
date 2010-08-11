@@ -1,0 +1,11 @@
+<div id="search_taxons">
+  <div id="taxon_concept_tree" class="span-10 colborder">
+  </div>
+  <div id="search_taxon_form" class="span-5">
+    <%= form_tag '/taxon_concepts/search_taxon', :remote => true do %>
+        <label>Search:</label>
+        <%= text_field_tag 'search'%>
+        <div><%= submit_tag 'Save' %></div>
+    <% end -%>
+  </div>
+</div>

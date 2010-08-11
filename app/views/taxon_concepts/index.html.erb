@@ -15,14 +15,17 @@
 		<tr>
 			<td><%= link_to taxon_concept.taxon_name.try(:scientific_name), edit_taxon_concept_path(taxon_concept)  %></td>
 			<td><%=h taxon_concept.try(:has_taxon_status).try(:humanize) %></td>
-			<td><%=h taxon_concept.rank %></td>
+			<td><%=h taxon_concept.rank.try(:name) %></td>
 			<td><%=h taxon_concept.is_current %></td>
 			<td><%=h taxon_concept.external_comments %></td>
-			<td><%= link_to "Show", taxon_concept %></td>
-			<td><%= link_to "Destroy", taxon_concept, :confirm => 'Are you sure?', :method => :delete %></td>
+			<td><%= link_to image_tag("icons/eye.png") , taxon_concept, :class => "tipme", :title => "Show" %>
+			<%= link_to image_tag("icons/delete.png") , taxon_concept, :confirm => 'Are you sure to delete?', :method => :delete, :class => "tipme", :title => "Delete" %></td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<p><%= link_to "New Taxon Concept", new_taxon_concept_path %></p>
+<p><%= link_to image_tag("icons/add.png") + "New Taxon Concept", new_taxon_concept_path, :class => "buttons" %></p>
+
+<hr />
+<%= render :partial => 'search_taxon' %>

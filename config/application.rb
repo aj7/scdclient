@@ -36,6 +36,7 @@ module Scdclient
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
      config.generators do |g|
+       
      #  g.orm             :active_record
        g.fixture_replacement :machinist
     #   g.template_engine :erb

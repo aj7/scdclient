@@ -155,7 +155,6 @@ function initialisePanels()
 
 }
 
-
 //APPLICATION SPECIFIC FUNCTIONS
 function initialiseNewRoleDialog()
     //function to get the dialog box to pop up, setup done here too
@@ -189,10 +188,9 @@ function scrollToId(id){
     window.scrollTo(0,$("#"+id).offset().top);
 }
 
-
 //APPLICATION SPECIFIC FUNCTIONS
 function initialiseNewStatusDialog()
-    //function to get the dialog box to pop up, setup done here too
+//function to get the dialog box to pop up, setup done here too
 {
     $.fx.speeds._default    = 1000;
     $('.hidden_dialog').dialog({autoOpen:false,
@@ -389,15 +387,15 @@ function ajaxifySavingForm()
     }
 }
 
-//JQUERY UI AUTOCOMPLETE
-function autocompleteCommonNames2()
+//JQUERY UI AUTOCOMPLETE - finding TaxonNames
+function autocompleteTaxonNames()
 {
 
-    $('#common_name_name').livequery(function(){
+    $('#search_taxon_concept').livequery(function(){
 
         $(this).autocomplete({
             minLength: 0,
-            source:"/common_names/get_common_names/1" ,
+            source:"/search/search_taxon" ,
             //			focus: function(event, ui) {
             //				$('#project').val(ui.item.label);
             //				return false;
@@ -412,9 +410,66 @@ function autocompleteCommonNames2()
             //alert(item[0].common_name.name)
             return $( "<li></li>" )
                     .data( "item.autocomplete", item )
-                    .append( "<a>" + item.name + " - " + item.name + "</a>" )
+                    .append( "<a>" + item.name + '-> ' + item.rank + "</a>" )
                     .appendTo( ul );
         };
+    });
+
+}
+
+//JQUERY UI AUTOCOMPLETE
+function autocompleteCommonNames2()
+{
+
+    $('#common_name_name').livequery(function(){
+
+        function split(val) {
+			return val.split(/,\s*/);
+		}
+        function extractLast(term) {
+			return split(term).pop();
+		}
+        
+        $(this).autocomplete({
+            minLength: 0,
+//            source:"/common_names/get_common_names/1" ,
+            //			focus: function(event, ui) {
+            //				$('#project').val(ui.item.label);
+            //				return false;
+            //			},
+            source:
+            function(request, response){
+            $.getJSON("/common_names/get_common_names/1", {term: request.term},dataoutput);
+
+                function dataoutput(data)
+                {
+                   response(
+                           $.each(data.items, function(i,item){
+                             growlMe(i + " - " + item,null);  
+                           })
+
+                           );
+
+                    growlMe(data[0].name,null);
+                }
+
+              //   response  ("hello");
+                growlMe(request.term, null);
+            },
+
+            select: function(event, ui) {
+                //alert(ui.item.common_name.name);
+                $(this).val(ui.item.name);
+                return false;
+            }
+        })
+//            .data( "autocomplete" )._renderItem = function( ul, item ) {
+//            //alert(item[0].common_name.name)
+//            return $( "<li></li>" )
+//                    .data( "item.autocomplete", item )
+//                    .append( "<a>" + item.name + " - " + item.name + "</a>")
+//                    .appendTo( ul );
+//        };
     });
 
 }
@@ -606,7 +661,7 @@ function initialiseRankDisplay()
         //growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + ', :href = ' + href , null) ;
 
     })
-            .jstree({
+      .jstree({
         "themes" : {
             "theme" : "default",
             "dots" : true,
@@ -768,7 +823,6 @@ function createRank()
 
 }
 
-
 //check for the move rank
 function moveRankNode(m)
 {
@@ -833,6 +887,179 @@ function initialiseTaxonTree()
     $.jstree._themes = "/stylesheets/jstree/themes/";
 
     $('#taxon_tree').bind("loaded.jstree", function  (event, data) {
+        growlMe("tree is loaded",null);
+    })
+    .bind("open_node.jstree close_node.jstree", function  (e) {
+        growlMe(e.type,null);
+    })
+
+            .bind("select_node.jstree", function(event, data) {
+
+        var href = data.rslt.obj.attr("href");
+        var path = window.location.href.toLowerCase();
+
+        //alert(data.inst.get_text(data.rslt.obj));
+        // growlMe(data.inst.get_text(data.rslt.obj)) ;
+
+        var nodeId = data.rslt.obj.attr("id");
+
+        growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + '',null) ;
+
+    })
+            .bind("hover_node.jstree", function(event, data) {
+
+        var href = data.rslt.obj.attr("href");
+        var path = window.location.href.toLowerCase();
+
+        //data.rslt.obj.find('a').tipsy({title : 'href',fade:true, gravity: $.fn.tipsy.autoNS , opacity:0.8, delayIn:0, delayOut:200});
+        //alert(data.inst.get_text(data.rslt.obj));
+        //growlMe(data.rslt.obj.find('a').attr('href')) ;
+
+        var nodeId = data.rslt.obj.attr("id");
+        var rank = getTaxonNodeRank(nodeId);
+
+        growlMe(data.inst.get_text(data.rslt.obj) + ': id =' + nodeId + ', :href = ' + href + ', rank = ' + rank) ;
+
+    })
+
+        .jstree({
+        "themes" : {
+            "theme" : "default",
+            "dots" : true,
+            "icons" : true
+        },
+        "contextmenu":{
+            "items" :function (node) {
+                //NEED TO IMPLEMENT SELECTIVE NODE RIGHT-CLICK
+                growlMe((node.attr('id')) + '--' + this.get_text(node) ,null);
+                return {
+                    // the context menu object here
+                    'refresh':{
+                        label: 'Refresh',
+                        action : function (obj) {
+                            this.refresh(obj) },
+
+                        "separator_before"	: false,	// Insert a separator before the item
+                        "separator_after"	: false		// Insert a separator after the item
+                        //                        submenu			: {
+                        //                            'test' : {
+                        //                                label : 'Test',
+                        //                                action : function (obj){
+                        //                                    growlMe ('You are in test',null);
+                        //                                }
+                        //                            }
+                        //                        }
+                        /* Collection of objects (the same structure) */
+                    }  ,
+                    // the context menu object here
+                    'attach':{
+                        label: 'Attach here',
+                        action : function (obj) {
+                            growlMe(obj.attr('id'),null);
+                            attachChildToNode(obj);
+                            this.refresh(obj)
+                        },
+                        "separator_before"	: false,	// Insert a separator before the item
+                        "separator_after"	: false		// Insert a separator after the item
+                    }
+
+                }
+            }
+        },
+
+        "json_data" : {
+            correct_state : true,
+            "data" : [
+                {
+                    attr : { id : "ranks"},
+                    state: 'closed',
+                    icon : "folder",
+                    data : {title : "Ranks", attr : { href : "#" }}
+                }
+            ],
+            "ajax" :{
+                url : "/rank_tree/get_ranks_jstree2",
+                data : function  (n) {
+                    return {
+                        operation : "get_children",
+                        id : n.attr ? n.attr("id") : 0 };
+                }  ,
+                success : function(data, textStatus, XMLHttpRequest)
+                {
+                    //alert (textStatus);
+                }
+            }
+        },
+
+        "plugins" : [ "themes", "json_data", "ui","crrm","contextmenu" ]
+
+    });
+
+    $("#tree").dynatree({
+        onActivate: function(dtnode) {
+            // A DynaTreeNode object is passed to the activation handler
+            // Note: we also get this event, if persistence is on, and the page is reloaded.
+            growlMe("You activated " + dtnode.data.title,null);
+            // alert("You activated " + dtnode.data.title);
+        },
+        onLazyRead: function(dtnode){
+            dtnode.appendAjax({url: "/rank_tree/get_ranks",
+                data: {"key": dtnode.data.key, // Optional url arguments
+                    "mode": "all"
+                },
+                success: function(dtnode) {
+                    // Called after nodes have been created and the waiting icon was removed.
+                    // 'this' is the options for this Ajax request
+                    //alert(dtnode);
+                },
+                error: function(dtnode, XMLHttpRequest, textStatus, errorThrown) {
+                    // Called on error, after error icon was created.
+                },
+                cache: false // Append random '_' argument to url to prevent caching.
+            });
+        },
+
+        persist: true,
+        children: [ // Pass an array of nodes.
+            {title: "Folder 2",
+                isFolder: true,
+                children: [
+                    {title: "Sub-item 2.1"},
+                    {title: "Sub-item 2.2"}
+                ]
+            },
+            {title: "Ranks", key : "ranks", isLazy :true, isFolder : true, state : "closed"}
+        ]
+    });
+
+
+    $("#tree2").jstree({
+        "json_data" : {"data" : [
+            {
+                "data" : "A aaanode",
+                "children" : [ "Child 1", "Child 2" ]
+            },
+            {
+                "attr" : { "id" : "li.node.id" },
+                "data" : {
+                    "title" : "Long format demo",
+                    "attr" : { "href" : "#" }
+                }
+            }
+        ]
+        },
+        "plugins" : [ "themes", "json_data" ]
+    });
+
+}
+
+//function to initialise TaxonConcept tree
+function initialiseTaxonConceptTree()
+{
+    //$.jstree._themes = RAILS_ROOT + "/public/stylesheets/jstree/themes/";
+    $.jstree._themes = "/stylesheets/jstree/themes/";
+
+    $('#taxon_concept_tree').bind("loaded.jstree", function  (event, data) {
         growlMe("tree is loaded",null);
     })
     .bind("open_node.jstree close_node.jstree", function  (e) {
@@ -1229,11 +1456,13 @@ $(document).ready(function() {
     initialisePanels();
     //autocompleteCommonNames();
     autocompleteCommonNames2();
+    autocompleteTaxonNames();
     //enterAsTab(document.forms.form, false);
     detectKeypress();
     commonNameInit();
     initialiseTaxonTree();
     initialiseRankDisplay();
+    initialiseTaxonConceptTree();
     createRank();
     // tiptipMe();
 

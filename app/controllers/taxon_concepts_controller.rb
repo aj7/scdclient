@@ -1,6 +1,10 @@
 class TaxonConceptsController < InheritedResources::Base
   respond_to :html, :xml, :json , :js
 
+   def index
+    @taxon_concepts = TaxonConcept.includes(:taxon_name, :rank)
+   end
+
   def create
     #debugger
     create!
@@ -121,8 +125,11 @@ class TaxonConceptsController < InheritedResources::Base
     end
   end
 
+  def search_taxon
+    #debugger
+    render "/taxon_concepts/refresh_taxon_concept_list"
 
- 
+  end 
 
 end
 

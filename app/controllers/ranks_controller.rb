@@ -42,7 +42,7 @@ class RanksController < InheritedResources::Base
   end
 
   def get_ranks_display
-    debugger
+    #debugger
 
     key = params[:id]
 

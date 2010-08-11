@@ -4,7 +4,7 @@ require 'mongo'
 source 'http://gems.github.com'
 source 'http://gemcutter.org'
 
-gem 'rails', '3.0.0.beta4'
+gem 'rails', '3.0.0.rc'
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
